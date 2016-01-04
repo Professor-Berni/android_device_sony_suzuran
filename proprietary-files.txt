@@ -403,9 +403,11 @@ bin/rmt_storage
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 lib/libpin-cache.so
+-lib/libril.so
 lib/libstartup-reason.so
 lib/libtpm.so
 lib64/libpin-cache.so
+-lib64/libril.so
 lib64/libstartup-reason.so
 lib64/libtpm.so
 framework/qcnvitems.jar
