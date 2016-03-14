@@ -34,7 +34,6 @@ import init.target.rc
 import init.sony-device.rc
 
 on early-init
-    mount debugfs debugfs /sys/kernel/debug
     insmod /sbin/qcrypto_module.ko
     insmod /sbin/qdrbg_module.ko
 
