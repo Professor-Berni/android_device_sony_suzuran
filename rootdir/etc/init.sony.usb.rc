@@ -1,0 +1,103 @@
+# Copyright (C) 2015 Sony Mobile Communications Inc.
+
+#
+# init.sony.usb.rc
+#
+# This is script for platform instead of common (products/common).
+
+on init
+    # USB related initialization
+    write /sys/class/android_usb/android0/iSerial ${ro.serialno}
+    write /sys/class/android_usb/android0/f_rndis/vendorID 0fce
+    write /sys/class/android_usb/android0/f_rndis/wceis 1
+
+on fs
+    mkdir /dev/usb-ffs 0770 shell shell
+    mkdir /dev/usb-ffs/adb 0770 shell shell
+    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
+    write /sys/class/android_usb/android0/f_ffs/aliases adb
+
+on post-fs-data
+    write /sys/class/android_usb/android0/f_mass_storage/inquiry_string "SONY    Mass Storage    0100"
+    write /sys/class/android_usb/android0/f_cdrom/cdrom_inquiry_string "SONY    CD-ROM          0100"
+    write /sys/class/android_usb/android0/f_mass_storage/serial_number ${ro.serialno}
+    write /sys/class/android_usb/android0/f_mass_storage/eui64_id 000AD90000000000
+    write /sys/class/android_usb/android0/f_mass_storage/lun/nofua 1
+    write /sys/class/android_usb/android0/f_cdrom/lun/nofua 1
+
+on boot
+    # USB gadget initial setup
+    write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
+    write /sys/class/android_usb/android0/f_rndis/manufacturer ${ro.product.manufacturer}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
+
+    
+
+on property:sys.usb.config=mass_storage
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   stop adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mass_storage,adb
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   start adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   stop adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp,adb
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   start adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp,cdrom
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   stop adbd
+   write /sys/class/android_usb/android0/f_cdrom/lun/file /system/etc/dop.iso
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp,cdrom,adb
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   stop adbd
+   write /sys/class/android_usb/android0/f_cdrom/lun/file /system/etc/dop.iso
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=rndis
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   stop adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=rndis,adb
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   start adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=ncm
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   stop adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=ncm,adb
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   start adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=midi
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   stop adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=midi,adb
+   exec u:r:usb_device_mode:s0 -- /init.usbmode.sh
+   start adbd
+   setprop sys.usb.state ${sys.usb.config}
+
+# Start usbeng
+service usbeng /system/bin/usbeng
+    user system
+    group system
+    class late_start
+    oneshot
