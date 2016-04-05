@@ -18,6 +18,9 @@ DEVICE_PATH := device/sony/sumire
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := E6653,sumire
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
