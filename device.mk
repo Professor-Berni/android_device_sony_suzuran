@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libxml2
 
+# TA
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/sbin/tad_static:root/sbin/tad_static
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf

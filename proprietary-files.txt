@@ -428,6 +428,17 @@ vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 
+# TA
+bin/taimport
+bin/ta_param_loader
+bin/ta_qmi_service
+lib/libMiscTaAccessor.so
+lib/libmiscta.so
+lib/libta.so
+lib64/libMiscTaAccessor.so
+lib64/libmiscta.so
+lib64/libta.so
+
 # Thermal
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
