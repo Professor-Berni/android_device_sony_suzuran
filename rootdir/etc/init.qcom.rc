@@ -29,6 +29,7 @@
 # Modifications are licensed under the License.
 #
 
+import init.qcom.power.rc
 import init.qcom.usb.rc
 import init.target.rc
 import init.sony-device.rc
@@ -754,12 +755,6 @@ service qcom-sensor-sh /system/bin/sh /init.qcom-sensor.sh
     user root
     oneshot
 
-service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
 service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
     class late_start
     user root
@@ -786,7 +781,6 @@ service config-zram /system/bin/sh /system/etc/init.qcom.zram.sh
    oneshot
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
     start qti-testscripts
     start config-zram
 

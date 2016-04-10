@@ -3,15 +3,6 @@
 # init.sony-platform.rc
 #
 
-on early-init
-    # disable big cluster
-    write /sys/module/msm_performance/parameters/num_clusters "2"
-    write /sys/module/msm_performance/parameters/managed_cpus "0-3"
-    write /sys/module/msm_performance/parameters/managed_cpus "4-7"
-    write /sys/module/msm_performance/parameters/max_cpus "-1:0"
-
-    
-
 on init
     # SONY: Start the TrimArea Daemon. It must be started before fota-ua
     wait /dev/block/mmcblk0p1
@@ -45,10 +36,6 @@ on init
     write /sys/module/bcm_wlan_ramdump/parameters/enable_ssr_dump 1
 
     # Set coredump mode to 1(debug)
-    
-
-    # Avoid long waits for rcu grace periods
-    write /sys/kernel/rcu_expedited 1
 
 on fs
     insmod /system/lib/modules/ecryptfs.ko
@@ -381,10 +368,6 @@ on property:init.taimport.ready=true
     restorecon /data/customization
     start config-linker
 
-# Restore big cluster
-on property:sys.boot_completed=1
-    write /sys/module/msm_performance/parameters/max_cpus "-1:-1"
-
 service ssr_dumper /system/bin/ssr_dumper
     class main
     user root
@@ -449,9 +432,5 @@ service uim /system/bin/brcm-uim-sysfs
 
 on property:init.svc.bootanim=running
     restorecon_recursive /sys/devices/platform/bcm_ldisc/
-
-on property:init.svc.fuse_sdcard1=running
-   write /sys/class/block/mmcblk1/queue/scheduler cfq
-   write /sys/class/block/mmcblk1/bdi/max_ratio 1
 
 import init.sony.rc

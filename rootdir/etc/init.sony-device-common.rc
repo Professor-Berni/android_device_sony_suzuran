@@ -9,13 +9,6 @@ on post-fs
     mkdir /dev/socket/tfsw 0770 system system
 
 on post-fs-data
-
-    # KSM options
-    write /sys/kernel/mm/ksm/pages_to_scan 100
-    write /sys/kernel/mm/ksm/deferred_timer 1
-    write /sys/kernel/mm/ksm/sleep_millisecs 999
-    write /sys/kernel/mm/ksm/run 1
-
     # Enterprise API configuration
     setprop ro.support.irda 0
 
