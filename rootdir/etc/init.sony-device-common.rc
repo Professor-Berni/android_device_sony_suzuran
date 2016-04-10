@@ -8,10 +8,6 @@ on post-fs
     # Touch
     mkdir /dev/socket/tfsw 0770 system system
 
-on post-fs-data
-    # Enterprise API configuration
-    setprop ro.support.irda 0
-
 on boot
     # PM8994 flash
     chown media system /sys/class/misc/pmi8994-flash/device/current1

@@ -74,12 +74,6 @@ on fs
     # SONY: Fota must be started after partitions are mounted
     exec u:r:fota-ua:s0 -- /sbin/fota-ua c
 
-    # Bluetooth address setting
-    setprop ro.bt.bdaddr_path "/data/etc/bluetooth_bdaddr"
-
-    # Enable Bluetooth HFP 1.6
-    setprop ro.bluetooth.hfp.ver 1.6
-
 on post-fs
     # MHL driver. To support MHL power off charge,
     # the insmod must be done before chargemon.

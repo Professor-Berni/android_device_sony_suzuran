@@ -16,6 +16,8 @@ use.voice.path.for.pcm.voip=true
 # Bluetooth
 bluetooth.enable_timeout_ms=12000
 qcom.bluetooth.soc=rome
+ro.bluetooth.hfp.ver=1.6
+ro.bt.bdaddr_path=/data/etc/bluetooth_bdaddr
 
 # Connectivity Engine support (CNE)
 persist.cne.feature=1
@@ -64,10 +66,15 @@ ro.min_freq_4=384000
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
+net.tcp.2g_init_rwnd=10
 persist.radio.apm_sim_not_pwdn=1
 rild.libargs=-d /dev/smd0
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+ro.telephony.call_ring.multiple=false
 ro.use_data_netmgrd=true
 
 # Time
 persist.timed.enable=true
+
+# Wifi
+wifi.interface=wlan0
