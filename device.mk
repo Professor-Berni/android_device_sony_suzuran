@@ -184,9 +184,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.post_boot.sh \
-    init.sony.cpu_parameter.sh \
-    init.sony.cpu_parameter_gov.sh
+    init.qcom.post_boot.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \

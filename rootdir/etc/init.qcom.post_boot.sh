@@ -898,12 +898,12 @@ case "$target" in
         echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif
         echo 19000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
         echo 90 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-        echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
+        echo 10000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
         echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
         echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
-        echo 80 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
-        echo 40000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-        echo 80000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
+        echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+        echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
+        echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
         echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         # online CPU4
         echo 1 > /sys/devices/system/cpu/cpu4/online
@@ -913,21 +913,19 @@ case "$target" in
         echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
         echo "19000 1400000:39000 1700000:19000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
         echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-        echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
+        echo 10000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
         echo 1248000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
         echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
         echo "85 1500000:90 1800000:70" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
         echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-        echo 80000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
+        echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
+        echo 10000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
         echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
         # enable boost for cgroup's tasks
         echo 1 > /dev/cpuctl/cpu.sched_boost
         # disallow upmigrate for cgroup's tasks
         echo 1 > /dev/cpuctl/bg_non_interactive/cpu.upmigrate_discourage
-
-        # Override with SOMC tuning parameters for governor
-        /system/bin/sh /system/etc/init.sony.cpu_parameter_gov.sh
 
         # insert core_ctl module and use conservative paremeters
         insmod /system/lib/modules/core_ctl.ko
@@ -959,7 +957,7 @@ case "$target" in
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         # configure core_ctl module parameters
         echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/max_cpus
-        echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+        echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
         echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
         echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
         echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
@@ -967,14 +965,31 @@ case "$target" in
         echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
         # Setting b.L scheduler parameters
         echo 1 > /proc/sys/kernel/sched_migration_fixup
-        echo 30 > /proc/sys/kernel/sched_small_task
+        echo 60 > /proc/sys/kernel/sched_small_task
         echo 20 > /proc/sys/kernel/sched_mostly_idle_load
         echo 3 > /proc/sys/kernel/sched_mostly_idle_nr_run
+        echo 9 > /proc/sys/kernel/sched_upmigrate_min_nice
         echo 99 > /proc/sys/kernel/sched_upmigrate
-        echo 85 > /proc/sys/kernel/sched_downmigrate
+        echo 90 > /proc/sys/kernel/sched_downmigrate
+        echo 30 > /proc/sys/kernel/sched_init_task_load
         echo 400000 > /proc/sys/kernel/sched_freq_inc_notify
         echo 400000 > /proc/sys/kernel/sched_freq_dec_notify
         echo 0 > /proc/sys/kernel/sched_boost
+        # Setting b.L per-core scheduler parameters
+        for i in {0,1,2,3}
+        do
+            echo 5 > /sys/devices/system/cpu/cpu$i/sched_mostly_idle_nr_run
+            echo 60 > /sys/devices/system/cpu/cpu$i/sched_mostly_idle_load
+            echo 960000 > /sys/devices/system/cpu/cpu$i/sched_mostly_idle_freq
+            echo 0 > /sys/devices/system/cpu/cpu$i/sched_prefer_idle
+        done
+        for i in {4,5,6,7}
+        do
+            echo 3 > /sys/devices/system/cpu/cpu$i/sched_mostly_idle_nr_run
+            echo 20 > /sys/devices/system/cpu/cpu$i/sched_mostly_idle_load
+            echo 0 > /sys/devices/system/cpu/cpu$i/sched_mostly_idle_freq
+            echo 0 > /sys/devices/system/cpu/cpu$i/sched_prefer_idle
+        done
         #enable rps static configuration
         echo 8 >  /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus
         for devfreq_gov in /sys/class/devfreq/qcom,cpubw*/governor
@@ -985,8 +1000,6 @@ case "$target" in
         do
             echo "cpufreq" > $devfreq_gov
         done
-        # Override with SOMC tuning parameters for scheduler and others
-        /system/bin/sh /system/etc/init.sony.cpu_parameter.sh
     ;;
 esac
 
