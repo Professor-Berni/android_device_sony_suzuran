@@ -29,7 +29,7 @@
 # Modifications are licensed under the License.
 #
 
-# import init.qcom.usb.rc
+import init.qcom.usb.rc
 import init.target.rc
 import init.sony-device.rc
 

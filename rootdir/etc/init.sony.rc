@@ -1,7 +1,5 @@
 # Copyright (c) 2013 Sony Mobile Communications Inc.
 
-import init.sony.usb.rc
-
 on init
     mkdir /tmp
     mount tmpfs tmpfs /tmp nosuid mode=0755,uid=0,gid=0

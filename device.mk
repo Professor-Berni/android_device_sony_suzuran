@@ -189,8 +189,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc \
+    init.qcom.usb.rc \
     init.sony.rc \
-    init.sony.usb.rc \
     init.sony-device.rc \
     init.sony-device-common.rc \
     init.sony-platform.rc \
