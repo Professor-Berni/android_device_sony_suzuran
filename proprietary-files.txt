@@ -419,6 +419,43 @@ vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxml.so
 
+# Security firmware
+etc/firmware/tzdtcpkctl.b00
+etc/firmware/tzdtcpkctl.b01
+etc/firmware/tzdtcpkctl.b02
+etc/firmware/tzdtcpkctl.b03
+etc/firmware/tzdtcpkctl.mdt
+etc/firmware/tzhdcp.b00
+etc/firmware/tzhdcp.b01
+etc/firmware/tzhdcp.b02
+etc/firmware/tzhdcp.b03
+etc/firmware/tzhdcp.mdt
+etc/firmware/tzlibasb.b00
+etc/firmware/tzlibasb.b01
+etc/firmware/tzlibasb.b02
+etc/firmware/tzlibasb.b03
+etc/firmware/tzlibasb.mdt
+etc/firmware/tznautilus.b00
+etc/firmware/tznautilus.b01
+etc/firmware/tznautilus.b02
+etc/firmware/tznautilus.b03
+etc/firmware/tznautilus.mdt
+etc/firmware/tzsuntory.b00
+etc/firmware/tzsuntory.b01
+etc/firmware/tzsuntory.b02
+etc/firmware/tzsuntory.b03
+etc/firmware/tzsuntory.mdt
+etc/firmware/tztpm.b00
+etc/firmware/tztpm.b01
+etc/firmware/tztpm.b02
+etc/firmware/tztpm.b03
+etc/firmware/tztpm.mdt
+etc/firmware/tzwidevine.b00
+etc/firmware/tzwidevine.b01
+etc/firmware/tzwidevine.b02
+etc/firmware/tzwidevine.b03
+etc/firmware/tzwidevine.mdt
+
 # Sensors
 lib64/hw/sensors.msm8994.so
 
