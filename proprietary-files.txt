@@ -180,6 +180,13 @@ vendor/lib/libmmcamera_sony_imx214_eeprom.so
 vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libois_lc898122.so
 
+# CMN firmware
+etc/firmware/cmnlib.b00
+etc/firmware/cmnlib.b01
+etc/firmware/cmnlib.b02
+etc/firmware/cmnlib.b03
+etc/firmware/cmnlib.mdt
+
 # CNE
 bin/cnd
 etc/cne/SwimConfig.xml
