@@ -141,29 +141,17 @@ etc/firmware/cpp_firmware_v1_8_0.fw
 # Camera module
 etc/flashled_calc_parameters.cfg
 lib/libcameralight.so
+vendor/camera/default.dat
 vendor/camera/flash.dat
+vendor/camera/snapshot.dat
+vendor/camera/streaming.dat
+vendor/camera/supported.dat
+vendor/camera/version.dat
 vendor/camera/LGI05BN0_IMX241.dat
 vendor/camera/SEM05BN0_IMX241.dat
-vendor/camera/SOI25BS0_BU64747GWZ.dat
-vendor/camera/SOI25BS0_BU64747GWZ_XCF.dat
-vendor/camera/SOI25BS0_BU64747GWZ_XFW.dat
-vendor/camera/SOI25BS0_IMX300.dat
-vendor/camera/SOI25BS1_BU64747GWZ.dat
-vendor/camera/SOI25BS1_BU64747GWZ_XCF.dat
-vendor/camera/SOI25BS1_BU64747GWZ_XFW.dat
-vendor/camera/SOI25BS1_IMX300.dat
-vendor/camera/SOI25BS2_BU64747GWZ.dat
-vendor/camera/SOI25BS2_BU64747GWZ_XCF.dat
-vendor/camera/SOI25BS2_BU64747GWZ_XFW.dat
-vendor/camera/SOI25BS2_IMX300.dat
-vendor/camera/SOI25BS3_BU64747GWZ.dat
-vendor/camera/SOI25BS3_BU64747GWZ_XCF.dat
-vendor/camera/SOI25BS3_BU64747GWZ_XFW.dat
-vendor/camera/SOI25BS3_IMX300.dat
-vendor/camera/SOI25BS4_BU64747GWZ.dat
-vendor/camera/SOI25BS4_BU64747GWZ_XCF.dat
-vendor/camera/SOI25BS4_BU64747GWZ_XFW.dat
-vendor/camera/SOI25BS4_IMX300.dat
+vendor/camera/SOI20BS0_IMX200.dat
+vendor/camera/SOI20BS1_BU64296GWX.dat
+vendor/camera/SOI20BS1_IMX200.dat
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ad5823_camcorder.so
 vendor/lib/libactuator_ad5823_camera.so
@@ -237,13 +225,6 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
-
-# Fingerprint
-bin/fingerprintd
-lib/hw/fingerprint.msm8994.so
-lib/lib_fpc_tac_shared.so
-lib64/hw/fingerprint.msm8994.so
-lib64/lib_fpc_tac_shared.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8994.so

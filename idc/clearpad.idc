@@ -2,10 +2,7 @@
 touch.deviceType = touchScreen
 
 # Pressure
-touch.pressure.scale = 0.0105
-
-# Size (Not tuned yet)
-touch.size.scale = 32.69
+touch.pressure.scale = 0.0065
 
 # Touch Filter
 touch.filter.level = 3
@@ -20,11 +17,11 @@ touch.filter.tfsw.f0.path = /system/lib64/touchfilter/roadrunner_ukf.so
 # Roadrunner
 touch.filter.RoadRunner.Enabled = 1
 touch.filter.RoadRunner.Debug = 0
-touch.filter.RoadRunner.c0.PredictionSteps = 0.0
-touch.filter.RoadRunner.c1.PredictionSteps = 2.8
-touch.filter.RoadRunner.c2.PredictionSteps = 2.8
-touch.filter.RoadRunner.c3.PredictionSteps = 2.8
-touch.filter.RoadRunner.FrameRate = 0.0105
+touch.filter.RoadRunner.c0.PredictionSteps = 2.1
+touch.filter.RoadRunner.c1.PredictionSteps = 3.2
+touch.filter.RoadRunner.c2.PredictionSteps = 4.9
+touch.filter.RoadRunner.c3.PredictionSteps = 6.4
+touch.filter.RoadRunner.FrameRate = 0.0079
 touch.filter.RoadRunner.PreSmoothingFactor = 0.2
 touch.filter.RoadRunner.PostSmoothingFactor = 0.1
 touch.filter.RoadRunner.DisplayPpi = 428

@@ -1468,7 +1468,7 @@
 
     <!-- Gain offset target for dmic2 unit calibration -->
     <path name="dmic2-adj-gain">
-        <ctl name="DEC9 Volume" value="84" />
+        <ctl name="DEC8 Volume" value="84" />
     </path>
 
     <path name="dmic1">
@@ -1820,43 +1820,43 @@
 
     <path name="speaker-mic">
         <path name="dmic2-adj-gain" />
-        <path name="dmic4" />
+        <path name="dmic2" />
     </path>
 
     <path name="stereo-mic-common">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1"/>
         <ctl name="AIF1_CAP Mixer SLIM TX8" value="1"/>
         <ctl name="SLIM_0_TX Channels" value="Two" />
-        <ctl name="SLIM TX7 MUX" value="DEC9" />
+        <ctl name="SLIM TX7 MUX" value="DEC8" />
         <ctl name="SLIM TX8 MUX" value="DEC7" />
         <ctl name="DEC7 MUX" value="DMIC1" />
-        <ctl name="DEC9 MUX" value="DMIC4" />
-        <ctl name="IIR1 INP1 MUX" value="DEC7" />
-        <ctl name="IIR2 INP1 MUX" value="DEC9" />
+        <ctl name="DEC8 MUX" value="DMIC2" />
+        <ctl name="IIR1 INP1 MUX" value="DEC8" />
+        <ctl name="IIR2 INP1 MUX" value="DEC7" />
     </path>
 
     <path name="stereo-mic">
         <path name="stereo-mic-common" />
-        <ctl name="DEC7 Volume" value="84" />
-        <ctl name="DEC9 Volume" value="84" />
+        <ctl name="DEC7 Volume" value="83" />
+        <ctl name="DEC8 Volume" value="84" />
     </path>
 
     <path name="stereo-mic-gain-low">
         <path name="stereo-mic-common" />
-        <ctl name="DEC7 Volume" value="84" />
-        <ctl name="DEC9 Volume" value="84" />
+        <ctl name="DEC7 Volume" value="83" />
+        <ctl name="DEC8 Volume" value="84" />
     </path>
 
     <path name="stereo-mic-gain-mid">
         <path name="stereo-mic-common" />
-        <ctl name="DEC7 Volume" value="97" />
-        <ctl name="DEC9 Volume" value="97" />
+        <ctl name="DEC7 Volume" value="96" />
+        <ctl name="DEC8 Volume" value="97" />
     </path>
 
     <path name="stereo-mic-gain-high">
         <path name="stereo-mic-common" />
-        <ctl name="DEC7 Volume" value="106" />
-        <ctl name="DEC9 Volume" value="106" />
+        <ctl name="DEC7 Volume" value="105" />
+        <ctl name="DEC8 Volume" value="106" />
     </path>
 
     <path name="speaker-mono-mic-common">
@@ -1968,7 +1968,7 @@
     </path>
 
     <path name="handset-secondary-mic">
-        <path name="dmic4" />
+        <path name="dmic2" />
     </path>
 
     <path name="anc-handset">
@@ -2438,36 +2438,36 @@
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1"/>
         <ctl name="AIF1_CAP Mixer SLIM TX8" value="1"/>
         <ctl name="SLIM_0_TX Channels" value="Two" />
-        <ctl name="SLIM TX7 MUX" value="DEC9" />
+        <ctl name="SLIM TX7 MUX" value="DEC8" />
         <ctl name="SLIM TX8 MUX" value="DEC7" />
         <ctl name="DEC7 MUX" value="DMIC1" />
-        <ctl name="DEC9 MUX" value="DMIC4" />
+        <ctl name="DEC8 MUX" value="DMIC2" />
         <ctl name="IIR1 INP1 MUX" value="DEC7" />
-        <ctl name="IIR2 INP1 MUX" value="DEC9" />
+        <ctl name="IIR2 INP1 MUX" value="DEC8" />
     </path>
 
     <path name="camcorder-mic">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="84" />
-        <ctl name="DEC9 Volume" value="84" />
+        <ctl name="DEC7 Volume" value="83" />
+        <ctl name="DEC8 Volume" value="84" />
     </path>
 
     <path name="camcorder-mic-gain-low">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="84" />
-        <ctl name="DEC9 Volume" value="84" />
+        <ctl name="DEC7 Volume" value="83" />
+        <ctl name="DEC8 Volume" value="84" />
     </path>
 
     <path name="camcorder-mic-gain-mid">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="97" />
-        <ctl name="DEC9 Volume" value="97" />
+        <ctl name="DEC7 Volume" value="96" />
+        <ctl name="DEC8 Volume" value="97" />
     </path>
 
     <path name="camcorder-mic-gain-high">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="106" />
-        <ctl name="DEC9 Volume" value="106" />
+        <ctl name="DEC7 Volume" value="105" />
+        <ctl name="DEC8 Volume" value="106" />
     </path>
 
     <path name="hdmi-tx">
@@ -2571,8 +2571,8 @@
         <ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
         <ctl name="SLIM TX7 MUX" value="DEC7" />
         <ctl name="DEC7 MUX" value="DMIC1" />
-        <ctl name="SLIM TX8 MUX" value="DEC9" />
-        <ctl name="DEC9 MUX" value="DMIC4" />
+        <ctl name="SLIM TX8 MUX" value="DEC8" />
+        <ctl name="DEC8 MUX" value="DMIC2" />
         <ctl name="SLIM_0_TX Channels" value="Two" />
         <path name="dmic1-adj-gain" />
         <path name="dmic2-adj-gain" />

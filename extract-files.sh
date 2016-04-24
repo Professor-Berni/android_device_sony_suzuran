@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set -e
-export DEVICE=sumire
+export DEVICE=ivy
 export VENDOR=sony
 
 if [ $# -eq 0 ]; then

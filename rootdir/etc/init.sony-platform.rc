@@ -213,9 +213,6 @@ on post-fs-data
     # the following directory.
     mkdir /data/dtcpip 0770 system drmrpc
 
-    # create directory for ric data
-    
-
     # Create directory to store logs
     mkdir /data/system/log 0770 root system
     chown root system /data/system/log
@@ -259,7 +256,6 @@ on early-boot
 on boot
     # SONY: Enable Sony RIC
     mount securityfs securityfs /sys/kernel/security nosuid nodev noexec
-    write /sys/kernel/security/sony_ric/enable 0
 
     # SONY: Native dumper via corepattern
     write /proc/sys/kernel/core_pattern "|/system/bin/nativedumper -c %p %e %s %t"
@@ -457,16 +453,5 @@ on property:init.svc.bootanim=running
 on property:init.svc.fuse_sdcard1=running
    write /sys/class/block/mmcblk1/queue/scheduler cfq
    write /sys/class/block/mmcblk1/bdi/max_ratio 1
-
-# Start RIC
-#service ric /sbin/ric
-#    user root
-#    group root drmrpc trimarea system
-#    class main
-#    seclabel u:r:ric:s0
-
-
-
-
 
 import init.sony.rc

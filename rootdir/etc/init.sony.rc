@@ -126,7 +126,6 @@ service credmgrd /system/bin/credmgrd
 
 # Start Security Daemon
 service secd /system/bin/secd
-    setenv LD_PRELOAD /lib/lib-preload64.so
     user system
     group system
     socket secd_ebl_sock stream 0660 system credmgr_client

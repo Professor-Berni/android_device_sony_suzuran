@@ -14,12 +14,14 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/sony/sumire
+DEVICE_PATH := device/sony/ivy
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+BOARD_VENDOR := sony
+
 # Assert
-TARGET_OTA_ASSERT_DEVICE := E6653,sumire
+TARGET_OTA_ASSERT_DEVICE := E6553,ivy
 
 # Architecture
 TARGET_ARCH := arm64
@@ -52,7 +54,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100
 TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := cyanogenmod_sumire_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_ivy_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/sony/msm8994
 
@@ -142,4 +144,4 @@ WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin"
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/sony/sumire/BoardConfigVendor.mk
+-include vendor/sony/ivy/BoardConfigVendor.mk

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEVICE=sumire
+DEVICE=ivy
 VENDOR=sony
 
 OUTDIR=vendor/$VENDOR/$DEVICE
@@ -111,7 +111,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),sumire)
+ifeq (\$(TARGET_DEVICE),ivy)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := TimeService

@@ -1,11 +1,8 @@
-# Copyright (c) 2015 Sony Mobile Communications Inc.
+# Copyright (c) 2014 Sony Mobile Communications Inc.
 #
 # product common configuration
 #
 import init.sony-platform.rc
-
-on init
-    write /sys/devices/soc.0/f98a4900.sdhci/mmc_host/mmc1/clkgate_delay 1
 
 on post-fs
     # Touch
@@ -90,14 +87,6 @@ service kobjeventd /system/bin/kobjeventd
     user system
     group system
     class main
-
-# Start Key Provision daemon
-service keyprovd /system/bin/keyprovd
-    setenv LD_PRELOAD /lib/lib-preload64.so
-    user system
-    group system
-    oneshot
-    class late_start
 
 # SmartcardService UICCterminal Daemon
 service ssuiccd /system/bin/ssuiccd

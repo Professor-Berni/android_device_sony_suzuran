@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),sumire)
+ifeq ($(TARGET_DEVICE),ivy)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

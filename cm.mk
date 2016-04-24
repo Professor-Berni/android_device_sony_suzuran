@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/sony/sumire/full_sumire.mk)
+$(call inherit-product, device/sony/ivy/full_ivy.mk)
 
 # Inherit some common CM stuff
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -22,13 +22,10 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-PRODUCT_NAME := cm_sumire
-BOARD_VENDOR := sony
-TARGET_VENDOR := sony
-PRODUCT_DEVICE := sumire
+PRODUCT_NAME := cm_ivy
 
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=sumire \
-    BUILD_FINGERPRINT=Sony/sumire/sumire:6.0/KITAKAMI-2.1.1-160226-0810/1:user/dev-keys \
-    PRIVATE_BUILD_DESC="sumire-user 6.0 KITAKAMI-2.1.1-160226-0810 1 dev-keys"
+    PRODUCT_NAME=ivy \
+    BUILD_FINGERPRINT=Sony/ivy/ivy:6.0/KITAKAMI-2.1.1-160226-0810/1:user/dev-keys \
+    PRIVATE_BUILD_DESC="ivy-user 6.0 KITAKAMI-2.1.1-160226-0810 1 dev-keys"
