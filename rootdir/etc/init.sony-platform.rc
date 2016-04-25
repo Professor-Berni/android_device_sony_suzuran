@@ -6,7 +6,7 @@
 on init
     # SONY: Start the TrimArea Daemon. It must be started before fota-ua
     wait /dev/block/mmcblk0p1
-    chown tad tad /dev/block/mmcblk0p1
+    chown root root /dev/block/mmcblk0p1
     chmod 0770 /dev/block/mmcblk0p1
     class_start trimarea
     exec u:r:tad:s0 system -- /sbin/wait4tad_static
@@ -282,11 +282,10 @@ on property:ro.semc.enable.fast_dormancy=false
 # SONY: TrimArea Daemon
 # Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
 service tad_static /sbin/tad_static /dev/block/bootdevice/by-name/TA 0,16
-    user tad
-    group tad root
-    socket tad stream 0660 system trimarea
-    class trimarea
-# tad_static is in rootfs, normal file_context does not work
+    class core
+    user root
+    group root
+    socket tad stream 0660 system system
     seclabel u:r:tad:s0
 
 service updatemiscta /system/bin/updatemiscta

@@ -256,7 +256,7 @@
 /dev/block/bootdevice/by-name/config 0600  system      system
 
 # TA
-/dev/block/bootdevice/by-name/TA 0770  tad     tad
+/dev/block/bootdevice/by-name/TA 0770  root     root
 
 # Fingerprint sensor SPI device
 /sys/devices/soc.0/f9923000.spi/spi_master/spi0/spi0.1 bus_lock         0220 system input
