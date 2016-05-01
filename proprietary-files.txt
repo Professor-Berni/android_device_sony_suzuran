@@ -477,6 +477,7 @@ vendor/lib/libmmcamera_ubifocus_lib.so
 
 # TA
 bin/mlog_qmi_service
+bin/sct_service
 bin/taimport
 bin/ta_param_loader
 bin/ta_qmi_service
