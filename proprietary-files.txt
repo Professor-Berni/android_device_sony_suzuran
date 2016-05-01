@@ -476,6 +476,7 @@ vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 
 # TA
+bin/mlog_qmi_service
 bin/taimport
 bin/ta_param_loader
 bin/ta_qmi_service
