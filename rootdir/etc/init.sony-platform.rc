@@ -8,8 +8,6 @@ on init
     wait /dev/block/mmcblk0p1
     chown root root /dev/block/mmcblk0p1
     chmod 0770 /dev/block/mmcblk0p1
-    class_start trimarea
-    exec u:r:tad:s0 system -- /sbin/wait4tad_static
 
     # SONY: checkabortedflash should be started as early as possible.
     # Dependant on the TrimArea Daemon.
@@ -213,10 +211,6 @@ on post-fs-data
     rmdir /data/pc
 
 on early-boot
-    start ta_qmi_service
-    start sct_service
-    start mlog_qmi_service
-
     exec u:r:touch_fw_update:s0 -- /system/bin/sh /system/etc/touch_fw_update.sh
     
 
@@ -288,21 +282,15 @@ service tad_static /sbin/tad_static /dev/block/bootdevice/by-name/TA 0,16
     socket tad stream 0660 system system
     seclabel u:r:tad:s0
 
-service updatemiscta /system/bin/updatemiscta
-    class main
-    user updatemiscta
-    group trimarea
-    oneshot
-
 # Trim Area QMI service
 service ta_qmi_service /system/bin/ta_qmi_service
     user root
-    disabled
+    class main
 
 # Secure Config Transfer service
 service sct_service /system/bin/sct_service
     user root
-    disabled
+    class main
 
 service illumination /system/bin/illumination_service
     socket illumination stream 0660 system system
@@ -381,7 +369,7 @@ service javadumper /system/bin/javadumper
 # Modem Log QMI service
 service mlog_qmi_service /system/bin/mlog_qmi_service
     user root
-    disabled
+    class main
 
 # Native daemon for PacketFilter
 service apfd /system/bin/apfd
