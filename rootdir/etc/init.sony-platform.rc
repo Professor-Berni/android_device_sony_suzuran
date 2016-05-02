@@ -47,10 +47,6 @@ on fs
     chown system system /lta-label
     chmod 0555 /lta-label
 
-    # mount oem
-    wait /dev/block/bootdevice/by-name/oem
-    mount ext4 /dev/block/bootdevice/by-name/oem /oem ro barrier=1
-
     # mount diag
     mkdir /idd 0751 idd idd
     wait /dev/block/bootdevice/by-name/diag

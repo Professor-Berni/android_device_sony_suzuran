@@ -8,7 +8,6 @@
 #<src>                                  <mnt_point>        <type>  <mnt_flags and options>                         <fs_mgr_flags>
 /dev/block/bootdevice/by-name/system    /system            ext4    ro,barrier=1,discard                            wait
 /dev/block/bootdevice/by-name/userdata  /data              ext4    nosuid,nodev,noatime,barrier=1,noauto_da_alloc,discard  wait,check,encryptable=footer,resize
-/dev/block/bootdevice/by-name/oem       /oem         ext4    ro,barrier=1                                wait
 /dev/block/bootdevice/by-name/cache     /cache        ext4    nosuid,nodev,noatime,barrier=1,discard                      wait,check
 /dev/block/bootdevice/by-name/boot      /boot              emmc    defaults                                        defaults
 /dev/block/bootdevice/by-name/FOTAKernel /recovery         emmc    defaults                                        defaults
