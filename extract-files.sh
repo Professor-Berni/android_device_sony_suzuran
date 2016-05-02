@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#set -e
+set -e
+
 export DEVICE=ivy
 export VENDOR=sony
 
