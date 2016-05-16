@@ -16,7 +16,7 @@
 
 DEVICE_PATH := device/sony/ivy
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
 BOARD_VENDOR := sony
 
