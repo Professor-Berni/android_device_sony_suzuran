@@ -654,11 +654,7 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # Time services
--app/TimeService/TimeService.apk
-bin/time_daemon
-vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
-vendor/lib64/libTimeService.so
 -vendor/lib64/libtime_genoff.so
 
 # Touchscreen
