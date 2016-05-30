@@ -25,6 +25,7 @@ etc/firmware/BCM43xx.hcd
 # Camera
 bin/mm-qcamera-daemon
 lib/hw/camera.msm8994.so
+lib/libcammw.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libmm-qcamera.so
@@ -50,11 +51,14 @@ vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
 vendor/lib/libmmcamera_cac2_lib.so
+vendor/lib/libmmcamera_chromaflash_lib.so
+vendor/lib/libmmcamera_dw9761b_eeprom.so
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libmmcamera_eztune_module.so
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_imx258_gt24c16_eeprom.so
 vendor/lib/libmmcamera_isp_abf44.so
 vendor/lib/libmmcamera_isp_bcc44.so
 vendor/lib/libmmcamera_isp_be_stats44.so
@@ -97,9 +101,21 @@ vendor/lib/libmmcamera_isp_scaler_viewfinder46.so
 vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_sub_module.so
 vendor/lib/libmmcamera_isp_wb46.so
+vendor/lib/libmmcamera_llvd.so
+vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
+vendor/lib/libmmcamera_optizoom_lib.so
+vendor/lib/libmmcamera_ov4688_eeprom.so
+vendor/lib/libmmcamera_pdaf.so
+vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
+vendor/lib/libmmcamera_sony_imx214_eeprom.so
+vendor/lib/libmmcamera_sonyimx135_eeprom.so
+vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib/libmmcamera_trueportrait_lib.so
+vendor/lib/libmmcamera_tuning.so
+vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib/libmmcamera_vpu_module.so
 vendor/lib/libmmipl.so
 vendor/lib/libmmjpeg.so
@@ -141,6 +157,7 @@ etc/firmware/cpp_firmware_v1_8_0.fw
 # Camera module
 etc/flashled_calc_parameters.cfg
 lib/libcameralight.so
+lib64/libcameralight.so
 vendor/camera/default.dat
 vendor/camera/flash.dat
 vendor/camera/snapshot.dat
@@ -148,19 +165,128 @@ vendor/camera/streaming.dat
 vendor/camera/supported.dat
 vendor/camera/version.dat
 vendor/camera/LGI05BN0_IMX241.dat
+vendor/camera/LGI05BN0/color_ctrl.dat
+vendor/camera/LGI05BN0/dataflow.dat
+vendor/camera/LGI05BN0/debug_mgr.dat
+vendor/camera/LGI05BN0/exposure_ctrl.dat
+vendor/camera/LGI05BN0/exposure_ctrl_diagram.dat
+vendor/camera/LGI05BN0/exposure_ctrl_gamma.dat
+vendor/camera/LGI05BN0/face_detector.dat
+vendor/camera/LGI05BN0/flicker_detector.dat
+vendor/camera/LGI05BN0/focus_stats_conv.dat
+vendor/camera/LGI05BN0/food_comp_yummy.dat
+vendor/camera/LGI05BN0/food_detector.dat
+vendor/camera/LGI05BN0/hal_ctrl.dat
+vendor/camera/LGI05BN0/hal_ctrl_platform.dat
+vendor/camera/LGI05BN0/hal_ctrl_platform_abf.dat
+vendor/camera/LGI05BN0/hal_ctrl_platform_asf_lin.dat
+vendor/camera/LGI05BN0/hal_ctrl_platform_asf_stp.dat
+vendor/camera/LGI05BN0/hal_ctrl_platform_gic.dat
+vendor/camera/LGI05BN0/hdr_comp.dat
+vendor/camera/LGI05BN0/idt_ctrl.dat
+vendor/camera/LGI05BN0/image_conv.dat
+vendor/camera/LGI05BN0/image_conv_canele.dat
+vendor/camera/LGI05BN0/image_conv_marble.dat
+vendor/camera/LGI05BN0/image_conv_raisin.dat
+vendor/camera/LGI05BN0/image_conv_spica.dat
+vendor/camera/LGI05BN0/jpeg_enc.dat
+vendor/camera/LGI05BN0/lens_ctrl.dat
+vendor/camera/LGI05BN0/motion_estimation.dat
+vendor/camera/LGI05BN0/multiframe_nr.dat
+vendor/camera/LGI05BN0/multiframe_nr_melonpan.dat
+vendor/camera/LGI05BN0/multiframe_nr_mugichoco.dat
+vendor/camera/LGI05BN0/multiframe_nr_toppo.dat
+vendor/camera/LGI05BN0/object_tracker.dat
+vendor/camera/LGI05BN0/scene_detector.dat
+vendor/camera/LGI05BN0/snapshot_ctrl.dat
 vendor/camera/SEM05BN0_IMX241.dat
+vendor/camera/SEM05BN0/color_ctrl.dat
+vendor/camera/SEM05BN0/dataflow.dat
+vendor/camera/SEM05BN0/debug_mgr.dat
+vendor/camera/SEM05BN0/exposure_ctrl.dat
+vendor/camera/SEM05BN0/exposure_ctrl_diagram.dat
+vendor/camera/SEM05BN0/exposure_ctrl_gamma.dat
+vendor/camera/SEM05BN0/face_detector.dat
+vendor/camera/SEM05BN0/flicker_detector.dat
+vendor/camera/SEM05BN0/focus_stats_conv.dat
+vendor/camera/SEM05BN0/food_comp_yummy.dat
+vendor/camera/SEM05BN0/food_detector.dat
+vendor/camera/SEM05BN0/hal_ctrl.dat
+vendor/camera/SEM05BN0/hal_ctrl_platform.dat
+vendor/camera/SEM05BN0/hal_ctrl_platform_abf.dat
+vendor/camera/SEM05BN0/hal_ctrl_platform_asf_lin.dat
+vendor/camera/SEM05BN0/hal_ctrl_platform_asf_stp.dat
+vendor/camera/SEM05BN0/hal_ctrl_platform_gic.dat
+vendor/camera/SEM05BN0/hdr_comp.dat
+vendor/camera/SEM05BN0/idt_ctrl.dat
+vendor/camera/SEM05BN0/image_conv.dat
+vendor/camera/SEM05BN0/image_conv_canele.dat
+vendor/camera/SEM05BN0/image_conv_marble.dat
+vendor/camera/SEM05BN0/image_conv_raisin.dat
+vendor/camera/SEM05BN0/image_conv_spica.dat
+vendor/camera/SEM05BN0/jpeg_enc.dat
+vendor/camera/SEM05BN0/lens_ctrl.dat
+vendor/camera/SEM05BN0/motion_estimation.dat
+vendor/camera/SEM05BN0/multiframe_nr.dat
+vendor/camera/SEM05BN0/multiframe_nr_melonpan.dat
+vendor/camera/SEM05BN0/multiframe_nr_mugichoco.dat
+vendor/camera/SEM05BN0/multiframe_nr_toppo.dat
+vendor/camera/SEM05BN0/object_tracker.dat
+vendor/camera/SEM05BN0/scene_detector.dat
+vendor/camera/SEM05BN0/snapshot_ctrl.dat
+vendor/camera/SOI20BS0_BU64296GWX.dat
 vendor/camera/SOI20BS0_IMX200.dat
+vendor/camera/SOI20BS1/color_ctrl.dat
+vendor/camera/SOI20BS1/dataflow.dat
+vendor/camera/SOI20BS1/debug_mgr.dat
+vendor/camera/SOI20BS1/exposure_ctrl.dat
+vendor/camera/SOI20BS1/exposure_ctrl_diagram.dat
+vendor/camera/SOI20BS1/exposure_ctrl_gamma.dat
+vendor/camera/SOI20BS1/face_detector.dat
+vendor/camera/SOI20BS1/flicker_detector.dat
+vendor/camera/SOI20BS1/focus_stats_conv.dat
+vendor/camera/SOI20BS1/food_comp_yummy.dat
+vendor/camera/SOI20BS1/food_detector.dat
+vendor/camera/SOI20BS1/hal_ctrl.dat
+vendor/camera/SOI20BS1/hal_ctrl_platform.dat
+vendor/camera/SOI20BS1/hal_ctrl_platform_abf.dat
+vendor/camera/SOI20BS1/hal_ctrl_platform_asf_lin.dat
+vendor/camera/SOI20BS1/hal_ctrl_platform_asf_stp.dat
+vendor/camera/SOI20BS1/hal_ctrl_platform_gic.dat
+vendor/camera/SOI20BS1/hdr_comp.dat
+vendor/camera/SOI20BS1/idt_ctrl.dat
+vendor/camera/SOI20BS1/image_conv.dat
+vendor/camera/SOI20BS1/image_conv_canele.dat
+vendor/camera/SOI20BS1/image_conv_marble.dat
+vendor/camera/SOI20BS1/image_conv_raisin.dat
+vendor/camera/SOI20BS1/image_conv_spica.dat
+vendor/camera/SOI20BS1/jpeg_enc.dat
+vendor/camera/SOI20BS1/lens_ctrl.dat
+vendor/camera/SOI20BS1/motion_estimation.dat
+vendor/camera/SOI20BS1/multiframe_nr.dat
+vendor/camera/SOI20BS1/multiframe_nr_melonpan.dat
+vendor/camera/SOI20BS1/multiframe_nr_mugichoco.dat
+vendor/camera/SOI20BS1/multiframe_nr_toppo.dat
+vendor/camera/SOI20BS1/object_tracker.dat
+vendor/camera/SOI20BS1/scene_detector.dat
+vendor/camera/SOI20BS1/snapshot_ctrl.dat
 vendor/camera/SOI20BS1_BU64296GWX.dat
 vendor/camera/SOI20BS1_IMX200.dat
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ad5823_camcorder.so
 vendor/lib/libactuator_ad5823_camera.so
+vendor/lib/libactuator_bu64244gwz.so
+vendor/lib/libactuator_bu64244gwz_camcorder.so
+vendor/lib/libactuator_bu64244gwz_camera.so
 vendor/lib/libactuator_dw9714.so
 vendor/lib/libactuator_dw9714_camcorder.so
 vendor/lib/libactuator_dw9714_camera.so
 vendor/lib/libactuator_dw9716.so
 vendor/lib/libactuator_dw9716_camcorder.so
 vendor/lib/libactuator_dw9716_camera.so
+vendor/lib/libactuator_dw9761b.so
+vendor/lib/libactuator_dw9761b_camcorder.so
+vendor/lib/libactuator_dw9761b_camera.so
 vendor/lib/libactuator_lc898122.so
 vendor/lib/libactuator_lc898122_camcorder.so
 vendor/lib/libactuator_lc898122_camera.so
@@ -238,6 +364,7 @@ vendor/lib/hw/gatekeeper.msm8994.so
 vendor/lib64/hw/gatekeeper.msm8994.so
 
 # GPS
+bin/loc_launcher
 lib/hw/gps.default.so
 lib/libgps.utils.so
 lib/libloc_api_v02.so
@@ -311,6 +438,13 @@ vendor/lib64/libscale.so
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
 
+# Illumination/lights
+lib/liblights-core.so
+lib/hw/lights.default.so
+lib64/liblights-core.so
+lib64/hw/lights.default.so
+bin/illumination_service
+
 # Keystore
 vendor/lib/hw/keystore.msm8994.so
 vendor/lib64/hw/keystore.msm8994.so
@@ -335,6 +469,7 @@ bin/energy-awareness
 bin/msm_irqbalance
 vendor/bin/perfd
 vendor/lib/libqc-opt.so
+vendor/lib/libqti-perfd-client.so
 vendor/lib64/libqc-opt.so
 vendor/lib64/libqti-perfd-client.so
 
@@ -393,12 +528,15 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # Radio
+bin/ATFWD-daemon
 bin/ipacm-diag
 bin/netmgrd
 bin/qmuxd
 bin/radish
 bin/rfs_access
 bin/rmt_storage
+bin/tftp_server
+bin/qcom-system-daemon
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 lib/libpin-cache.so
@@ -413,10 +551,12 @@ framework/qcnvitems.jar
 framework/qcrilhook.jar
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
+vendor/lib/libsubsystem_control.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
+vendor/lib64/libsubsystem_control.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libril-qc-qmi-1.so
@@ -461,7 +601,15 @@ etc/firmware/tzwidevine.b03
 etc/firmware/tzwidevine.mdt
 
 # Sensors
+bin/sensors.qcom
+lib/hw/sensors.msm8994.so
 lib64/hw/sensors.msm8994.so
+vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
+vendor/lib/sensors.ssc.so
+vendor/lib64/libsensor1.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/sensors.ssc.so
 
 # Signed Venus (media) firmware
 etc/firmware/venus.b00
@@ -477,16 +625,26 @@ vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 
 # TA
+bin/iddd
 bin/mlog_qmi_service
+bin/scd
+bin/scdnotifier
 bin/sct_service
 bin/taimport
 bin/ta_param_loader
 bin/ta_qmi_service
+bin/updatemiscta
+lib/libidd.so
 lib/libMiscTaAccessor.so
 lib/libmiscta.so
+lib/libprotobuf-c.so
+lib/libsys-utils.so
 lib/libta.so
+lib64/libidd.so
 lib64/libMiscTaAccessor.so
 lib64/libmiscta.so
+lib64/libprotobuf-c.so
+lib64/libsys-utils.so
 lib64/libta.so
 
 # Thermal
@@ -502,6 +660,21 @@ vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
 vendor/lib64/libTimeService.so
 -vendor/lib64/libtime_genoff.so
+
+# Touchscreen
+etc/firmware/touch_module_id_0xb0.img
+etc/firmware/touch_module_id_0xb1.img
+etc/firmware/touch_module_id_0xb2.img
+etc/firmware/touch_module_id_0xb3.img
+etc/firmware/touch_module_id_0xba.img
+etc/firmware/touch_module_id_0xbb.img
+etc/firmware/touch_module_id_0xbc.img
+etc/firmware/touch_module_id_0xca.img
+etc/firmware/touch_module_id_0xcb.img
+etc/firmware/touch_module_id_0xcc.img
+etc/firmware/touch_module_id_0xd0.img
+etc/firmware/touch_module_id_0xd1.img
+etc/touch_fw_update.sh
 
 # Wifi
 etc/firmware/wlan/bcmdhd/bcmdhd.cal
