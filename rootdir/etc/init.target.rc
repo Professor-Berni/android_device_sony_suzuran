@@ -33,16 +33,9 @@ on early-init
     mkdir /bt_firmware 0771 system system
     symlink /data/tombstones /tombstones
 
-on post-fs
-    export LD_PRELOAD libNimsWrap.so
-
 on fs
     # SONY: start service that shows graphics if checking filesystems takes long time.
-    start fsckwait
     mount_all fstab.qcom
-
-    # SONY: notify the service that starts the graphics to stop.
-    exec u:r:fsckwait:s0 system -- /sbin/fsckwait e
 
     wait /dev/block/bootdevice/by-name/persist /persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
@@ -75,7 +68,8 @@ on boot
     write /sys/bus/i2c/devices/2-004a/update_fw 1
     write /sys/bus/i2c/devices/2-004a/update_cfg 1
     write /sys/bus/i2c/devices/2-0020/input/input0/update_fw 1
-# access permission for secure touch
+
+    # access permission for secure touch
     chmod 0660 /sys/devices/soc.0/f9924000.i2c/i2c-2/2-0020/input/input0/secure_touch_enable
     chmod 0440 /sys/devices/soc.0/f9924000.i2c/i2c-2/2-0020/input/input0/secure_touch
     chmod 0660 /sys/devices/soc.0/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
@@ -297,30 +291,3 @@ service energy-awareness /system/bin/energy-awareness
     group system
     oneshot
 
-service dts_configurator /system/bin/dts_configurator
-    class late_start
-    user system
-    group system media audio
-    oneshot
-
-service dtseagleservice /system/bin/dts_eagle_service
-    class late_start
-    user system
-    group audio media
-    disabled
-
-on property:init.svc.dts_configurator=stopped
-    start dtseagleservice
-
-service fidodaemon /system/vendor/bin/fidodaemon
-    class late_start
-    user system
-    group system
-
-service fsckwait /sbin/fsckwait s
-    user root
-    group root system graphics
-    disabled
-    oneshot
-    socket fsckwait stream 0660 root root
-    seclabel u:r:fsckwait:s0

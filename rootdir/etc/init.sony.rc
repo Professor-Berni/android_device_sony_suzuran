@@ -7,9 +7,6 @@ on init
     
     chown root system /proc/rdtag
 
-on early-fs
-    
-
 on post-fs-data
     mkdir /data/credmgr 0770 system credmgr_client
     mkdir /data/tombstones 0755 system system
@@ -30,147 +27,12 @@ on post-fs-data
     mkdir /mnt/idd/startup-prober 0700 root root
     
     restorecon_recursive /mnt/idd
-    exec u:r:fota-init:s0 -- /system/bin/sh /system/etc/post-fs-data-fota.sh
-
-on early-boot
-    exec /system/bin/sh /system/etc/pre_hw_config.sh
 
 on boot
-    # Install exfat module to support exfat file system
-    insmod /system/lib/modules/texfat.ko
-
     # Disable C_A_D
     write /proc/sys/kernel/ctrl-alt-del 0
-
-    # Configure coredumps
-    
-
-    # Override the value set in rootdir/init.rc
-    
-
-    
 
     # NFC local data and storage
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
-on property:dev.bootcomplete=1
-    start fota-snoop
-    start fota-trigger
-    start startup-prober
-
-# klogger and klogrouter service switch
-
-
-
-
-
-
-# input events logger
-
-
-
-
-
-
-service cleanlostfound /system/bin/cleanlostfound.sh
-    oneshot
-    disabled
-    group system root idd cache
-    user root
-
-#tcpdump service
-
-
-#iplog service
-
-
-
-#service to let Service Menu get and set Wlan antenna mode
-service sm_svc_get /system/bin/sm_native_svc GetWlanAntennaMode
-    oneshot
-    disabled
-
-service sm_svc_set /system/bin/sm_native_svc SetWlanAntennaMode
-    oneshot
-    disabled
-
-on property:wlan.antenna_mode.action=get
-    start sm_svc_get
-
-on property:wlan.antenna_mode.action=set
-    start sm_svc_set
-
-
-
-# klogger service
-
-
-# klogrouter service
-
-
-# input events logger service (output to file)
-
-
-# input events logger service (output to logcat)
-
-
-# Start Credential manager daemon
-service credmgrd /system/bin/credmgrd
-    user system
-    group credmgr_client
-    socket credmgr stream 0660 system credmgr_client
-    class main
-
-# Start Security Daemon
-service secd /system/bin/secd
-    user system
-    group system
-    socket secd_ebl_sock stream 0660 system credmgr_client
-    socket secd_devsec_sock stream 0660 system credmgr_client
-    socket secd_credmgr_sock stream 0660 system credmgr_client
-    class main
-
-#Start crashmonitor native service
-
-
-#Start IDD thermal probe
-
-
-# Sony: FOTA snooping
-service fota-snoop /system/bin/fota-snoop
-    group cache
-    oneshot
-    disabled
-
-# Sony: FOTA trigger
-service fota-trigger /system/bin/fota-trigger
-    group cache
-    disabled
-
-# Start system_monitor
-service system_monitor /system/bin/system_monitor
-    socket sysmon stream 0660 root system
-    class core
-    user root
-    group trimarea system qcom_diag radio
-    disabled
-
-on property:ro.somc.thermal=system_monitor
-    start system_monitor
-
-
-
-service startup-prober /system/bin/startup-prober
-    user root
-    oneshot
-    disabled
-    group trimarea drmrpc system credmgr_client
-
-# Diskwrite IDD probe
-
-
-# Configurate TCP/IP kernel settings
-service mss_update /system/bin/mssconfig
-    class core
-    oneshot

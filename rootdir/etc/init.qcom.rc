@@ -34,10 +34,6 @@ import init.qcom.usb.rc
 import init.target.rc
 import init.sony-device.rc
 
-on early-init
-    insmod /sbin/qcrypto_module.ko
-    insmod /sbin/qdrbg_module.ko
-
 on init
     start qfintverify
     # Set permissions for persist partition
@@ -704,10 +700,6 @@ service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     disabled
     oneshot
 
-on property:crypto.driver.load=1
-     insmod /system/lib/modules/qce.ko
-     insmod /system/lib/modules/qcedev.ko
-
 service drmdiag /system/bin/drmdiagapp
     class late_start
      user root
@@ -932,11 +924,6 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     user root
     group root
     disabled
-
-service wfdservice /system/bin/wfdservice
-    class main
-    user system
-    group graphics audio camera inet net_bt net_bt_admin net_bt_stack drmrpc bluetooth media_rw media wifi
 
 service RIDL /system/vendor/bin/RIDLClient.exe
     class late_start
