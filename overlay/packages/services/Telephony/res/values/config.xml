@@ -19,4 +19,14 @@
          are routed through the android.media.AudioManager class (true) or through
          the com.android.internal.telephony.Phone interface (false). -->
     <bool name="send_mic_mute_to_AudioManager">true</bool>
+
+    <!-- Show enabled lte option for lte device -->
+    <bool name="config_enabled_lte" translatable="false">true</bool>
+
+    <!-- Flag indicating if dtmf tone type is enabled -->
+    <bool name="dtmf_type_enabled">true</bool>
+
+    <!-- Determine whether we should show the "listen for instructions" screen after
+         successfully placing the OTA call -->
+    <integer name="OtaShowListeningScreen">1</integer>
 </resources>
