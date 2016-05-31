@@ -23,7 +23,10 @@ vendor/lib64/libaudcal.so
 etc/firmware/BCM43xx.hcd
 
 # Camera
+bin/mm-qcamera-app
 bin/mm-qcamera-daemon
+lib/libcamera_clientsemc.so
+lib64/libcamera_clientsemc.so
 lib/hw/camera.msm8994.so
 lib/libcammw.so
 lib/libmmcamera_interface.so
@@ -125,6 +128,9 @@ vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
+vendor/lib64/libmmcamera2_q3a_core.so
+vendor/lib64/libmmcamera2_sensor_debug.so
+vendor/lib64/libmmcamera2_stats_algorithm.so
 
 # Camera chromatix
 vendor/lib/libchromatix_s5k3m2xx_common.so
@@ -305,6 +311,43 @@ vendor/lib/libmmcamera_ov4688_eeprom.so
 vendor/lib/libmmcamera_sony_imx214_eeprom.so
 vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libois_lc898122.so
+
+# Cacao
+lib/camera/libexcal_color_ctrl_plugin.so
+lib/camera/libexcal_debug_display_plugin.so
+lib/camera/libexcal_exposure_ctrl_plugin.so
+lib/camera/libexcal_face_detector_plugin.so
+lib/camera/libexcal_flicker_detector_plugin.so
+lib/camera/libexcal_focus_stats_conv_plugin.so
+lib/camera/libexcal_food_comp_plugin.so
+lib/camera/libexcal_food_detector_plugin.so
+lib/camera/libexcal_hal_ctrl_plugin.so
+lib/camera/libexcal_hdr_plugin.so
+lib/camera/libexcal_idt_ctrl_plugin.so
+lib/camera/libexcal_image_conv_plugin.so
+lib/camera/libexcal_iq_ctrl_plugin.so
+lib/camera/libexcal_jpeg_enc_plugin.so
+lib/camera/libexcal_lens_ctrl_plugin.so
+lib/camera/libexcal_motion_estimation_plugin.so
+lib/camera/libexcal_multiframe_nr_plugin.so
+lib/camera/libexcal_object_tracker_plugin.so
+lib/camera/libexcal_req_ctrl_plugin.so
+lib/camera/libexcal_scene_detector_plugin.so
+lib/camera/libexcal_snapshot_ctrl_plugin.so
+lib/camera/libexcal_splitter_plugin.so
+lib/camera/libexcal_stream_ctrl_plugin.so
+lib/libcacao_client.so
+lib/libcacao_common.so
+lib/libcacao_imgproc.so
+lib/libcacao_jpeg.so
+lib/libcacao_service.so
+lib/libcacao_system.so
+lib/libexcal_core.so
+lib/libexcal_legacy.so
+lib/libexcal_pal.so
+lib/libexcal_system.so
+lib/libsomc_chokoballcmn.so
+lib/libsomc_chokoballpal.so
 
 # CMN firmware
 etc/firmware/cmnlib.b00
@@ -604,9 +647,11 @@ etc/firmware/tzwidevine.mdt
 bin/sensors.qcom
 lib/hw/sensors.msm8994.so
 lib64/hw/sensors.msm8994.so
+vendor/lib/libdataitems.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/sensors.ssc.so
+vendor/lib64/libdataitems.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so

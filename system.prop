@@ -13,6 +13,11 @@ persist.audio.fluence.voicerec=false
 ro.qc.sdk.audio.fluencetype=none
 use.voice.path.for.pcm.voip=true
 
+# Camera
+ro.qc.sdk.gestures.camera=false
+ro.qc.sdk.camera.facialproc=false
+camera.disable_zsl_mode=1
+
 # Bluetooth
 bluetooth.enable_timeout_ms=12000
 qcom.bluetooth.soc=rome
@@ -110,6 +115,7 @@ ro.qti.sensors.scrn_ortn=false
 ro.qti.sensors.cmc=false
 ro.qti.sensors.dpc=false
 ro.qti.sensors.pug=false
+ro.qc.sdk.sensors.gestures=true
 
 # Wifi
 wifi.interface=wlan0
