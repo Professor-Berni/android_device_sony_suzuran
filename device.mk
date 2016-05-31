@@ -229,6 +229,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
 
+# SmartStyle cover app
+PRODUCT_PACKAGES += \
+    SmartStyle
+
 # TA
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/sbin/tad_static:root/sbin/tad_static
