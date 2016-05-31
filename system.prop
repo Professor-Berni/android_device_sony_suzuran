@@ -97,5 +97,22 @@ DEVICE_PROVISIONED=1
 # Time
 persist.timed.enable=true
 
+# Sensors
+ro.qti.sensors.wu=true
+ro.qti.sensors.max_geomag_rotv=70
+ro.qti.sensors.step_detector=false
+ro.qti.sensors.step_counter=false
+ro.qti.sensors.smd=false
+ro.qti.sensors.game_rv=false
+ro.qti.sensors.amd=false
+ro.qti.sensors.rmd=false
+ro.qti.sdk.sensors.gestures=false
+ro.qti.sensors.facing=false
+ro.qti.sensors.pedometer=false
+ro.qti.sensors.scrn_ortn=false
+ro.qti.sensors.cmc=false
+ro.qti.sensors.dpc=false
+ro.qti.sensors.pug=false
+
 # Wifi
 wifi.interface=wlan0
