@@ -424,12 +424,6 @@ on property:wc_transport.start_root=true
 on property:wc_transport.start_root=false
     stop hci_filter_root
 
-service hci_filter_root /system/bin/wcnss_filter
-    class late_start
-    user bluetooth
-    group bluetooth qcom_diag system
-    disabled
-
 #service config_bt_addr /system/bin/btnvtool -O
 #    class core
 #    user bluetooth
