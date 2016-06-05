@@ -28,24 +28,6 @@ on fs
     chown system system /lta-label
     chmod 0555 /lta-label
 
-    # mount diag
-    mkdir /idd 0751 idd idd
-    wait /dev/block/bootdevice/by-name/diag
-    mount ext4 /dev/block/bootdevice/by-name/diag /idd nosuid nodev noatime noexec barrier=0 discard
-    chown idd idd /idd
-    chmod 0751 /idd
-    exec /system/bin/rm -r /idd/lost+found
-    symlink /idd /mnt/idd
-
-    # mount apps_log
-    mkdir /rca 0750 idd idd
-    wait /dev/block/bootdevice/by-name/apps_log
-    mount ext4 /dev/block/bootdevice/by-name/apps_log /rca nosuid nodev noatime noexec barrier=0 discard
-    chown idd idd /rca
-    chmod 0750 /rca
-    exec /system/bin/rm -r /rca/lost+found
-    symlink /rca /mnt/rca
-
 on post-fs
     # MHL driver. To support MHL power off charge,
     # the insmod must be done before chargemon.
@@ -159,13 +141,6 @@ on post-fs-data
 on early-boot
     exec u:r:touch_fw_update:s0 -- /system/bin/sh /system/etc/touch_fw_update.sh
 
-    # Load BRCM V4L2 drivers
-    # TODO: Actually add them to the kernel.
-    #insmod /system/lib/modules/brcm_hci_ldisc.ko
-    #insmod /system/lib/modules/brcm_bt_drv.ko
-    #insmod /system/lib/modules/fm_drv.ko
-    #insmod /system/lib/modules/ant_drv.ko
-
 on boot
     # SONY: Enable Sony RIC
     mount securityfs securityfs /sys/kernel/security nosuid nodev noexec
@@ -184,6 +159,9 @@ on boot
 
     write /sys/module/qpnp_smbcharger_extension/parameters/id_polling_timeout 30000
     write /sys/module/qpnp_smbcharger_extension/parameters/start_id_polling 1
+
+    # Relabel to that brcm-uim-sysfs access to files which is created by brcm_hci_ldisc.ko
+    restorecon_recursive /sys/devices/platform/bcm_ldisc/
 
 on property:gsm.nitz.time=*
     start scdnotifier_nitz

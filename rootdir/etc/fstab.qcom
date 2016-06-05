@@ -12,6 +12,8 @@
 /dev/block/bootdevice/by-name/boot      /boot              emmc    defaults                                        defaults
 /dev/block/bootdevice/by-name/FOTAKernel /recovery         emmc    defaults                                        defaults
 /dev/block/bootdevice/by-name/config    /persistent        emmc    defaults                              defaults
+/dev/block/bootdevice/by-name/apps_log  /rca               ext4    nosuid,nodev,noatime,noexec,barrier=0,discard   wait,check,formattable
+/dev/block/bootdevice/by-name/diag      /idd               ext4    nosuid,nodev,noatime,noexec,barrier=0,discard   wait,check,formattable
 /devices/soc.0/f98a4900.sdhci/mmc_host* /storage/sdcard1   vfat    nosuid,nodev                                    wait,voldmanaged=sdcard1:auto,encryptable=footer,noemulatedsd
 /devices/soc.0/f9a55000.ehci/usb1       /storage/uicc0     vfat    nosuid,nodev                                    wait,voldmanaged=uicc0:auto
 /devices/soc.0/f9a55000.ehci/usb1       /storage/uicc1     vfat    nosuid,nodev                                    wait,voldmanaged=uicc1:auto

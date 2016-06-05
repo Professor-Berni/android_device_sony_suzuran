@@ -27,5 +27,5 @@ PRODUCT_NAME := cm_ivy
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=ivy \
-    BUILD_FINGERPRINT=Sony/ivy/ivy:6.0/KITAKAMI-2.1.1-160226-0810/1:user/dev-keys \
-    PRIVATE_BUILD_DESC="ivy-user 6.0 KITAKAMI-2.1.1-160226-0810 1 dev-keys"
+    BUILD_FINGERPRINT=Sony/ivy/ivy:6.0.1/KITAKAMI-2.1.2-160521-1945/1:user/dev-keys \
+    PRIVATE_BUILD_DESC="ivy-user 6.0.1 KITAKAMI-2.1.2-160521-1945 1 dev-keys"

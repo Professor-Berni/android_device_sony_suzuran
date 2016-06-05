@@ -34,8 +34,22 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on fs
+    # SONY: create mount points for idd and rca
+    mkdir /idd 0751 idd idd
+    mkdir /rca 0750 idd idd
+
     # SONY: start service that shows graphics if checking filesystems takes long time.
     mount_all fstab.qcom
+
+    # SONY: setup idd and rca partitions
+    chown idd idd /idd
+    chmod 0751 /idd
+    exec /system/bin/rm -r /idd/lost+found
+    symlink /idd /mnt/idd
+    chown idd idd /rca
+    chmod 0750 /rca
+    exec /system/bin/rm -r /rca/lost+found
+    symlink /rca /mnt/rca
 
     wait /dev/block/bootdevice/by-name/persist /persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1

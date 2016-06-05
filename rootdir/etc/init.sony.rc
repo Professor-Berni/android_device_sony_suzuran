@@ -27,6 +27,8 @@ on post-fs-data
     mkdir /mnt/idd/startup-prober 0700 root root
     
     restorecon_recursive /mnt/idd
+    mkdir /mnt/rca/plugins 0750 idd idd
+    restorecon_recursive /mnt/rca
 
 on boot
     # Disable C_A_D

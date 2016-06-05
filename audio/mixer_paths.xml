@@ -4200,4 +4200,12 @@
         <ctl name="RX2 MIX1 INP1" value="RX2" />
     </path>
 
+    <path name="anc-preparation-combo-rx">
+        <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
+        <ctl name="SLIM RX2 MUX" value="AIF1_PB" />
+        <ctl name="SLIM_0_RX Channels" value="Two" />
+        <ctl name="RX1 MIX1 INP1" value="RX2" />
+        <ctl name="RX2 MIX1 INP1" value="RX2" />
+    </path>
+
 </mixer>
