@@ -98,7 +98,6 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Keymaster
