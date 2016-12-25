@@ -15,7 +15,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/sony/ivy/ivy-vendor.mk)
+$(call inherit-product, vendor/sony/ivy/ivy-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -81,6 +81,15 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
+# init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/init.qcom.power.rc:root/init.qcom.power.rc \
+    $(LOCAL_PATH)/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
+    $(LOCAL_PATH)/rootdir/init.qcom-sensor.sh:root/init.qcom-sensor.sh \
+    $(LOCAL_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
+
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -100,17 +109,17 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += charger_res_images
 
-# Connectivity Engine support (CNE)
-PRODUCT_PACKAGES += \
-    CNEService \
-    cneapiclient \
-    com.quicinc.cne \
-    libcnefeatureconfig \
-    services-ext
-
 # Data services
 PRODUCT_PACKAGES += \
     librmnetctl
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.ivy
+
+# NFC config
+PRODUCT_PACKAGES += \
+    nfc_nci.ivy
 
 # Display
 PRODUCT_PACKAGES += \
@@ -126,8 +135,8 @@ PRODUCT_PACKAGES += \
     dpmapi
 
 # Gello
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+#    Gello
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -190,25 +199,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     power.msm8994
 
-# Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.class_main.sh \
-    init.qcom-sensor.sh \
-    init.qcom.class_core.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.factory.sh \
-    init.qcom.sh \
-    init.qcom.rc \
-    init.qcom.power.rc \
-    init.qcom.usb.rc \
-    init.sony.rc \
-    init.sony-device.rc \
-    init.sony-device-common.rc \
-    init.sony-platform.rc \
-    init.target.rc \
-    ueventd.qcom.rc
-
 # RIL
 PRODUCT_PACKAGES += \
     libxml2
@@ -217,6 +207,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dsi_config.xml:system/etc/data/dsi_config.xml \
     $(LOCAL_PATH)/configs/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(LOCAL_PATH)/configs/qmi_config.xml:system/etc/data/qmi_config.xml
+
+# NFC configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/rootdir/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -241,8 +236,9 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    libwpa_client \
+    p2p_supplicant.conf \
     hostapd \
-    dhcpcd.conf \
+    libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
+

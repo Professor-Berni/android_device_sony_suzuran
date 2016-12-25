@@ -51,7 +51,6 @@ vendor/lib64/libaudcal.so
 etc/firmware/BCM43xx.hcd
 
 # Camera
-bin/mm-qcamera-app
 bin/mm-qcamera-daemon
 lib/libcamera_clientsemc.so
 lib64/libcamera_clientsemc.so
@@ -390,7 +389,6 @@ etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
-vendor/lib/libNimsWrap.so
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneconn.so
@@ -509,13 +507,6 @@ vendor/lib64/libscale.so
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
 
-# Illumination/lights
-lib/liblights-core.so
-lib/hw/lights.default.so
-lib64/liblights-core.so
-lib64/hw/lights.default.so
-bin/illumination_service
-
 # Keystore
 vendor/lib/hw/keystore.msm8994.so
 vendor/lib64/hw/keystore.msm8994.so
@@ -599,23 +590,17 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # Radio
-bin/ATFWD-daemon
 bin/ipacm-diag
 bin/netmgrd
 bin/qmuxd
-bin/radish
-bin/rfs_access
 bin/rmt_storage
 bin/tftp_server
-bin/qcom-system-daemon
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 lib/libpin-cache.so
--lib/libril.so
 lib/libstartup-reason.so
 lib/libtpm.so
 lib64/libpin-cache.so
--lib64/libril.so
 lib64/libstartup-reason.so
 lib64/libtpm.so
 framework/qcnvitems.jar

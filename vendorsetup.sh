@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/sony/ivy/full_ivy.mk)
-
-# Inherit some common CM stuff
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
-PRODUCT_NAME := cm_ivy
-
-# Use the latest approved GMS identifiers
-#PRODUCT_BUILD_PROP_OVERRIDES += \
-#    PRODUCT_NAME=ivy \
-#    BUILD_FINGERPRINT=Sony/ivy/ivy:6.0.1/KITAKAMI-2.1.2-160521-1945/1:user/dev-keys \
-#    PRIVATE_BUILD_DESC="ivy-user 6.0.1 KITAKAMI-2.1.2-160521-1945 1 dev-keys"
+add_lunch_combo cm_ivy-userdebug
+#add_lunch_combo aosp_e6553-userdebug
+#add_lunch_combo aosp_e6533-userdebug
