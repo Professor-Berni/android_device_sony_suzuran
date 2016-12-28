@@ -277,19 +277,19 @@ on post-fs-data
     chown system system /sys/class/leds/led:rgb_blue/pause_hi_multi
 
     # PM8994 flash
-    chown media system /sys/class/misc/pmi8994-flash/device/current1
-    chown media system /sys/class/misc/pmi8994-flash/device/current2
-    chown media system /sys/class/misc/pmi8994-flash/device/fault_status
-    chown media system /sys/class/misc/pmi8994-flash/device/fine_current1
-    chown media system /sys/class/misc/pmi8994-flash/device/fine_current2
-    chown media system /sys/class/misc/pmi8994-flash/device/flash_timer
-    chown media system /sys/class/misc/pmi8994-flash/device/mask_clamp_current
-    chown media system /sys/class/misc/pmi8994-flash/device/mask_enable
-    chown media system /sys/class/misc/pmi8994-flash/device/max_current
-    chown media system /sys/class/misc/pmi8994-flash/device/mode
-    chown media system /sys/class/misc/pmi8994-flash/device/startup_delay
-    chown media system /sys/class/misc/pmi8994-flash/device/strobe
-    chown media system /sys/class/misc/pmi8994-flash/device/vph_pwr_droop
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/current1
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/current2
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/fault_status
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/fine_current1
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/fine_current2
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/flash_timer
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/mask_clamp_current
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/mask_enable
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/max_current
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/mode
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/startup_delay
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/strobe
+    chown cameraserver camera /sys/class/misc/pmi8994-flash/device/vph_pwr_droop
 
     # Cover mode
     chown system system /sys/devices/virtual/input/clearpad/cover_mode_enabled
