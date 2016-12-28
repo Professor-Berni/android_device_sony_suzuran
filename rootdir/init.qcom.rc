@@ -34,12 +34,15 @@ import init.qcom.usb.rc
 
 on early-init
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
+    symlink /dev/pn54x /dev/pn547
+
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist/data 0700 system system
     mkdir /lta-label 0555 system system
     mkdir /idd 0751 system system
     mkdir /rca 0750 system system
+
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
