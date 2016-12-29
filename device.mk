@@ -114,7 +114,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.ivy
+    lights.msm8994
 
 # NFC config
 PRODUCT_PACKAGES += \
