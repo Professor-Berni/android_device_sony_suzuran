@@ -212,10 +212,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/rootdir/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
-# Sensors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
-
 # SmartStyle cover app
 PRODUCT_PACKAGES += \
     SmartStyle
