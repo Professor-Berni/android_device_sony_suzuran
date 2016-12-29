@@ -33,6 +33,8 @@ import init.qcom.power.rc
 import init.qcom.usb.rc
 
 on early-init
+    mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
+
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
     symlink /dev/pn54x /dev/pn547
 
