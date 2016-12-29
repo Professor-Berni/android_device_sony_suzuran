@@ -420,6 +420,7 @@ vendor/lib/libcneqmiutils.so
 vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
+vendor/lib/libril-qc-radioconfig.so
 vendor/lib64/libNimsWrap.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
@@ -428,10 +429,10 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
+vendor/lib64/libril-qc-radioconfig.so
 
 # DPM
 bin/dpmd
-etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/dpmapi.xml
 vendor/lib/libdpmctmgr.so
@@ -564,19 +565,6 @@ bin/pm-proxy
 bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
-
-# Postprocessing
-bin/mm-pp-daemon
-vendor/lib/libdisp-aba.so
-vendor/lib/libmm-abl-oem.so
-vendor/lib/libmm-abl.so
-vendor/lib/libmm-als.so
-vendor/lib/libmm-qdcm.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libmm-abl-oem.so
-vendor/lib64/libmm-abl.so
-vendor/lib64/libmm-als.so
-vendor/lib64/libmm-qdcm.so
 
 # Qualcomm framework
 bin/irsc_util
