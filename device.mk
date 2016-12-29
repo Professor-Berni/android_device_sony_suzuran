@@ -233,6 +233,9 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
+# Wlan
+PRODUCT_PACKAGES += macaddrsetup
+
 # Wifi
 PRODUCT_PACKAGES += \
     p2p_supplicant.conf \
