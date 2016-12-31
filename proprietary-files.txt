@@ -447,11 +447,23 @@ vendor/lib64/libdpmnsrm.so
 # DRM
 bin/qseecomd
 vendor/lib/libQSEEComAPI.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/librpmb.so
+vendor/lib/libsecureui.so
+vendor/lib/libsecureui_svcsock.so
+vendor/lib/lib-sec-disp.so
+vendor/lib/libssd.so
+vendor/lib/libStDrvInt.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/librpmb.so
+vendor/lib64/libsecureui.so
+vendor/lib64/libsecureui_svcsock.so
+vendor/lib64/lib-sec-disp.so
 vendor/lib64/libssd.so
+vendor/lib64/libStDrvInt.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8994.so
