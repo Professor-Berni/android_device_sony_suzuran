@@ -678,8 +678,6 @@ etc/firmware/tzwidevine.mdt
 etc/sensors/hals.conf
 etc/sensors/sensor_def_qcomdev.conf
 bin/sensors.qcom
-lib/hw/sensors.msm8994.so
-lib64/hw/sensors.msm8994.so
 vendor/lib/libdataitems.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
