@@ -411,8 +411,7 @@ etc/firmware/cmnlib.mdt
 bin/cnd
 etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
-etc/permissions/cneapiclient.xml
-etc/permissions/com.quicinc.cne.xml
+vendor/lib/libNimsWrap.so
 vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneconn.so
@@ -430,19 +429,6 @@ vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 vendor/lib64/libril-qc-radioconfig.so
-
-# DPM
-bin/dpmd
-etc/dpm/nsrm/NsrmConfiguration.xml
-etc/permissions/dpmapi.xml
-vendor/lib/libdpmctmgr.so
-vendor/lib/libdpmfdmgr.so
-vendor/lib/libdpmframework.so
-vendor/lib/libdpmnsrm.so
-vendor/lib64/libdpmctmgr.so
-vendor/lib64/libdpmfdmgr.so
-vendor/lib64/libdpmframework.so
-vendor/lib64/libdpmnsrm.so
 
 # DRM
 bin/qseecomd
@@ -625,16 +611,13 @@ bin/netmgrd
 bin/qmuxd
 bin/rmt_storage
 bin/tftp_server
-etc/permissions/qcnvitems.xml
-etc/permissions/qcrilhook.xml
+bin/qcom-system-daemon
 lib/libpin-cache.so
 lib/libstartup-reason.so
 lib/libtpm.so
 lib64/libpin-cache.so
 lib64/libstartup-reason.so
 lib64/libtpm.so
-framework/qcnvitems.jar
-framework/qcrilhook.jar
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libsubsystem_control.so

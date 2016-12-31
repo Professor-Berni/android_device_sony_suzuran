@@ -128,15 +128,6 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     memtrack.msm8994
 
-# DPM
-PRODUCT_PACKAGES += \
-    com.qti.dpmframework \
-    dpmapi
-
-# Gello
-#PRODUCT_PACKAGES += \
-#    Gello
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
