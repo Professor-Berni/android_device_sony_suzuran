@@ -120,6 +120,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     nfc_nci.ivy
 
+# Multihal
+PRODUCT_PACKAGES += \
+    sensors.msm8994
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8994 \
