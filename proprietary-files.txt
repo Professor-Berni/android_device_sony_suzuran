@@ -681,6 +681,7 @@ bin/scd
 bin/scdnotifier
 bin/sct_service
 bin/taimport
+bin/tad_static
 bin/ta_param_loader
 bin/ta_qmi_service
 bin/updatemiscta
