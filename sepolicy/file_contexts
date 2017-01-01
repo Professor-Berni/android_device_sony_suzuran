@@ -1,0 +1,10 @@
+# NFC
+/dev/pn54x                               u:object_r:nfc_device:s0
+
+/system/bin/brcm-uim-sysfs               u:object_r:brcm_uim_exec:s0
+/system/bin/macaddrsetup                 u:object_r:addrsetup_exec:s0
+/system/bin/timekeep                     u:object_r:timekeep_exec:s0
+/system/bin/mlog_qmi_service             u:object_r:mlog_qmi_exec:s0
+/system/bin/sct_service                  u:object_r:sct_exec:s0
+/system/bin/tad_static                   u:object_r:tad_exec:s0
+/system/bin/ta_qmi_service               u:object_r:ta_qmi_exec:s0

@@ -1,0 +1,12 @@
+type tad, domain, domain_deprecated;
+type tad_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(tad)
+
+# Read /proc/stat
+allow tad proc:file r_file_perms;
+
+# Allow tad to work it's magic
+allow tad trim_area_partition_device:blk_file rw_file_perms;
+allow tad block_device:dir search;

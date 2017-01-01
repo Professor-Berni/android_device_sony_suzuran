@@ -1,0 +1,14 @@
+# BRCM BT FM
+type brcm_ldisc_sysfs, sysfs_type, fs_type;
+type brcm_uim_exec, exec_type, file_type;
+
+# TAD
+type tad_socket, file_type;
+type ta_data_file, file_type;
+
+# Timekeep
+type timekeep_data_file, file_type, data_file_type;
+type sysfs_timekeep, fs_type, sysfs_type;
+
+# Macaddr
+type sysfs_addrsetup, fs_type, sysfs_type;
