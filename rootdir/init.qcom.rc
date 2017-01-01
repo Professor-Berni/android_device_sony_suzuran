@@ -73,7 +73,7 @@ on fs
 
 on boot
     # Bluetooth
-    chown system system /sys/devices/soc.0/bcmdhd_wlan.82/macaddr
+    chown system system /sys/devices/soc.0/bcmdhd_wlan.83/macaddr
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
@@ -555,7 +555,7 @@ on property:persist.radio.multisim.config=dsds
     enable ril-daemon2
 
 # OSS WLAN and BT MAC setup
-service macaddrsetup /system/bin/macaddrsetup /sys/devices/soc.0/bcmdhd_wlan.82/macaddr
+service macaddrsetup /system/bin/macaddrsetup /sys/devices/soc.0/bcmdhd_wlan.83/macaddr
     class core
     user system
     group system bluetooth
