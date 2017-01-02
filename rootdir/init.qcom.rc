@@ -305,6 +305,10 @@ on post-fs-data
     chown system system /sys/devices/virtual/input/clearpad/cover_win_right
     chown system system /sys/devices/virtual/input/clearpad/cover_win_top
 
+    # Touchscreen
+    chown system radio /sys/devices/virtual/input/clearpad/wakeup_gesture
+    chmod 0660 /sys/devices/virtual/input/clearpad/wakeup_gesture
+
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
