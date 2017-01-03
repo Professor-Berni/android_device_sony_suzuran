@@ -216,6 +216,12 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    brcm-uim-sysfs \
+    libfmjni
+
 # Wlan
 PRODUCT_PACKAGES += macaddrsetup
 

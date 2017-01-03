@@ -545,12 +545,13 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
-
 # brcm-uim-sysfs (BT/FM/ANT+)
 service uim /system/bin/brcm-uim-sysfs
     class late_start
     user root
     group bluetooth net_bt_admin net_bt
+    seclabel u:r:uim:s0
+    writepid /dev/cpuset/system-background/tasks
 
 on property:persist.radio.multisim.config=dsds
     enable ril-daemon2
