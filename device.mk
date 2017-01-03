@@ -207,10 +207,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/rootdir/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
-# SmartStyle cover app
-PRODUCT_PACKAGES += \
-    SmartStyle
-
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
