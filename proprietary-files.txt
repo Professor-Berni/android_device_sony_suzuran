@@ -387,23 +387,12 @@ etc/firmware/cmnlib.b03
 etc/firmware/cmnlib.mdt
 
 # CNE
-bin/cnd
-etc/cne/SwimConfig.xml
-etc/cne/andsfCne.xml
-vendor/lib/libNimsWrap.so
-vendor/lib/libcne.so
 vendor/lib/libcneapiclient.so
-vendor/lib/libcneconn.so
-vendor/lib/libcneqmiutils.so
 vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
 vendor/lib/libril-qc-radioconfig.so
-vendor/lib64/libNimsWrap.so
-vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
-vendor/lib64/libcneconn.so
-vendor/lib64/libcneqmiutils.so
 vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
@@ -585,12 +574,9 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # Radio
-bin/ipacm-diag
 bin/netmgrd
 bin/qmuxd
 bin/rmt_storage
-bin/tftp_server
-bin/qcom-system-daemon
 lib/libpin-cache.so
 lib/libstartup-reason.so
 lib/libtpm.so
@@ -675,23 +661,16 @@ vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 
 # TA
-bin/iddd
 bin/mlog_qmi_service
-bin/scd
-bin/scdnotifier
 bin/sct_service
 bin/taimport
 bin/tad_static
-bin/ta_param_loader
 bin/ta_qmi_service
-bin/updatemiscta
-lib/libidd.so
 lib/libMiscTaAccessor.so
 lib/libmiscta.so
 lib/libprotobuf-c.so
 lib/libsys-utils.so
 lib/libta.so
-lib64/libidd.so
 lib64/libMiscTaAccessor.so
 lib64/libmiscta.so
 lib64/libprotobuf-c.so
