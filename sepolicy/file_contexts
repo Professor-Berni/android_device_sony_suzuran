@@ -28,5 +28,5 @@
 /sys/devices(/soc\.0)?/bcmdhd_wlan.83/macaddr                                            u:object_r:sysfs_addrsetup:s0
 
 # Camera
-/sys/class/misc/pmi8994-flash/device(/.*)?  u:object_r:sysfs_camera_torch:s0
+/sys/devices(/soc\.0)?/pmi8994-flash-27(/.*)?  u:object_r:sysfs_camera_torch:s0
 
