@@ -19,7 +19,7 @@ $(call inherit-product, device/sony/ivy/full_ivy.mk)
 # Inherit some common CM stuff
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_ivy
+PRODUCT_NAME := lineage_ivy
 
 # Use the latest approved GMS identifiers
 
