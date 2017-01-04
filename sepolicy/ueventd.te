@@ -19,5 +19,5 @@ allow ueventd {
 
 allow ueventd device:file relabelfrom;
 allow ueventd urandom_device:file { relabelto setattr };
-allow ueventd vfat:dir search;
-allow ueventd vfat:file { read open getattr };
+allow ueventd sysfs_camera_torch:file { open write };
+

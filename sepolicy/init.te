@@ -15,4 +15,7 @@ allow init uim:process { siginh noatsecure transition rlimitinh };
 #TAD
 allow init tad_socket:sock_file create;
 
+#Torch
+allow init sysfs_camera_torch:lnk_file read;
+
 
