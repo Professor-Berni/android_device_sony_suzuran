@@ -14,3 +14,19 @@
 /system/vendor/bin/sct_service           u:object_r:sct_exec:s0
 /system/vendor/bin/tad_static            u:object_r:tad_exec:s0
 /system/vendor/bin/ta_qmi_service        u:object_r:ta_qmi_exec:s0
+
+/dev/socket/tad                          u:object_r:tad_socket:s0
+
+/dev/block/mmcblk0p1                                           u:object_r:trim_area_partition_device:s0
+/dev/block/platform/soc\.0/7824900\.sdhci/by-name/TA           u:object_r:trim_area_partition_device:s0
+/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/TA          u:object_r:trim_area_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/TA                     u:object_r:trim_area_partition_device:s0
+/dev/block/bootdevice/by-name/TA                               u:object_r:trim_area_partition_device:s0
+
+# WiFi MAC address
+/sys/devices/platform/bcmdhd_wlan/macaddr                                                u:object_r:sysfs_addrsetup:s0
+/sys/devices(/soc\.0)?/bcmdhd_wlan.83/macaddr                                            u:object_r:sysfs_addrsetup:s0
+
+# Camera
+/sys/class/misc/pmi8994-flash/device(/.*)?  u:object_r:sysfs_camera_torch:s0
+

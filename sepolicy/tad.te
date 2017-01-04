@@ -13,3 +13,4 @@ allow tad block_device:dir search;
 allow tad tmpfs:file rw_file_perms;
 type_transition tad socket_device:sock_file tad_socket "tad";
 
+
