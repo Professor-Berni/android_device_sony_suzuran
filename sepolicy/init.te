@@ -1,0 +1,13 @@
+#For sdcard
+allow init tmpfs:lnk_file create_file_perms;
+
+allow init proc_kernel_sched:file write;
+
+allow init persist_file:dir mounton;
+allow init debugfs:file w_file_perms;
+
+#FM BCM
+allow init hci_attach_dev:chr_file rw_file_perms;
+allow init brcm_uim_exec:file { execute getattr read open };
+allow init brcm_ldisc_sysfs:lnk_file { read };
+allow init uim:process { siginh noatsecure transition rlimitinh };

@@ -12,3 +12,5 @@ type sysfs_timekeep, fs_type, sysfs_type;
 
 # Macaddr
 type sysfs_addrsetup, fs_type, sysfs_type;
+
+type proc_kernel_sched, fs_type;
