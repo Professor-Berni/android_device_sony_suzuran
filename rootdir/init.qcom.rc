@@ -41,9 +41,6 @@ on early-init
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist/data 0700 system system
-    mkdir /lta-label 0555 system system
-    mkdir /idd 0751 system system
-    mkdir /rca 0750 system system
 
 
 on early-boot
