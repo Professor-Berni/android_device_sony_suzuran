@@ -34,14 +34,14 @@ import init.qcom.usb.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
-
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
     symlink /dev/pn54x /dev/pn547
 
+on init
+    export LD_SHIM_LIBS "/system/lib64/libgui.so|/system/lib64/libgui_shim.so:/system/lib/libgui.so|/system/lib/libgui_shim.so"
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist/data 0700 system system
-
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
