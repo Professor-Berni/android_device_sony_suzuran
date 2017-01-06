@@ -1,0 +1,2 @@
+allow mm-qcamerad ta_data_file:dir search;
+

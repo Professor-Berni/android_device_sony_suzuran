@@ -1,3 +1,2 @@
-allow system_app timekeep_prop:file { getattr open };
+allow system_app timekeep_prop:file { read getattr open };
 allow system_app timekeep_prop:property_service set;
-
