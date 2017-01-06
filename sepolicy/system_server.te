@@ -16,3 +16,8 @@ use_per_mgr(system_server);
 allow system_server system_app_data_file:dir r_dir_perms;
 
 r_dir_file(system_server, sysfs_addrsetup)
+
+allow system_server ta_data_file:dir search;
+allow system_server ta_data_file:file r_file_perms;
+
+

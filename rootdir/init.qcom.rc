@@ -70,7 +70,6 @@ on fs
 
 on boot
     # Bluetooth
-    chown system system /sys/devices/soc.0/bcmdhd_wlan.83/macaddr
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
@@ -184,7 +183,7 @@ on boot
 # msm specific files that need to be created on /data
 on post-fs-data
     # SONY: Import MiscTA to System properties
-    mkdir /data/etc 0775 system bluetooth
+    mkdir /data/etc 0775 system system
 
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
@@ -552,15 +551,6 @@ service uim /system/bin/brcm-uim-sysfs
 
 on property:persist.radio.multisim.config=dsds
     enable ril-daemon2
-
-# OSS WLAN and BT MAC setup
-service macaddrsetup /system/bin/macaddrsetup /sys/devices/soc.0/bcmdhd_wlan.83/macaddr
-    class core
-    user system
-    group system bluetooth
-    disabled
-    oneshot
-    writepid /dev/cpuset/system-background/tasks
 
 on property:vold.post_fs_data_done=1
     # Generate Bluetooth MAC address file only when /data is ready
