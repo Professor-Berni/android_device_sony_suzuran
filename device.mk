@@ -236,6 +236,9 @@ PRODUCT_PACKAGES += \
     brcm-uim-sysfs \
     libfmjni
 
+# Shim libs
+PRODUCT_PACKAGES += libgui_shim
+
 # Wlan
 PRODUCT_PACKAGES += macaddrsetup
 
