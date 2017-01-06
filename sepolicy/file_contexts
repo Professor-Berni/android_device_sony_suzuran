@@ -30,3 +30,5 @@
 # Camera
 /sys/devices(/soc\.0)?/pmi8994-flash-27(/.*)?  u:object_r:sysfs_camera_torch:s0
 
+# HCI
+/dev/ttyHS0                              u:object_r:hci_attach_dev:s0
