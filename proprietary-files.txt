@@ -678,6 +678,10 @@ vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
+vendor/lib64/liblights-core.so
+vendor/lib/liblights-core.so
+vendor/lib64/libidd.so
+vendor/lib/libidd.so
 
 # Time services
 -vendor/lib/libtime_genoff.so
