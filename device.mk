@@ -213,6 +213,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
 
+# WLAN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wlan/bcmdhd.cal:system/etc/firmware/wlan/bcmdhd/bcmdhd.cal
+
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \

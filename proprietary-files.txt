@@ -703,6 +703,5 @@ etc/firmware/touch_module_id_0xd1.img
 etc/touch_fw_update.sh
 
 # Wifi
-etc/firmware/wlan/bcmdhd/bcmdhd.cal
 etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
 etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
