@@ -8,10 +8,6 @@
     "target_path": "device/qcom/common"
   },
   {
-    "repository": "android_hardware_sony_macaddrsetup",
-    "target_path": "hardware/sony/macaddrsetup"
-  },
-  {
     "repository": "android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep"
   }
