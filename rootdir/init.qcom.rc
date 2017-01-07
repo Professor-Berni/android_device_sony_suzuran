@@ -65,8 +65,6 @@ on init
     write /sys/bus/msm_subsys/devices/subsys1/restart_level "RELATED"
     # wcnss ssr
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "RELATED"
-    # venus ssr
-    write /sys/bus/msm_subsys/devices/subsys3/restart_level "RELATED"
 
     # Create a tmpfs for dynamic network mounting
     mkdir /storage/removable/remote 0700 root system
