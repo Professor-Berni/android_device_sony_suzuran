@@ -11,3 +11,4 @@ allow taimport self:capability dac_override;
 allow taimport ta_data_file:dir { read search write add_name create remove_name };
 allow taimport ta_data_file:file { read write create getattr open unlink};
 
+

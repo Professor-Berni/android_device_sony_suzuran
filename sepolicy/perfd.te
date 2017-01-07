@@ -1,0 +1,2 @@
+allow perfd sysfs_performance:dir search;
+allow perfd sysfs_performance:file rw_file_perms;

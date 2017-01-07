@@ -40,3 +40,4 @@
 
 # Taimport
 /data/etc                                u:object_r:ta_data_file:s0
+/data/etc(/.*)                           u:object_r:ta_data_file:s0
