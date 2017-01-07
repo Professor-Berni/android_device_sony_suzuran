@@ -9,6 +9,7 @@
 /system/bin/tad_static                   u:object_r:tad_exec:s0
 /system/bin/ta_qmi_service               u:object_r:ta_qmi_exec:s0
 /system/bin/taimport                     u:object_r:taimport_exec:s0
+/system/bin/init\.qcom\.power\.sh        u:object_r:init-power-sh_exec:s0
 
 /system/vendor/bin/brcm-uim-sysfs        u:object_r:brcm_uim_exec:s0
 /system/vendor/bin/mlog_qmi_service      u:object_r:mlog_qmi_exec:s0
@@ -30,6 +31,9 @@
 
 # Camera
 /sys/devices(/soc\.0)?/pmi8994-flash-27(/.*)?  u:object_r:sysfs_camera_torch:s0
+
+# MSM Performance
+/sys/module/msm_performance(/.*)?                                   u:object_r:sysfs_performance:s0
 
 # HCI
 /dev/ttyHS0                              u:object_r:hci_attach_dev:s0
