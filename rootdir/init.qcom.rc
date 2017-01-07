@@ -37,11 +37,21 @@ on early-init
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
     symlink /dev/pn54x /dev/pn547
 
+    # Disable big cluster
+    write /sys/module/msm_performance/parameters/num_clusters 2
+    write /sys/module/msm_performance/parameters/managed_cpus 0-3
+    write /sys/module/msm_performance/parameters/managed_cpus 4-7
+
 on init
     export LD_SHIM_LIBS "/system/lib64/libgui.so|/system/lib64/libgui_shim.so:/system/lib/libgui.so|/system/lib/libgui_shim.so"
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist/data 0700 system system
+
+    write /sys/devices/soc.0/f98a4900.sdhci/mmc_host/mmc1/clkgate_delay 1
+    # Avoid long waits for rcu grace periods
+    write /sys/kernel/rcu_expedited 1
+
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -65,10 +75,15 @@ on init
 
 on fs
     mount_all fstab.qcom
-    chown system system /lta-label
-    chmod 0555 /lta-label
+    # Threshold for cma page reclaim
+    write /proc/sys/vm/swap_thresh_cma_free_pages 7680
 
 on boot
+
+    # execute script to set initial CPU settings
+    # don't run as a service to avoid race conditions
+    exec - root system -- /system/bin/init.qcom.power.sh
+
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
@@ -87,6 +102,28 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
+
+    # add a cpuset for the camera daemon
+    # we want all the little cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0
+    write /dev/cpuset/camera-daemon/mems 0 
+    chown system system /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
+
+    # update foreground cpuset now that processors are up
+    # reserve CPU 3 for the top app and camera daemon
+    write /dev/cpuset/foreground/cpus 0-2,4-7
+    write /dev/cpuset/foreground/boost/cpus 4-7
+    write /dev/cpuset/background/cpus 0
+    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/camera-daemon/cpus 0-3
+
+    write /proc/sys/kernel/sched_boost 1
+    write /proc/sys/vm/dirty_ratio 5
+    write /proc/sys/vm/dirty_background_ratio 1
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
@@ -179,9 +216,22 @@ on boot
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
 
+on post-fs
+    # Setup zram options
+    write /sys/block/zram0/comp_algorithm lz4
+    write /sys/block/zram0/max_comp_streams 4
 
-# msm specific files that need to be created on /data
+    write /proc/sys/vm/page-cluster 0
+
+    swapon_all fstab.qcom
+
 on post-fs-data
+    # KSM options
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/deferred_timer 1
+    write /sys/kernel/mm/ksm/sleep_millisecs 999
+    write /sys/kernel/mm/ksm/run 1
+
     # SONY: Import MiscTA to System properties
     mkdir /data/etc 0775 system system
 
@@ -342,6 +392,8 @@ on post-fs-data
     chmod 2755 /data/misc/perfd
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
+    rm /data/system/perfd/default_values
+    start perfd
 
     # SONY: Camera
     mkdir /data/camera 0770 media camera
@@ -439,6 +491,7 @@ service qseecomd /system/bin/qseecomd
 service perfd /system/vendor/bin/perfd
     class main
     user root
+    group system
     disabled
     writepid /dev/cpuset/system-background/tasks
 
@@ -524,6 +577,11 @@ service taimport /system/bin/taimport
     group system
     oneshot
 
+service charger /charger
+    class charger
+    group log
+    seclabel u:r:healthd:s0
+
 service per_mgr /system/bin/pm-service
     class core
     user system
@@ -556,16 +614,7 @@ on property:vold.post_fs_data_done=1
     # Generate Bluetooth MAC address file only when /data is ready
     start macaddrsetup
 
-on property:init.svc.bootanim=running
-    write /sys/module/lpm_levels/system/a53/cpu0/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/cpu1/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/cpu2/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/cpu3/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu4/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu5/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu6/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu7/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/a57-l2-retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/a53-l2-retention/idle_enabled 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+on property:init.svc.fuse_sdcard1=running
+    write /sys/class/block/mmcblk1/queue/scheduler cfq
+    write /sys/class/block/mmcblk1/bdi/max_ratio 1
 
