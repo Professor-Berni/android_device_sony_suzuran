@@ -29,7 +29,6 @@
 # Modifications are licensed under the License.
 #
 
-import init.qcom.power.rc
 import init.qcom.usb.rc
 
 on early-init
