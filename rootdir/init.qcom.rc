@@ -610,10 +610,6 @@ service uim /system/bin/brcm-uim-sysfs
 on property:persist.radio.multisim.config=dsds
     enable ril-daemon2
 
-on property:vold.post_fs_data_done=1
-    # Generate Bluetooth MAC address file only when /data is ready
-    start macaddrsetup
-
 on property:init.svc.fuse_sdcard1=running
     write /sys/class/block/mmcblk1/queue/scheduler cfq
     write /sys/class/block/mmcblk1/bdi/max_ratio 1
