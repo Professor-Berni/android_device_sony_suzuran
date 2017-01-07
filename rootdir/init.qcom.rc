@@ -538,6 +538,7 @@ service sct_service /system/bin/sct_service
 service mlog_qmi_service /system/bin/mlog_qmi_service
     class main
     user root
+    group system wakelock
     writepid /dev/cpuset/system-background/tasks
 
 # QCOM prop
