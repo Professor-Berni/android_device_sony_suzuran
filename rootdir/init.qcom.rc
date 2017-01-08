@@ -529,6 +529,7 @@ service tad_static /system/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
 service ta_qmi_service /system/bin/ta_qmi_service
     class main
     user root
+    group system wakelock
     writepid /dev/cpuset/system-background/tasks
 
 # SONY prop
