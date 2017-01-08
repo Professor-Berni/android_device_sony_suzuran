@@ -1,0 +1,6 @@
+type secd, domain, domain_deprecated;
+type secd_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(secd)
+

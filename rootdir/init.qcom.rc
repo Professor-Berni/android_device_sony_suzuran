@@ -624,3 +624,12 @@ on property:init.svc.fuse_sdcard1=running
     write /sys/class/block/mmcblk1/queue/scheduler cfq
     write /sys/class/block/mmcblk1/bdi/max_ratio 1
 
+service secd /system/bin/secd
+    setenv LD_PRELOAD /system/lib64/lib-preload64.so
+    user system
+    group system
+    socket secd_ebl_sock stream 0660 system system
+    socket secd_devsec_sock stream 0660 system system
+    socket secd_credmgr_sock stream 0660 system system
+    class main
+

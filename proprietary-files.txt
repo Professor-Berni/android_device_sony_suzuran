@@ -706,3 +706,22 @@ etc/touch_fw_update.sh
 # Wifi
 etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
 etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
+
+# Secd
+bin/secd
+lib/lib_asb_tee.so
+lib/libcredential-manager-service.so
+lib/libdevice_security.so
+lib/libplstorage.so
+lib/libsuntory.so
+lib/libsuntory_utils.so
+lib64/lib-preload64.so
+lib64/lib_asb_tee.so
+lib64/lib_get_secure_mode.so
+lib64/libcredential-manager-service.so
+lib64/libdevice_security.so
+lib64/libplstorage.so
+lib64/libsuntory.so
+lib64/libsuntory_utils.so
+lib64/libtee.so
+
