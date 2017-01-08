@@ -226,6 +226,9 @@ on post-fs
     swapon_all fstab.qcom
 
 on post-fs-data
+    #Secd
+    mkdir /data/credmgr 0770 system system
+
     # KSM options
     write /sys/kernel/mm/ksm/pages_to_scan 100
     write /sys/kernel/mm/ksm/deferred_timer 1
