@@ -19,5 +19,8 @@ r_dir_file(system_server, sysfs_addrsetup)
 
 allow system_server ta_data_file:dir search;
 allow system_server ta_data_file:file r_file_perms;
+allow system_server persist_file:dir rw_file_perms;
+
+
 
 

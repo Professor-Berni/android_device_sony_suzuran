@@ -581,6 +581,12 @@ service taimport /system/bin/taimport
     group system
     oneshot
 
+service updatemiscta /system/bin/updatemiscta
+    class main
+    user root
+    group system
+    oneshot
+
 service charger /charger
     class charger
     group log
