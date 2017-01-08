@@ -105,3 +105,19 @@ ro.qc.sdk.sensors.gestures=true
 
 # Wifi
 wifi.interface=wlan0
+
+# Semc props
+ro.semc.content.number=PA4
+ro.semc.ms_type_id=PM-0796-BV
+ro.semc.product.device=E65
+ro.semc.product.model=E6533
+ro.semc.product.name=Xperia Z3+ Dual
+ro.semc.version.cust=1295-0610
+ro.semc.version.cust.active=
+ro.semc.version.cust_revision=R5C
+ro.semc.version.fs=GENERIC
+ro.semc.version.fs_revision=32.2.A.5.11
+ro.semc.version.sw=1292-0963
+ro.semc.version.sw_revision=32.2.A.5.11
+ro.semc.version.sw_type=user
+ro.semc.version.sw_variant=GLOBAL-LTECA
