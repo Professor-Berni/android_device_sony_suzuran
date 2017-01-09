@@ -70,14 +70,14 @@ include \$(CLEAR_VARS)
 LOCAL_MODULE := libta
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_OWNER := $VENDOR
-LOCAL_MODULE_PATH_64 := \$(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_MODULE_PATH_32 := \$(2ND_TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_64 := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_PATH_32 := \$(2ND_TARGET_OUT_VENDOR_SHARED_LIBRARIES)
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
 LOCAL_MULTILIB := both
 LOCAL_PROPRIETARY_MODULE := true
-LOCAL_SRC_FILES_64 := proprietary/lib64/libta.so
-LOCAL_SRC_FILES_32 := proprietary/lib/libta.so
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libta.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libta.so
 include \$(BUILD_PREBUILT)
 
 \$(shell mkdir -p \$(PRODUCT_OUT)/system/vendor/lib/egl && pushd \$(PRODUCT_OUT)/system/vendor/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
