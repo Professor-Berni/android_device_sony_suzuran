@@ -46,6 +46,7 @@ on init
     mkdir /firmware 0771 system system
     mkdir /persist 0771 system system
     mkdir /persist/data 0700 system system
+    mkdir /idd 0751 system system
 
     write /sys/devices/soc.0/f98a4900.sdhci/mmc_host/mmc1/clkgate_delay 1
     # Avoid long waits for rcu grace periods
@@ -228,6 +229,10 @@ on post-fs
 on post-fs-data
     #Secd
     mkdir /data/credmgr 0770 system system
+    mkdir /mnt/idd 0755 system system
+    mkdir /mnt/idd/output 0755 system system
+    mkdir /mnt/idd/socket 0711 system system
+    mkdir /mnt/idd/startup-prober 0700 root root
 
     # KSM options
     write /sys/kernel/mm/ksm/pages_to_scan 100
@@ -525,7 +530,7 @@ service tad_static /system/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
     class core
     user root
     group root
-    socket tad stream 0660 system system
+    socket tad stream 0777 system system
     writepid /dev/cpuset/system-background/tasks
 
 # SONY misc
@@ -629,10 +634,16 @@ on property:init.svc.fuse_sdcard1=running
 
 service secd /system/bin/secd
     setenv LD_PRELOAD /system/lib64/lib-preload64.so
-    user system
-    group system
-    socket secd_ebl_sock stream 0660 system system
-    socket secd_devsec_sock stream 0660 system system
-    socket secd_credmgr_sock stream 0660 system system
     class main
+    user root
+    group root
+    socket secd_ebl_sock stream 0777 system system
+    socket secd_devsec_sock stream 0777 system system
+    socket secd_credmgr_sock stream 0777 system system
+
+service iddd /system/bin/iddd
+    class core
+    user root
+    group root
+
 

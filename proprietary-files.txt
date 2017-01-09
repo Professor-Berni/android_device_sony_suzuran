@@ -709,6 +709,7 @@ etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
 
 # Secd
 bin/secd
+bin/iddd
 lib/lib_asb_tee.so
 lib/libcredential-manager-service.so
 lib/libdevice_security.so
