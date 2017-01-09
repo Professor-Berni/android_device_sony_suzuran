@@ -524,7 +524,6 @@ vendor/lib64/libconnctrl.so
 vendor/firmware/libpn547_fw.so
 
 # Perf
-bin/energy-awareness
 bin/msm_irqbalance
 vendor/bin/perfd
 vendor/lib/libqc-opt.so
@@ -729,4 +728,3 @@ lib64/libplstorage.so
 lib64/libsuntory.so
 lib64/libsuntory_utils.so
 lib64/libtee.so
-
