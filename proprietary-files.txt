@@ -712,7 +712,7 @@ etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin:vendor/etc/firmware/wlan/bcmdhd/fw_
 
 # Secd
 bin/secd:vendor/bin/secd
-bin/iddd:bin/iddd
+bin/iddd:vendor/bin/iddd
 lib/lib_asb_tee.so:vendor/lib/lib_asb_tee.so
 lib/libcredential-manager-service.so:vendor/lib/libcredential-manager-service.so
 lib/libdevice_security.so:vendor/lib/libdevice_security.so
