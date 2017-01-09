@@ -505,6 +505,10 @@ vendor/lib64/libuiblur.so
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
 
+# Keystore
+vendor/lib/hw/keystore.msm8994.so
+vendor/lib64/hw/keystore.msm8994.so
+
 # Media
 vendor/lib/libI420colorconvert.so
 vendor/lib/libOmxAacDec.so
