@@ -478,11 +478,6 @@ vendor/lib/libllvm-qgl.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libscale.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/hw/vulkan.msm8994.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
