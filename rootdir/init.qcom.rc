@@ -228,10 +228,10 @@ on post-fs
 
 on post-fs-data
     #Secd
-    mkdir /data/credmgr 0770 system system
-    mkdir /mnt/idd 0755 system system
-    mkdir /mnt/idd/output 0755 system system
-    mkdir /mnt/idd/socket 0711 system system
+    mkdir /data/credmgr 0770 system drmrpc
+    mkdir /mnt/idd 0755 system drmrpc
+    mkdir /mnt/idd/output 0755 system drmrpc
+    mkdir /mnt/idd/socket 0711 system drmrpc
     mkdir /mnt/idd/startup-prober 0700 root root
 
     # KSM options
@@ -489,7 +489,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
-    group camera system inet input graphics
+    group camera system inet input graphics drmrpc
     writepid /dev/cpuset/camera-daemon/tasks
 
 service qseecomd /system/bin/qseecomd
@@ -522,42 +522,42 @@ service timekeep /system/bin/timekeep restore
 
 service adsprpcd /system/bin/adsprpcd
    class main
-   user media
-   group media
+   user media 
+   group media drmrpc
 
 # SONY misc
 service tad_static /system/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
     class core
     user root
-    group root
-    socket tad stream 0777 system system
+    group drmrpc
+    socket tad stream 0660 root drmrpc 
     writepid /dev/cpuset/system-background/tasks
 
 # SONY misc
 service ta_qmi_service /system/bin/ta_qmi_service
     class main
     user root
-    group system wakelock
+    group wakelock drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # SONY prop
 service sct_service /system/bin/sct_service
     class main
-    user root
+    user root drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # SONY prop
 service mlog_qmi_service /system/bin/mlog_qmi_service
     class main
     user root
-    group system wakelock
+    group system wakelock drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # QCOM prop
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
-    group system wakelock
+    group system wakelock drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # DSDS second ril
@@ -574,7 +574,7 @@ service ril-daemon2 /system/bin/rild -c 2
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth wakelock gps nfc diag
+    group radio audio bluetooth wakelock gps nfc diag drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # QCOM prop
@@ -586,13 +586,13 @@ service netmgrd /system/bin/netmgrd
 service taimport /system/bin/taimport
     class late_start
     user root
-    group system
+    group system drmrpc
     oneshot
 
 service updatemiscta /system/bin/updatemiscta
     class main
     user root
-    group system
+    group system drmrpc
     oneshot
 
 service charger /charger
@@ -636,14 +636,14 @@ service secd /system/bin/secd
     setenv LD_PRELOAD /system/lib64/lib-preload64.so
     class main
     user root
-    group root
-    socket secd_ebl_sock stream 0777 system system
-    socket secd_devsec_sock stream 0777 system system
-    socket secd_credmgr_sock stream 0777 system system
+    group system drmrpc
+    socket secd_ebl_sock stream 0660 root drmrpc
+    socket secd_devsec_sock stream 0660 root drmrpc
+    socket secd_credmgr_sock stream 0660 root drmrpc
 
 service iddd /system/bin/iddd
     class core
     user root
-    group root
+    group system drmrpc
 
 
