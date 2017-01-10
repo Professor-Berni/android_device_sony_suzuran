@@ -1,17 +1,17 @@
 # ADSP
-bin/adsprpcd:vendor/bin/adsprpcd
+bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 vendor/lib64/libadsprpc.so
 
 # Audio
-etc/acdbdata/Sony/Sony_Bluetooth_cal.acdb:vendor/etc/acdbdata/Sony/Sony_Bluetooth_cal.acdb
-etc/acdbdata/Sony/Sony_General_cal.acdb:vendor/etc/acdbdata/Sony/Sony_General_cal.acdb
-etc/acdbdata/Sony/Sony_Global_cal.acdb:vendor/etc/acdbdata/Sony/Sony_Global_cal.acdb
-etc/acdbdata/Sony/Sony_Handset_cal.acdb:vendor/etc/acdbdata/Sony/Sony_Handset_cal.acdb
-etc/acdbdata/Sony/Sony_Hdmi_cal.acdb:vendor/etc/acdbdata/Sony/Sony_Hdmi_cal.acdb
-etc/acdbdata/Sony/Sony_Headset_cal.acdb:vendor/etc/acdbdata/Sony/Sony_Headset_cal.acdb
-etc/acdbdata/Sony/Sony_Speaker_cal.acdb:vendor/etc/acdbdata/Sony/Sony_Speaker_cal.acdb
+etc/acdbdata/Sony/Sony_Bluetooth_cal.acdb
+etc/acdbdata/Sony/Sony_General_cal.acdb
+etc/acdbdata/Sony/Sony_Global_cal.acdb
+etc/acdbdata/Sony/Sony_Handset_cal.acdb
+etc/acdbdata/Sony/Sony_Hdmi_cal.acdb
+etc/acdbdata/Sony/Sony_Headset_cal.acdb
+etc/acdbdata/Sony/Sony_Speaker_cal.acdb
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -27,42 +27,42 @@ vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 
 # Bluetooth
-etc/firmware/BCM43xx.hcd:vendor/etc/firmware/BCM43xx.hcd
+etc/firmware/BCM43xx.hcd
 
 # Camera
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
-lib/hw/camera.qcom.so:vendor/lib/hw/camera.qcom.so
-lib/libcamera_clientsemc.so:vendor/lib/libcamera_clientsemc.so
-lib/libcammw.so:vendor/lib/libcammw.so
-lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
-lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
-lib/libqomx_core.so:vendor/lib/libqomx_core.so
-lib/libsomc_alfort.so:vendor/lib/libsomc_alfort.so
-lib/libsomc_alfortrsc.so:vendor/lib/libsomc_alfortrsc.so
-lib/libsomc_bordeaux.so:vendor/lib/libsomc_bordeaux.so
-lib/libsomc_bordeauxrsc.so:vendor/lib/libsomc_bordeauxrsc.so
-lib/libsomc_canele.so:vendor/lib/libsomc_canele.so
-lib/libsomc_canelersc.so:vendor/lib/libsomc_canelersc.so
-lib/libsomc_marble.so:vendor/lib/libsomc_marble.so
-lib/libsomc_marblersc.so:vendor/lib/libsomc_marblersc.so
-lib/libsomc_melonpan.so:vendor/lib/libsomc_melonpan.so
-lib/libsomc_melonpanrsc.so:vendor/lib/libsomc_melonpanrsc.so
-lib/libsomc_mugichoco.so:vendor/lib/libsomc_mugichoco.so
-lib/libsomc_mugichocorsc.so:vendor/lib/libsomc_mugichocorsc.so
-lib/libsomc_raisin.so:vendor/lib/libsomc_raisin.so
-lib/libsomc_raisinrsc.so:vendor/lib/libsomc_raisinrsc.so
-lib/libsomc_spica.so:vendor/lib/libsomc_spica.so
-lib/libsomc_spicarsc.so:vendor/lib/libsomc_spicarsc.so
-lib/libsomc_thermal.so:vendor/lib/libsomc_thermal.so
-lib/libsomc_thermal.so:vendor/lib/libsomc_thermal.so
-lib/libsomc_toppo.so:vendor/lib/libsomc_toppo.so
-lib/libsomc_topporsc.so:vendor/lib/libsomc_topporsc.so
-lib/libsomc_yummy.so:vendor/lib/libsomc_yummy.so
-lib/libsomc_yummyrsc.so:vendor/lib/libsomc_yummyrsc.so
-lib/libsony_fooddetect.so:vendor/lib/libsony_fooddetect.so
-lib/libsony_naruto.so:vendor/lib/libsony_naruto.so
-lib64/libcamera_clientsemc.so:vendor/lib/libsony_naruto.so
+bin/mm-qcamera-daemon
+lib/hw/camera.qcom.so
+lib/libcamera_clientsemc.so
+lib/libcammw.so
+lib/libmm-qcamera.so
+lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so
+lib/libqomx_core.so
+lib/libsomc_alfort.so
+lib/libsomc_alfortrsc.so
+lib/libsomc_bordeaux.so
+lib/libsomc_bordeauxrsc.so
+lib/libsomc_canele.so
+lib/libsomc_canelersc.so
+lib/libsomc_marble.so
+lib/libsomc_marblersc.so
+lib/libsomc_melonpan.so
+lib/libsomc_melonpanrsc.so
+lib/libsomc_mugichoco.so
+lib/libsomc_mugichocorsc.so
+lib/libsomc_raisin.so
+lib/libsomc_raisinrsc.so
+lib/libsomc_spica.so
+lib/libsomc_spicarsc.so
+lib/libsomc_thermal.so
+lib/libsomc_thermal.so
+lib/libsomc_toppo.so
+lib/libsomc_topporsc.so
+lib/libsomc_yummy.so
+lib/libsomc_yummyrsc.so
+lib/libsony_fooddetect.so
+lib/libsony_naruto.so
+lib64/libcamera_clientsemc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
@@ -183,17 +183,17 @@ vendor/lib/libchromatix_s5k3m2xx_snapshot.so
 vendor/lib/libchromatix_s5k3m2xx_video_4k.so
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_1_1.fw:vendor/etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw:vendor/etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw:vendor/etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/cpp_firmware_v1_4_0.fw:vendor/etc/firmware/cpp_firmware_v1_4_0.fw
-etc/firmware/cpp_firmware_v1_6_0.fw:vendor/etc/firmware/cpp_firmware_v1_6_0.fw
-etc/firmware/cpp_firmware_v1_8_0.fw:vendor/etc/firmware/cpp_firmware_v1_8_0.fw
+etc/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_4_0.fw
+etc/firmware/cpp_firmware_v1_6_0.fw
+etc/firmware/cpp_firmware_v1_8_0.fw
 
 # Camera module
-etc/flashled_calc_parameters.cfg:vendor/etc/flashled_calc_parameters.cfg
-lib/libcameralight.so:vendor/lib/libcameralight.so
-lib64/libcameralight.so:vendor/lib64/libcameralight.so
+etc/flashled_calc_parameters.cfg
+lib/libcameralight.so
+lib64/libcameralight.so
 vendor/camera/default.dat
 vendor/camera/flash.dat
 vendor/camera/snapshot.dat
@@ -343,48 +343,48 @@ vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libois_lc898122.so
 
 # Cacao
-lib/camera/libexcal_color_ctrl_plugin.so:vendor/lib/camera/libexcal_color_ctrl_plugin.so
-lib/camera/libexcal_debug_display_plugin.so:vendor/lib/camera/libexcal_debug_display_plugin.so
-lib/camera/libexcal_exposure_ctrl_plugin.so:vendor/lib/camera/libexcal_exposure_ctrl_plugin.so
-lib/camera/libexcal_face_detector_plugin.so:vendor/lib/camera/libexcal_face_detector_plugin.so
-lib/camera/libexcal_flicker_detector_plugin.so:vendor/lib/camera/libexcal_flicker_detector_plugin.so
-lib/camera/libexcal_focus_stats_conv_plugin.so:vendor/lib/camera/libexcal_focus_stats_conv_plugin.so
-lib/camera/libexcal_food_comp_plugin.so:vendor/lib/camera/libexcal_food_comp_plugin.so
-lib/camera/libexcal_food_detector_plugin.so:vendor/lib/camera/libexcal_food_detector_plugin.so
-lib/camera/libexcal_hal_ctrl_plugin.so:vendor/lib/camera/libexcal_hal_ctrl_plugin.so
-lib/camera/libexcal_hdr_plugin.so:vendor/lib/camera/libexcal_hdr_plugin.so
-lib/camera/libexcal_idt_ctrl_plugin.so:vendor/lib/camera/libexcal_idt_ctrl_plugin.so
-lib/camera/libexcal_image_conv_plugin.so:vendor/lib/camera/libexcal_image_conv_plugin.so
-lib/camera/libexcal_iq_ctrl_plugin.so:vendor/lib/camera/libexcal_iq_ctrl_plugin.so
-lib/camera/libexcal_jpeg_enc_plugin.so:vendor/lib/camera/libexcal_jpeg_enc_plugin.so
-lib/camera/libexcal_lens_ctrl_plugin.so:vendor/lib/camera/libexcal_lens_ctrl_plugin.so
-lib/camera/libexcal_motion_estimation_plugin.so:vendor/lib/camera/libexcal_motion_estimation_plugin.so
-lib/camera/libexcal_multiframe_nr_plugin.so:vendor/lib/camera/libexcal_multiframe_nr_plugin.so
-lib/camera/libexcal_object_tracker_plugin.so:vendor/lib/camera/libexcal_object_tracker_plugin.so
-lib/camera/libexcal_req_ctrl_plugin.so:vendor/lib/camera/libexcal_req_ctrl_plugin.so
-lib/camera/libexcal_scene_detector_plugin.so:vendor/lib/camera/libexcal_scene_detector_plugin.so
-lib/camera/libexcal_snapshot_ctrl_plugin.so:vendor/lib/camera/libexcal_snapshot_ctrl_plugin.so
-lib/camera/libexcal_splitter_plugin.so:vendor/lib/camera/libexcal_splitter_plugin.so
-lib/camera/libexcal_stream_ctrl_plugin.so:vendor/lib/camera/libexcal_stream_ctrl_plugin.so
-lib/libcacao_client.so:vendor/lib/libcacao_client.so
-lib/libcacao_common.so:vendor/lib/libcacao_common.so
-lib/libcacao_imgproc.so:vendor/lib/libcacao_imgproc.so
-lib/libcacao_jpeg.so:vendor/lib/libcacao_jpeg.so
-lib/libcacao_service.so:vendor/lib/libcacao_service.so
-lib/libcacao_system.so:vendor/lib/libcacao_system.so
-lib/libexcal_core.so:vendor/lib/libexcal_core.so
-lib/libexcal_legacy.so:vendor/lib/libexcal_legacy.so
-lib/libexcal_pal.so:vendor/lib/libexcal_pal.so
-lib/libexcal_system.so:vendor/lib/libexcal_system.so
-lib/libsomc_chokoballcmn.so:vendor/lib/libsomc_chokoballcmn.so
-lib/libsomc_chokoballpal.so:vendor/lib/libsomc_chokoballpal.so
+lib/camera/libexcal_color_ctrl_plugin.so
+lib/camera/libexcal_debug_display_plugin.so
+lib/camera/libexcal_exposure_ctrl_plugin.so
+lib/camera/libexcal_face_detector_plugin.so
+lib/camera/libexcal_flicker_detector_plugin.so
+lib/camera/libexcal_focus_stats_conv_plugin.so
+lib/camera/libexcal_food_comp_plugin.so
+lib/camera/libexcal_food_detector_plugin.so
+lib/camera/libexcal_hal_ctrl_plugin.so
+lib/camera/libexcal_hdr_plugin.so
+lib/camera/libexcal_idt_ctrl_plugin.so
+lib/camera/libexcal_image_conv_plugin.so
+lib/camera/libexcal_iq_ctrl_plugin.so
+lib/camera/libexcal_jpeg_enc_plugin.so
+lib/camera/libexcal_lens_ctrl_plugin.so
+lib/camera/libexcal_motion_estimation_plugin.so
+lib/camera/libexcal_multiframe_nr_plugin.so
+lib/camera/libexcal_object_tracker_plugin.so
+lib/camera/libexcal_req_ctrl_plugin.so
+lib/camera/libexcal_scene_detector_plugin.so
+lib/camera/libexcal_snapshot_ctrl_plugin.so
+lib/camera/libexcal_splitter_plugin.so
+lib/camera/libexcal_stream_ctrl_plugin.so
+lib/libcacao_client.so
+lib/libcacao_common.so
+lib/libcacao_imgproc.so
+lib/libcacao_jpeg.so
+lib/libcacao_service.so
+lib/libcacao_system.so
+lib/libexcal_core.so
+lib/libexcal_legacy.so
+lib/libexcal_pal.so
+lib/libexcal_system.so
+lib/libsomc_chokoballcmn.so
+lib/libsomc_chokoballpal.so
 
 # CMN firmware
-etc/firmware/cmnlib.b00:vendor/etc/firmware/cmnlib.b00
-etc/firmware/cmnlib.b01:vendor/etc/firmware/cmnlib.b01
-etc/firmware/cmnlib.b02:vendor/etc/firmware/cmnlib.b02
-etc/firmware/cmnlib.b03:vendor/etc/firmware/cmnlib.b03
-etc/firmware/cmnlib.mdt:vendor/etc/firmware/cmnlib.mdt
+etc/firmware/cmnlib.b00
+etc/firmware/cmnlib.b01
+etc/firmware/cmnlib.b02
+etc/firmware/cmnlib.b03
+etc/firmware/cmnlib.mdt
 
 # CNE
 vendor/lib/libcneapiclient.so
@@ -399,7 +399,7 @@ vendor/lib64/libxml.so
 vendor/lib64/libril-qc-radioconfig.so
 
 # DRM
-bin/qseecomd:vendor/bin/qseecomd
+bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -424,19 +424,19 @@ vendor/lib/hw/gatekeeper.msm8994.so
 vendor/lib64/hw/gatekeeper.msm8994.so
 
 # GPS
-bin/loc_launcher:vendor/bin/loc_launcher
-lib/hw/gps.default.so:vendor/lib/hw/gps.default.so
-lib/libgps.utils.so:vendor/lib/libgps.utils.so
-lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so
-lib/libloc_core.so:vendor/lib/libloc_core.so
-lib/libloc_ds_api.so:vendor/lib/libloc_ds_api.so
-lib/libloc_eng.so:vendor/lib/libloc_eng.so
-lib64/hw/gps.default.so:vendor/lib64/hw/gps.default.so
-lib64/libgps.utils.so:vendor/lib64/libgps.utils.so
-lib64/libloc_api_v02.so:vendor/lib64/libloc_api_v02.so
-lib64/libloc_core.so:vendor/lib64/libloc_core.so
-lib64/libloc_ds_api.so:vendor/lib64/libloc_ds_api.so
-lib64/libloc_eng.so:vendor/lib64/libloc_eng.so
+bin/loc_launcher
+lib/hw/gps.default.so
+lib/libgps.utils.so
+lib/libloc_api_v02.so
+lib/libloc_core.so
+lib/libloc_ds_api.so
+lib/libloc_eng.so
+lib64/hw/gps.default.so
+lib64/libgps.utils.so
+lib64/libloc_api_v02.so
+lib64/libloc_core.so
+lib64/libloc_ds_api.so
+lib64/libloc_eng.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
@@ -501,8 +501,8 @@ vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libscale.so
 
 # Graphics firmware
-etc/firmware/a420_pfp.fw:vendor/etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw:vendor/etc/firmware/a420_pm4.fw
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
 
 # Keystore
 vendor/lib/hw/keystore.msm8994.so
@@ -524,7 +524,7 @@ vendor/lib64/libconnctrl.so
 vendor/firmware/libpn547_fw.so
 
 # Perf
-bin/msm_irqbalance:vendor/bin/msm_irqbalance
+bin/msm_irqbalance
 vendor/bin/perfd
 vendor/lib/libqc-opt.so
 vendor/lib/libqti-perfd-client.so
@@ -532,13 +532,13 @@ vendor/lib64/libqc-opt.so
 vendor/lib64/libqti-perfd-client.so
 
 # Peripheral manager
-bin/pm-proxy:vendor/bin/pm-proxy
-bin/pm-service:vendor/bin/pm-service
+bin/pm-proxy
+bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
 # Qualcomm framework
-bin/irsc_util:vendor/bin/irsc_util
+bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
@@ -573,15 +573,15 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # Radio
-bin/netmgrd:vendor/bin/netmgrd
-bin/qmuxd:vendor/bin/qmuxd
-bin/rmt_storage:vendor/bin/rmt_storage
-lib/libpin-cache.so:vendor/lib/libpin-cache.so
-lib/libstartup-reason.so:vendor/lib/libstartup-reason.so
-lib/libtpm.so:vendor/lib/libtpm.so
-lib64/libpin-cache.so:vendor/lib64/libpin-cache.so
-lib64/libstartup-reason.so:vendor/lib64/libstartup-reason.so
-lib64/libtpm.so:vendor/lib64/libtpm.so
+bin/netmgrd
+bin/qmuxd
+bin/rmt_storage
+lib/libpin-cache.so
+lib/libstartup-reason.so
+lib/libtpm.so
+lib64/libpin-cache.so
+lib64/libstartup-reason.so
+lib64/libtpm.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libsubsystem_control.so
@@ -597,46 +597,46 @@ vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxml.so
 
 # Security firmware
-etc/firmware/tzdtcpkctl.b00:vendor/etc/firmware/tzdtcpkctl.b00
-etc/firmware/tzdtcpkctl.b01:vendor/etc/firmware/tzdtcpkctl.b01
-etc/firmware/tzdtcpkctl.b02:vendor/etc/firmware/tzdtcpkctl.b02
-etc/firmware/tzdtcpkctl.b03:vendor/etc/firmware/tzdtcpkctl.b03
-etc/firmware/tzdtcpkctl.mdt:vendor/etc/firmware/tzdtcpkctl.mdt
-etc/firmware/tzhdcp.b00:vendor/etc/firmware/tzhdcp.b00
-etc/firmware/tzhdcp.b01:vendor/etc/firmware/tzhdcp.b01
-etc/firmware/tzhdcp.b02:vendor/etc/firmware/tzhdcp.b02
-etc/firmware/tzhdcp.b03:vendor/etc/firmware/tzhdcp.b03
-etc/firmware/tzhdcp.mdt:vendor/etc/firmware/tzhdcp.mdt
-etc/firmware/tzlibasb.b00:vendor/etc/firmware/tzlibasb.b00
-etc/firmware/tzlibasb.b01:vendor/etc/firmware/tzlibasb.b01
-etc/firmware/tzlibasb.b02:vendor/etc/firmware/tzlibasb.b02
-etc/firmware/tzlibasb.b03:vendor/etc/firmware/tzlibasb.b03
-etc/firmware/tzlibasb.mdt:vendor/etc/firmware/tzlibasb.mdt
-etc/firmware/tznautilus.b00:vendor/etc/firmware/tznautilus.b00
-etc/firmware/tznautilus.b01:vendor/etc/firmware/tznautilus.b01
-etc/firmware/tznautilus.b02:vendor/etc/firmware/tznautilus.b02
-etc/firmware/tznautilus.b03:vendor/etc/firmware/tznautilus.b03
-etc/firmware/tznautilus.mdt:vendor/etc/firmware/tznautilus.mdt
-etc/firmware/tzsuntory.b00:vendor/etc/firmware/tzsuntory.b00
-etc/firmware/tzsuntory.b01:vendor/etc/firmware/tzsuntory.b01
-etc/firmware/tzsuntory.b02:vendor/etc/firmware/tzsuntory.b02
-etc/firmware/tzsuntory.b03:vendor/etc/firmware/tzsuntory.b03
-etc/firmware/tzsuntory.mdt:vendor/etc/firmware/tzsuntory.mdt
-etc/firmware/tztpm.b00:vendor/etc/firmware/tztpm.b00
-etc/firmware/tztpm.b01:vendor/etc/firmware/tztpm.b01
-etc/firmware/tztpm.b02:vendor/etc/firmware/tztpm.b02
-etc/firmware/tztpm.b03:vendor/etc/firmware/tztpm.b03
-etc/firmware/tztpm.mdt:vendor/etc/firmware/tztpm.mdt
-etc/firmware/tzwidevine.b00:vendor/etc/firmware/tzwidevine.b00
-etc/firmware/tzwidevine.b01:vendor/etc/firmware/tzwidevine.b01
-etc/firmware/tzwidevine.b02:vendor/etc/firmware/tzwidevine.b02
-etc/firmware/tzwidevine.b03:vendor/etc/firmware/tzwidevine.b03
-etc/firmware/tzwidevine.mdt:vendor/etc/firmware/tzwidevine.mdt
+etc/firmware/tzdtcpkctl.b00
+etc/firmware/tzdtcpkctl.b01
+etc/firmware/tzdtcpkctl.b02
+etc/firmware/tzdtcpkctl.b03
+etc/firmware/tzdtcpkctl.mdt
+etc/firmware/tzhdcp.b00
+etc/firmware/tzhdcp.b01
+etc/firmware/tzhdcp.b02
+etc/firmware/tzhdcp.b03
+etc/firmware/tzhdcp.mdt
+etc/firmware/tzlibasb.b00
+etc/firmware/tzlibasb.b01
+etc/firmware/tzlibasb.b02
+etc/firmware/tzlibasb.b03
+etc/firmware/tzlibasb.mdt
+etc/firmware/tznautilus.b00
+etc/firmware/tznautilus.b01
+etc/firmware/tznautilus.b02
+etc/firmware/tznautilus.b03
+etc/firmware/tznautilus.mdt
+etc/firmware/tzsuntory.b00
+etc/firmware/tzsuntory.b01
+etc/firmware/tzsuntory.b02
+etc/firmware/tzsuntory.b03
+etc/firmware/tzsuntory.mdt
+etc/firmware/tztpm.b00
+etc/firmware/tztpm.b01
+etc/firmware/tztpm.b02
+etc/firmware/tztpm.b03
+etc/firmware/tztpm.mdt
+etc/firmware/tzwidevine.b00
+etc/firmware/tzwidevine.b01
+etc/firmware/tzwidevine.b02
+etc/firmware/tzwidevine.b03
+etc/firmware/tzwidevine.mdt
 
 # Sensors
-etc/sensors/hals.conf:vendor/etc/sensors/hals.conf
-etc/sensors/sensor_def_qcomdev.conf:vendor/etc/sensors/sensor_def_qcomdev.conf
-bin/sensors.qcom:vendor/bin/sensors.qcom
+etc/sensors/hals.conf
+etc/sensors/sensor_def_qcomdev.conf
+bin/sensors.qcom
 vendor/lib/libdataitems.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
@@ -647,12 +647,12 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
 
 # Signed Venus (media) firmware
-etc/firmware/venus.b00:vendor/etc/firmware/venus.b00
-etc/firmware/venus.b01:vendor/etc/firmware/venus.b01
-etc/firmware/venus.b02:vendor/etc/firmware/venus.b02
-etc/firmware/venus.b03:vendor/etc/firmware/venus.b03
-etc/firmware/venus.b04:vendor/etc/firmware/venus.b04
-etc/firmware/venus.mdt:vendor/etc/firmware/venus.mdt
+etc/firmware/venus.b00
+etc/firmware/venus.b01
+etc/firmware/venus.b02
+etc/firmware/venus.b03
+etc/firmware/venus.b04
+etc/firmware/venus.mdt
 
 # Smart camera
 vendor/lib/libmmcamera_chromaflash_lib.so
@@ -660,71 +660,71 @@ vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 
 # TA
-bin/mlog_qmi_service:vendor/bin/mlog_qmi_service
-bin/sct_service:vendor/bin/sct_service
-bin/taimport:vendor/bin/taimport
-bin/tad_static:vendor/bin/tad_static
-bin/ta_qmi_service:vendor/bin/ta_qmi_service
-bin/updatemiscta:vendor/bin/updatemiscta
-lib/libMiscTaAccessor.so:vendor/lib/libMiscTaAccessor.so
-lib/libmiscta.so:vendor/lib/libmiscta.so
-lib/libprotobuf-c.so:vendor/lib/libprotobuf-c.so
-lib/libsys-utils.so:vendor/lib/libsys-utils.so
-lib/libta.so:vendor/lib/libta.so
-lib64/libMiscTaAccessor.so:vendor/lib64/libMiscTaAccessor.so
-lib64/libmiscta.so:vendor/lib64/libmiscta.so
-lib64/libprotobuf-c.so:vendor/lib64/libprotobuf-c.so
-lib64/libsys-utils.so:vendor/lib64/libsys-utils.so
-lib64/libta.so:vendor/lib64/libta.so
+bin/mlog_qmi_service
+bin/sct_service
+bin/taimport
+bin/tad_static
+bin/ta_qmi_service
+bin/updatemiscta
+lib/libMiscTaAccessor.so
+lib/libmiscta.so
+lib/libprotobuf-c.so
+lib/libsys-utils.so
+lib/libta.so
+lib64/libMiscTaAccessor.so
+lib64/libmiscta.so
+lib64/libprotobuf-c.so
+lib64/libsys-utils.so
+lib64/libta.so
 
 # Thermal
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
-lib64/liblights-core.so:vendor/lib64/liblights-core.so
-lib/liblights-core.so:vendor/lib/liblights-core.so
-lib64/libidd.so:vendor/lib64/libidd.so
-lib/libidd.so:vendor/lib/libidd.so
+vendor/lib64/liblights-core.so
+vendor/lib/liblights-core.so
+vendor/lib64/libidd.so
+vendor/lib/libidd.so
 
 # Time services
 -vendor/lib/libtime_genoff.so
 -vendor/lib64/libtime_genoff.so
 
 # Touchscreen
-etc/firmware/touch_module_id_0xb0.img:vendor/etc/firmware/touch_module_id_0xb0.img
-etc/firmware/touch_module_id_0xb1.img:vendor/etc/firmware/touch_module_id_0xb1.img
-etc/firmware/touch_module_id_0xb2.img:vendor/etc/firmware/touch_module_id_0xb2.img
-etc/firmware/touch_module_id_0xb3.img:vendor/etc/firmware/touch_module_id_0xb3.img
-etc/firmware/touch_module_id_0xba.img:vendor/etc/firmware/touch_module_id_0xba.img
-etc/firmware/touch_module_id_0xbb.img:vendor/etc/firmware/touch_module_id_0xbb.img
-etc/firmware/touch_module_id_0xbc.img:vendor/etc/firmware/touch_module_id_0xbc.img
-etc/firmware/touch_module_id_0xca.img:vendor/etc/firmware/touch_module_id_0xca.img
-etc/firmware/touch_module_id_0xcb.img:vendor/etc/firmware/touch_module_id_0xcb.img
-etc/firmware/touch_module_id_0xcc.img:vendor/etc/firmware/touch_module_id_0xcc.img
-etc/firmware/touch_module_id_0xd0.img:vendor/etc/firmware/touch_module_id_0xd0.img
-etc/firmware/touch_module_id_0xd1.img:vendor/etc/firmware/touch_module_id_0xd1.img
-etc/touch_fw_update.sh:vendor/etc/touch_fw_update.sh
+etc/firmware/touch_module_id_0xb0.img
+etc/firmware/touch_module_id_0xb1.img
+etc/firmware/touch_module_id_0xb2.img
+etc/firmware/touch_module_id_0xb3.img
+etc/firmware/touch_module_id_0xba.img
+etc/firmware/touch_module_id_0xbb.img
+etc/firmware/touch_module_id_0xbc.img
+etc/firmware/touch_module_id_0xca.img
+etc/firmware/touch_module_id_0xcb.img
+etc/firmware/touch_module_id_0xcc.img
+etc/firmware/touch_module_id_0xd0.img
+etc/firmware/touch_module_id_0xd1.img
+etc/touch_fw_update.sh
 
 # Wifi
-etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin:vendor/etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
-etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin:vendor/etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
+etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
+etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
 
 # Secd
-bin/secd:vendor/bin/secd
-bin/iddd:vendor/bin/iddd
-lib/lib_asb_tee.so:vendor/lib/lib_asb_tee.so
-lib/libcredential-manager-service.so:vendor/lib/libcredential-manager-service.so
-lib/libdevice_security.so:vendor/lib/libdevice_security.so
-lib/libplstorage.so:vendor/lib/libplstorage.so
-lib/libsuntory.so:vendor/lib/libsuntory.so
-lib/libsuntory_utils.so:vendor/lib/libsuntory_utils.so
-lib64/lib-preload64.so:vendor/lib64/lib-preload64.so
-lib64/lib_asb_tee.so:vendor/lib64/lib_asb_tee.so
-lib64/lib_get_secure_mode.so:vendor/lib64/lib_get_secure_mode.so
-lib64/libcredential-manager-service.so:vendor/lib64/libcredential-manager-service.so
-lib64/libdevice_security.so:vendor/lib64/libdevice_security.so
-lib64/libplstorage.so:vendor/lib64/libplstorage.so
-lib64/libsuntory.so:vendor/lib64/libsuntory.so
-lib64/libsuntory_utils.so:vendor/lib64/libsuntory_utils.so
-lib64/libtee.so:vendor/lib64/libtee.so
+bin/secd
+bin/iddd
+lib/lib_asb_tee.so
+lib/libcredential-manager-service.so
+lib/libdevice_security.so
+lib/libplstorage.so
+lib/libsuntory.so
+lib/libsuntory_utils.so
+lib64/lib-preload64.so
+lib64/lib_asb_tee.so
+lib64/lib_get_secure_mode.so
+lib64/libcredential-manager-service.so
+lib64/libdevice_security.so
+lib64/libplstorage.so
+lib64/libsuntory.so
+lib64/libsuntory_utils.so
+lib64/libtee.so
