@@ -1,0 +1,2 @@
+allow audioserver tad:unix_stream_socket connectto;
+allow audioserver tad_socket:sock_file write;

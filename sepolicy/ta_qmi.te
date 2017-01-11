@@ -8,6 +8,7 @@ init_daemon_domain(ta_qmi)
 allow ta_qmi self:capability { dac_override net_raw };
 
 allow ta_qmi self:socket create_socket_perms;
+allow ta_qmi self:capability { setgid setuid };
 
 # Connect to /dev/socket/tad
 unix_socket_connect(ta_qmi, tad, tad)
