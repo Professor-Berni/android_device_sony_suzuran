@@ -1,2 +1,0 @@
-allow thermal-engine ta_data_file:dir search;
-allow thermal-engine ta_data_file:file r_file_perms;

@@ -1,1 +1,0 @@
-allow fsck urandom_device:file getattr;

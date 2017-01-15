@@ -1,3 +1,0 @@
-allow rild cache_file:dir { rw_file_perms remove_name };
-allow rild cache_file:file { r_file_perms unlink };
-

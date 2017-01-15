@@ -1,8 +1,0 @@
-type updatemiscta, domain, domain_deprecated;
-type updatemiscta_exec, exec_type, file_type;
-
-# Started by init
-init_daemon_domain(updatemiscta)
-
-unix_socket_connect(taimport, tad, tad)
-allow taimport tad_socket:sock_file { write };
