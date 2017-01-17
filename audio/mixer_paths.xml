@@ -1527,8 +1527,8 @@
         <ctl name="SLIM_0_RX Channels" value="Two" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="RX8 MIX1 INP1" value="RX2" />
-        <ctl name="RX7 Digital Volume" value="84" />
-        <ctl name="RX8 Digital Volume" value="84" />
+        <ctl name="RX7 Digital Volume" value="76" />
+        <ctl name="RX8 Digital Volume" value="76" />
         <ctl name="COMP0 Switch" value="1" />
         <ctl name="VI_FEED_TX Channels" value="Two" />
         <ctl name="SLIM0_RX_VI_FB_LCH_MUX"  value="SLIM4_TX" />
@@ -1543,8 +1543,8 @@
         <ctl name="SLIM_0_RX Channels" value="Two" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="RX8 MIX1 INP1" value="RX2" />
-        <ctl name="RX7 Digital Volume" value="84" />
-        <ctl name="RX8 Digital Volume" value="84" />
+        <ctl name="RX7 Digital Volume" value="76" />
+        <ctl name="RX8 Digital Volume" value="76" />
         <ctl name="COMP0 Switch" value="1" />
         <ctl name="VI_FEED_TX Channels" value="Two" />
         <ctl name="SLIM0_RX_VI_FB_LCH_MUX"  value="SLIM4_TX" />
@@ -1582,7 +1582,7 @@
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX8 MIX1 INP1" value="RX1" />
-        <ctl name="RX8 Digital Volume" value="84" />
+        <ctl name="RX8 Digital Volume" value="76" />
         <ctl name="COMP0 Switch" value="1" />
     </path>
 
@@ -1592,8 +1592,8 @@
 
     <path name="speaker-db">
         <path name="speaker" />
-        <ctl name="RX7 Digital Volume" value="83" />
-        <ctl name="RX8 Digital Volume" value="83" />
+        <ctl name="RX7 Digital Volume" value="76" />
+        <ctl name="RX8 Digital Volume" value="76" />
     </path>
 
     <path name="speaker-ext-1-liquid">
@@ -1912,7 +1912,7 @@
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="COMP0 Switch" value="1" />
-        <ctl name="RX7 Digital Volume" value="84" />
+        <ctl name="RX7 Digital Volume" value="76" />
     </path>
 
     <path name="voice-speaker-protected">
@@ -1935,7 +1935,7 @@
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
         <ctl name="DAC1 Switch" value="1" />
-        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="RX1 Digital Volume" value="77" />
         <ctl name="PM8994_Ear_Enable_States" value="Enable" />
     </path>
 
@@ -2111,7 +2111,7 @@
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="RX8 MIX1 INP1" value="RX2" />
         <ctl name="RX7 Digital Volume" value="0" />
-        <ctl name="RX8 Digital Volume" value="84" />
+        <ctl name="RX8 Digital Volume" value="77" />
         <ctl name="COMP0 Switch" value="1" />
         <ctl name="VI_FEED_TX Channels" value="Two" />
         <ctl name="SLIM0_RX_VI_FB_LCH_MUX"  value="SLIM4_TX" />
