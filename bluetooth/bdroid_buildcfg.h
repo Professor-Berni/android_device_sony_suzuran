@@ -18,5 +18,7 @@
 #define _BDROID_BUILDCFG_H
 
 #define BTM_DEF_LOCAL_NAME   "Xperia Z3+"
+#define HCILP_INCLUDED FALSE
+#define BT_WAKE_VIA_USERIAL_IOCTL FALSE
 
 #endif
