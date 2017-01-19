@@ -24,6 +24,12 @@
     <!-- Restart preview for front camera onPictureTaken -->
     <bool name="front_camera_restart_preview_onPictureTaken">true</bool>
 
+    <!-- Opens back camera using openLegacy() and forces api v1 -->
+    <bool name="back_camera_open_legacy">false</bool>
+
+    <!-- Opens front camera using openLegacy() and forces api v1 -->
+    <bool name="front_camera_open_legacy">false</bool>
+
     <!-- Use following iso parameter.-->
     <string name="key_iso">sony-iso</string>
     <string name="key_iso_values">sony-iso-values</string>
