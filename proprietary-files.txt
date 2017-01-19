@@ -340,6 +340,7 @@ vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
 vendor/lib/libmmcamera_ov4688_eeprom.so
 vendor/lib/libmmcamera_sony_imx214_eeprom.so
 vendor/lib/libmmcamera_sonyimx135_eeprom.so
+vendor/lib/libmmcamera_pdaf_v3.so
 vendor/lib/libois_lc898122.so
 
 # Cacao
@@ -472,6 +473,7 @@ vendor/lib/libOpenCL.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libc2d30-a4xx.so
+vendor/lib/libc2d30-a3xx.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
@@ -479,6 +481,7 @@ vendor/lib/libmm-disp-apis.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libscale.so
+vendor/lib/libEGL_adreno.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -499,6 +502,8 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libscale.so
+vendor/lib64/libc2d30-a3xx.so
+vendor/lib64/libEGL_adreno.so
 
 # Graphics firmware
 etc/firmware/a420_pfp.fw
@@ -555,6 +560,10 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
+vendor/lib/libril-qc-ltedirectdisc.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/librilqmiservices.so
+vendor/lib/libsettings.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -571,6 +580,10 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
+vendor/lib64/libril-qc-ltedirectdisc.so
+vendor/lib64/librilqmiservices.so
+vendor/lib64/libsettings.so
+
 
 # Radio
 bin/netmgrd
