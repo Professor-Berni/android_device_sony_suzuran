@@ -42,8 +42,6 @@ ro.gps.agps_provider=1
 # Media
 mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 
 # Perf
 ro.min_freq_0=384000
