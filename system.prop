@@ -20,7 +20,6 @@ camera.disable_zsl_mode=1
 
 # Bluetooth
 bluetooth.enable_timeout_ms=12000
-qcom.bluetooth.soc=rome
 ro.bluetooth.hfp.ver=1.6
 ro.bt.bdaddr_path=/data/etc/bluetooth_bdaddr
 
