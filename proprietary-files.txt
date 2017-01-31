@@ -726,6 +726,13 @@ etc/firmware/touch_module_id_0xd0.img
 etc/firmware/touch_module_id_0xd1.img
 etc/touch_fw_update.sh
 
+# Widevine
+lib/drm/libdrmwvmplugin.so
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/mediadrm/libwvdrmengine.so
+
 # Wifi
 etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
 etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
