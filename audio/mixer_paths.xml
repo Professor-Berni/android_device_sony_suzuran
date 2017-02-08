@@ -2448,26 +2448,26 @@
 
     <path name="camcorder-mic">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="83" />
-        <ctl name="DEC8 Volume" value="84" />
+        <ctl name="DEC7 Volume" value="103" />
+        <ctl name="DEC8 Volume" value="104" />
     </path>
 
     <path name="camcorder-mic-gain-low">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="83" />
-        <ctl name="DEC8 Volume" value="84" />
+        <ctl name="DEC7 Volume" value="103" />
+        <ctl name="DEC8 Volume" value="104" />
     </path>
 
     <path name="camcorder-mic-gain-mid">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="96" />
-        <ctl name="DEC8 Volume" value="97" />
+        <ctl name="DEC7 Volume" value="116" />
+        <ctl name="DEC8 Volume" value="117" />
     </path>
 
     <path name="camcorder-mic-gain-high">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="105" />
-        <ctl name="DEC8 Volume" value="106" />
+        <ctl name="DEC7 Volume" value="125" />
+        <ctl name="DEC8 Volume" value="126" />
     </path>
 
     <path name="hdmi-tx">
