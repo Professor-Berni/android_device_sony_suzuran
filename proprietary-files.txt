@@ -528,7 +528,7 @@ vendor/lib/libconnctrl.so
 vendor/lib64/libconnctrl.so
 
 # NFC
-vendor/firmware/libpn547_fw.so
+lib64/hw/libpn547_fw.so
 
 # Perf
 bin/msm_irqbalance
