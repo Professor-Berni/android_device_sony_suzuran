@@ -1,17 +1,24 @@
 # Audio
+tunnel.audio.encode = false
 audio.deep_buffer.media=true
-audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
-audio.offload.multiple.enabled=true
-audio.offload.passthrough=false
-audio.offload.pcm.16bit.enable=true
-audio.offload.pcm.24bit.enable=true
+audio.offload.buffer.size.kb=32
 audio.offload.video=false
-persist.audio.fluence.speaker=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.passthrough=false
+audio.offload.multiple.enabled=true
+audio.offload.pcm.24bit.enable=true
+audio.offload.track.enable=true
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
 ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.ssr=false
+persist.audio.ssr.3mic=false
 use.voice.path.for.pcm.voip=true
+persist.speaker.prot.enable=false
+persist.spkr.cal.duration=0
+qcom.hw.aac.encoder=true
 
 # Camera
 ro.qc.sdk.gestures.camera=false
@@ -24,8 +31,20 @@ ro.bluetooth.hfp.ver=1.6
 ro.bt.bdaddr_path=/data/etc/bluetooth_bdaddr
 
 # Display
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
-ro.qualcomm.cabl=0
+persist.mdpcomp.4k2kSplit=1
+persist.hwc.mdpcomp.maxpermixer=5
+persist.mdpcomp_perfhint=50
+debug.mdpcomp.logs=0
+persist.metadata_dynfps.disable=true
+persist.hwc.ptor.enable=true
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+ro.qualcomm.cabl=2
+hw.cabl.level=Auto
 ro.sf.lcd_density=480
 ro.opengles.version=196609
 
@@ -34,13 +53,17 @@ dalvik.vm.boot-dex2oat-threads=4
 dalvik.vm.dex2oat-threads=2
 dalvik.vm.image-dex2oat-threads=4
 
-# GPS
-persist.gps.qc_nlp_in_use=1
-ro.gps.agps_provider=1
-
 # Media
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
 mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
+av.debug.disable.pers.cache=true
 
 # Perf
 ro.min_freq_0=384000
@@ -48,12 +71,9 @@ ro.min_freq_4=384000
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
-net.tcp.2g_init_rwnd=10
-persist.radio.apm_sim_not_pwdn=1
-persist.radio.block_allow_data=1
-persist.radio.oem_socket=true
-persist.radio.mt_sms_ack=19
-persist.radio.add_power_save=1
+rild.libargs=-d /dev/smd0
+rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+ril.subscription.types=NV,RUIM
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -63,33 +83,38 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-persist.telephony.oosisdc=false
-rild.libargs=-d /dev/smd0
-rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-ril.subscription.types=NV,RUIM
-ro.telephony.call_ring.multiple=false
-ro.use_data_netmgrd=true
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.custom_ecc=1
+persist.radio.block_allow_data=1
+persist.radio.oem_socket=true
+persist.radio.mt_sms_ack=19
+persist.radio.add_power_save=1
+persist.radio.redir_party_num=0
+persist.radio.sib16_support=1
+persist.radio.wait_for_pbm=1
 persist.data.netmgrd.qos.enable=true
 persist.data.qmi.adb_logmask=0
-telephony.lteOnGsmDevice=1
+ro.telephony.call_ring.multiple=false
+ro.use_data_netmgrd=true
+ro.data.large_tcp_window_size=true
 DEVICE_PROVISIONED=1
 
 # Sensors
-ro.qti.sensors.wu=true
-ro.qti.sensors.max_geomag_rotv=70
-ro.qti.sensors.step_detector=false
-ro.qti.sensors.step_counter=false
-ro.qti.sensors.smd=false
-ro.qti.sensors.game_rv=false
-ro.qti.sensors.amd=false
-ro.qti.sensors.rmd=false
-ro.qti.sdk.sensors.gestures=false
-ro.qti.sensors.facing=false
-ro.qti.sensors.pedometer=false
-ro.qti.sensors.scrn_ortn=false
-ro.qti.sensors.cmc=false
-ro.qti.sensors.dpc=false
-ro.qti.sensors.pug=false
+ro.sony.sensors.wu=true
+ro.sony.sensors.max_geomag_rotv=70
+ro.sony.sensors.step_detector=false
+ro.sony.sensors.step_counter=false
+ro.sony.sensors.smd=false
+ro.sony.sensors.game_rv=false
+ro.sony.sensors.amd=false
+ro.sony.sensors.rmd=false
+ro.sony.sdk.sensors.gestures=false
+ro.sony.sensors.facing=false
+ro.sony.sensors.pedometer=false
+ro.sony.sensors.scrn_ortn=false
+ro.sony.sensors.cmc=false
+ro.sony.sensors.dpc=false
+ro.sony.sensors.pug=false
 ro.qc.sdk.sensors.gestures=true
 
 # Wifi
@@ -100,4 +125,4 @@ ro.semc.content.number=PA4
 ro.semc.ms_type_id=PM-0796-BV
 ro.semc.product.device=E65
 ro.semc.version.fs=GENERIC
-ro.semc.version.fs_revision=32.3.A.0.372
+ro.semc.version.fs_revision=32.3.A.0.376
