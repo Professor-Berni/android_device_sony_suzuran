@@ -193,7 +193,6 @@ etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
 
 # Camera module
-etc/flashled_calc_parameters.cfg
 lib/libcameralight.so
 lib64/libcameralight.so
 vendor/camera/default.dat
