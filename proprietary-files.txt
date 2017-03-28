@@ -739,7 +739,7 @@ lib/libdevice_security.so
 lib/libplstorage.so
 lib/libsuntory.so
 lib/libsuntory_utils.so
-lib64/lib-preload64.so
+lib64/lib-preload64.so|7c5582e9df7dfd98b70814b3792429b2d9a0231b
 lib64/lib_asb_tee.so
 lib64/lib_get_secure_mode.so
 lib64/libcredential-manager-service.so
