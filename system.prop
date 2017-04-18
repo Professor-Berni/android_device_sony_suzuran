@@ -45,7 +45,7 @@ dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 ro.qualcomm.cabl=2
 hw.cabl.level=Auto
-ro.sf.lcd_density=480
+ro.sf.lcd_density=320
 ro.opengles.version=196609
 
 # Dex2oat limits
@@ -122,8 +122,13 @@ ro.qc.sdk.sensors.gestures=true
 wifi.interface=wlan0
 
 # Semc props
-ro.semc.content.number=PA4
-ro.semc.ms_type_id=PM-0796-BV
-ro.semc.product.device=E65
+ro.semc.content.number=PA5
+ro.semc.ms_type_id=PM-0880-BV
+ro.semc.product.device=E58
+ro.semc.product.model=E5823
+ro.semc.product.name=Xperia Z5 Compact
+ro.semc.version.cust=1298-1220
+ro.semc.version.cust.active=
+ro.semc.version.cust_revision=R5D
 ro.semc.version.fs=GENERIC
-ro.semc.version.fs_revision=32.3.A.0.376
+ro.semc.version.fs_revision=32.3.A.2.33

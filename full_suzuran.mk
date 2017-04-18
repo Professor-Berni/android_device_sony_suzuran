@@ -18,12 +18,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from ivy device
-$(call inherit-product, device/sony/ivy/device.mk)
+# Inherit from suzuran device
+$(call inherit-product, device/sony/suzuran/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_BRAND := Sony
-PRODUCT_NAME := full_ivy
+PRODUCT_NAME := full_suzuran
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_DEVICE := ivy
-PRODUCT_MODEL := Xperia Z3+
+PRODUCT_DEVICE := suzuran
+PRODUCT_MODEL := E5823

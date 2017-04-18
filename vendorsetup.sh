@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo lineage_ivy-userdebug
+add_lunch_combo lineage_suzuran-userdebug

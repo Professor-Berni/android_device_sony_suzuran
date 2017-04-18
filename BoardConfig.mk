@@ -16,16 +16,16 @@
 
 include device/sony/kitakami-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/sony/ivy
+DEVICE_PATH := device/sony/suzuran
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := E6533,E6553,ivy,ivy_dsds
+TARGET_OTA_ASSERT_DEVICE := E5803,E5823,suzuran
 
 # Boot image/kernel
-TARGET_KERNEL_CONFIG := kitakami_ivy_defconfig
+TARGET_KERNEL_CONFIG := kitakami_suzuran_defconfig
 
 # Audio
 BOARD_HAVE_BCM_FM := true
@@ -33,10 +33,6 @@ BOARD_HAVE_BCM_FM := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/vnd_generic.txt
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_ivy
-TARGET_UNIFIED_DEVICE := true
 
 # NFC
 NFC_NXP_CHIP_TYPE := PN547C2
@@ -65,7 +61,7 @@ WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin"
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
-WIFI_BUS := PCIE
+WIFI_BUS := SDIO
 
 # Inherit from the proprietary version
--include vendor/sony/ivy/BoardConfigVendor.mk
+-include vendor/sony/suzuran/BoardConfigVendor.mk

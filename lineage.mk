@@ -14,9 +14,16 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/sony/ivy/full_ivy.mk)
+$(call inherit-product, device/sony/suzuran/full_suzuran.mk)
 
 # Inherit some common CM stuff
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_ivy
+PRODUCT_NAME := lineage_suzuran
+
+# Use the latest approved GMS identifiers
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=suzuran \
+    BUILD_FINGERPRINT=Sony/suzuran/suzuran:7.0/KITAKAMI-2.2.1-170315-2214/1:user/dev-keys \
+    PRIVATE_BUILD_DESC="suzuran-user 7.0 KITAKAMI-2.2.1-170315-2214 1 dev-keys"
