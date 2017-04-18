@@ -30,10 +30,6 @@ TARGET_KERNEL_CONFIG := kitakami_suzuran_defconfig
 # Audio
 BOARD_HAVE_BCM_FM := true
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
-BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/vnd_generic.txt
-
 # NFC
 NFC_NXP_CHIP_TYPE := PN547C2
 BOARD_NFC_CHIPSET := pn547
