@@ -683,7 +683,7 @@ vendor/lib/libmmcamera_ubifocus_lib.so
 bin/mlog_qmi_service
 bin/sct_service
 bin/taimport
-bin/tad_static
+bin/tad_static|791b8b21184ba72d54368aeabdf093f9f7f9bafd
 bin/ta_qmi_service
 bin/updatemiscta
 lib/libMiscTaAccessor.so
