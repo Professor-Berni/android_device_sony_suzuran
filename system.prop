@@ -98,6 +98,10 @@ ro.telephony.call_ring.multiple=false
 ro.use_data_netmgrd=true
 ro.data.large_tcp_window_size=true
 ro.ril.telephony.mqanelements=5
+ro.telephony.default_network=9
+persist.telephony.oosisdc=false
+telephony.lteOnCdmaDevice=0
+telephony.lteOnGsmDevice=1
 DEVICE_PROVISIONED=1
 
 # Sensors
@@ -131,4 +135,4 @@ ro.semc.version.cust=1298-1220
 ro.semc.version.cust.active=
 ro.semc.version.cust_revision=R5D
 ro.semc.version.fs=GENERIC
-ro.semc.version.fs_revision=32.3.A.2.33
+ro.semc.version.fs_revision=32.4.A.0.160
