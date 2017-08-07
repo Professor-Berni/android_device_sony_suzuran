@@ -81,10 +81,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
-# NFC config
-PRODUCT_PACKAGES += \
-    nfc_nci.suzuran
-
 # Flash LED config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/flashled_calc_parameters.cfg:system/etc/flashled_calc_parameters.cfg
