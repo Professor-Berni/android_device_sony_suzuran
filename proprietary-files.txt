@@ -538,7 +538,7 @@ vendor/lib64/libStDrvInt.so
 lib64/hw/libpn547_fw.so
 
 # Sensors
-etc/sensors/hals.conf
+etc/sensors/hals.conf:vendor/etc/sensors/hals.conf
 etc/sensors/sensor_def_qcomdev.conf
 bin/sensors.qcom
 vendor/lib/libdataitems.so
