@@ -15,3 +15,9 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_suzuran.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_suzuran-user \
+    lineage_suzuran-userdebug \
+    lineage_suzuran-eng
+
