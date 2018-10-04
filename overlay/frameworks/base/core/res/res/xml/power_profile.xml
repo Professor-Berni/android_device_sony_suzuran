@@ -27,7 +27,7 @@
         <value>6.78</value>
         <value>6.04</value>
     </array>
-    <array name="cpu.speeds.cluster0">
+    <array name="cpu.core_speeds.cluster0">
         <value>384000</value>
         <value>460800</value>
         <value>600000</value>
@@ -40,7 +40,7 @@
         <value>1478400</value>
         <value>1555200</value>
     </array>
-    <array name="cpu.speeds.cluster1">
+    <array name="cpu.core_speeds.cluster1">
         <value>384000</value>
         <value>480000</value>
         <value>633600</value>
@@ -57,7 +57,7 @@
         <value>1958400</value>
     </array>
     <item name="cpu.idle">4.66</item>
-    <array name="cpu.active.cluster0">
+    <array name="cpu.core_power.cluster0">
         <value>39.96</value>
         <value>43.41</value>
         <value>46.21</value>
@@ -70,7 +70,7 @@
         <value>83.71</value>
         <value>88.25</value>
     </array>
-    <array name="cpu.active.cluster1">
+    <array name="cpu.core_power.cluster1">
         <value>83.34</value>
         <value>92.39</value>
         <value>105.66</value>
