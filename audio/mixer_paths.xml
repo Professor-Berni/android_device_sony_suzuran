@@ -1515,12 +1515,12 @@
 
     <!-- Gain offset target for dmic1 unit calibration -->
     <path name="dmic1-adj-gain">
-        <ctl name="DEC7 Volume" value="90" />
+        <ctl name="DEC7 Volume" value="84" />
     </path>
 
     <!-- Gain offset target for dmic2 unit calibration -->
     <path name="dmic2-adj-gain">
-        <ctl name="DEC9 Volume" value="70" />
+        <ctl name="DEC9 Volume" value="84" />
     </path>
 
     <path name="dmic1">
@@ -1987,7 +1987,7 @@
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
         <ctl name="DAC1 Switch" value="1" />
-        <ctl name="RX1 Digital Volume" value="85" />
+        <ctl name="RX1 Digital Volume" value="76" />
         <ctl name="PM8994_Ear_Enable_States" value="Enable" />
     </path>
 
@@ -2024,7 +2024,7 @@
     </path>
 
     <path name="anc-handset">
-        <ctl name="ANC Function" value="ON" />
+        <ctl name="ANC Function" value="OFF" />
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
