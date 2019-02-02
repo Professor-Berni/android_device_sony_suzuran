@@ -44,6 +44,14 @@ lib/libsomc_yummyrsc.so
 lib/libsony_fooddetect.so
 lib/libsony_naruto.so
 lib64/libcamera_clientsemc.so
+
+# bt 2019-02-02 Added missing blob's
+vendor/lib/libchromaflash.so
+vendor/lib/liboptizoom.so
+vendor/lib/libubifocus.so
+vendor/lib/libtrueportrait.so
+# bt 2019-02-02 ---end---
+
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
