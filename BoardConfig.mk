@@ -48,6 +48,9 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Radio
 BOARD_HAVE_RADIO := true
 
+# Security Patch Level
+VENDOR_SECURITY_PATCH := 2017-09-01
+
 # Wifi
 WIFI_BUS := SDIO
 
