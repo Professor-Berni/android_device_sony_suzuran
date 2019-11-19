@@ -37,7 +37,7 @@
 
 using android::init::ImportKernelCmdline;
 
-constexpr auto LTALABEL_PATH = "/dev/block/platform/soc.0/f9824900.sdhci/by-name/LTALabel";
+constexpr auto LTALABEL_PATH = "/lta-label/pages/menu.htm";
 
 void property_override(char const prop[], char const value[], bool add = true)
 {
