@@ -1,3 +1,17 @@
+# Dalvik
+ro.sys.fw.dex2oatthreadcount=6
+dalvik.vm.boot-dex2oat-threads=6
+dalvik.vm.dex2oat-threads=6
+dalvik.vm.image-dex2oat-threads=6
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
+
 # Display density
 ro.sf.lcd_density=320
 
