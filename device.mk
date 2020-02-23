@@ -21,6 +21,9 @@ $(call inherit-product, device/sony/kitakami-common/device-common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/suzuran/suzuran-vendor.mk)
 
+# FDroid
+$(call inherit-product-if-exists, vendor/fdroid/fdroid-vendor.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 

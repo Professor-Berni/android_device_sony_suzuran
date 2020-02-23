@@ -54,5 +54,8 @@ VENDOR_SECURITY_PATCH := 2017-09-01
 # Wifi
 WIFI_BUS := SDIO
 
+# FDroid
+WITH_FDROID := true
+
 # Inherit from the proprietary version
 -include vendor/sony/suzuran/BoardConfigVendor.mk
