@@ -1987,7 +1987,7 @@
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
         <ctl name="DAC1 Switch" value="1" />
-        <ctl name="RX1 Digital Volume" value="85" />
+        <ctl name="RX1 Digital Volume" value="76" />
         <ctl name="PM8994_Ear_Enable_States" value="Enable" />
     </path>
 
@@ -2024,7 +2024,7 @@
     </path>
 
     <path name="anc-handset">
-        <ctl name="ANC Function" value="ON" />
+        <ctl name="ANC Function" value="OFF" />
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
@@ -2050,9 +2050,9 @@
         <!--100 % of 20 register: 0x1B4-->
         <ctl name="HPHR Volume" value="20" />
         <!--68 % of 124 (rounded) register: 0x2B7-->
-        <ctl name="RX1 Digital Volume" value="76" />
+        <ctl name="RX1 Digital Volume" value="84" />
         <!--68 % of 124 (rounded) register: 0x2BF-->
-        <ctl name="RX2 Digital Volume" value="76" />
+        <ctl name="RX2 Digital Volume" value="84" />
     </path>
 
     <path name="headphones-regulation">
@@ -2500,26 +2500,26 @@
 
     <path name="camcorder-mic">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="104" />
-        <ctl name="DEC9 Volume" value="104" />
+        <ctl name="DEC7 Volume" value="114" />
+        <ctl name="DEC9 Volume" value="114" />
     </path>
 
     <path name="camcorder-mic-gain-low">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="104" />
-        <ctl name="DEC9 Volume" value="104" />
+        <ctl name="DEC7 Volume" value="114" />
+        <ctl name="DEC9 Volume" value="114" />
     </path>
 
     <path name="camcorder-mic-gain-mid">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="117" />
-        <ctl name="DEC9 Volume" value="117" />
+        <ctl name="DEC7 Volume" value="127" />
+        <ctl name="DEC9 Volume" value="127" />
     </path>
 
     <path name="camcorder-mic-gain-high">
         <path name="camcorder-mic-common" />
-        <ctl name="DEC7 Volume" value="126" />
-        <ctl name="DEC9 Volume" value="126" />
+        <ctl name="DEC7 Volume" value="136" />
+        <ctl name="DEC9 Volume" value="136" />
     </path>
 
     <path name="hdmi-tx">
@@ -2732,9 +2732,9 @@
         <!--75 % of 20 register: 0x1B4-->
         <ctl name="HPHR Volume" value="20" />
         <!--66 % of 124 (rounded) register: 0x2B7-->
-        <ctl name="RX1 Digital Volume" value="75" />
+        <ctl name="RX1 Digital Volume" value="82" />
         <!--66 % of 124 (rounded) register: 0x2BF-->
-        <ctl name="RX2 Digital Volume" value="75" />
+        <ctl name="RX2 Digital Volume" value="82" />
     </path>
 
     <path name="binaural-mic-common">
@@ -2755,8 +2755,8 @@
         <!-- 120dBSPLpeak & -33dBV/Pa so mic gain 10.5dB so ADCx VOL = 7 -->
         <ctl name="ADC3 Volume" value="13" />
         <ctl name="ADC2 Volume" value="13" />
-        <ctl name="IIR1 INP1 Volume" value="79" />
-        <ctl name="IIR2 INP1 Volume" value="79" />
+        <ctl name="IIR1 INP1 Volume" value="87" />
+        <ctl name="IIR2 INP1 Volume" value="87" />
         <path name="binaural-mic-common" />
     </path>
 
