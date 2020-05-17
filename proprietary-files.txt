@@ -473,6 +473,12 @@ vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libmmcamera_pdaf_v3.so
 vendor/lib/libois_lc898122.so
 
+# Camera Extra's
+vendor/lib/libchromaflash.so
+vendor/lib/liboptizoom.so
+vendor/lib/libtrueportrait.so
+vendor/lib/libubifocus.so
+
 # Cacao
 lib/camera/libexcal_color_ctrl_plugin.so
 lib/camera/libexcal_debug_display_plugin.so
