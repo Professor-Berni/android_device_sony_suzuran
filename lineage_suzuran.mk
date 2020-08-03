@@ -25,5 +25,5 @@ PRODUCT_NAME := lineage_suzuran
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=suzuran \
-    BUILD_FINGERPRINT=Sony/suzuran/suzuran:7.1.1/N-MR1-KITAKAMI-170920-0229/1:user/dev-keys \
-    PRIVATE_BUILD_DESC="suzuran-user 7.1.1 N-MR1-KITAKAMI-170920-0229 1 dev-keys"
+    BUILD_FINGERPRINT=Sony/E5823/E5823:7.1.1/32.4.A.1.54/3761073091:user/release-keys \
+    PRIVATE_BUILD_DESC="E5823-user 7.1.1 32.4.A.1.54-3761073091 release-keys"
