@@ -12,7 +12,7 @@ etc/firmware/BCM43xx.hcd
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.qcom.so
+lib/hw/camera.qcom.so:vendor/lib/hw/camera.vendor.qcom.so
 lib/libcamera_clientsemc.so
 lib/libcammw.so
 lib/libmm-qcamera.so
