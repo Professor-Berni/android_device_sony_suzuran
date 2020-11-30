@@ -19,9 +19,6 @@ include device/sony/kitakami-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/sony/suzuran
 
-# Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
-
 # Assert
 TARGET_OTA_ASSERT_DEVICE := E5803,E5823,suzuran
 
