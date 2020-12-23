@@ -24,6 +24,10 @@ $(call inherit-product, vendor/sony/suzuran/suzuran-vendor.mk)
 # FDroid
 $(call inherit-product-if-exists, vendor/fdroid/fdroid-vendor.mk)
 
+# FDroidPrivilegedExtension
+PRODUCT_PACKAGES += \
+    privapp_whitelist_org.fdroid.fdroid.privileged.xml
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
