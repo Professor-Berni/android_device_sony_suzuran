@@ -8,3 +8,7 @@ ro.semc.product.device=E58
 ro.semc.product.model=E5823
 ro.semc.product.name=Xperia Z5 Compact
 
+# Recovery
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1

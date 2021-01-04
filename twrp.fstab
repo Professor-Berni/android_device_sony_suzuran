@@ -1,0 +1,24 @@
+# mount point    fstype    device                                         flags
+
+/boot            emmc      /dev/block/bootdevice/by-name/boot             flags=backup=1;display="Boot "Kernel"";
+/FOTAKernel      emmc      /dev/block/bootdevice/by-name/FOTAKernel       flags=backup=1;display="FOTAKernel "Recovery"";
+
+/cache           ext4      /dev/block/bootdevice/by-name/cache
+/system          ext4      /dev/block/bootdevice/by-name/system           flags=display="System";mounttodecrypt;
+/data            ext4      /dev/block/bootdevice/by-name/userdata         flags=encryptable=footer;length=-16384;retainlayoutversion;
+
+/external_sd     auto      /dev/block/mmcblk1p1 /dev/block/mmcblk1        flags=display="MicroSD card";storage;wipeingui;removable;
+/usb-otg         auto      /dev/block/sda1      /dev/block/sda            flags=display="USB OTG";storage;wipeingui;removable;
+
+/oem             ext4      /dev/block/bootdevice/by-name/oem              flags=display="OEM";backup=1;
+/rca             ext4      /dev/block/bootdevice/by-name/apps_log         flags=display="AppsLog";backup=1;usermrf;
+/persist         ext4      /dev/block/bootdevice/by-name/persist          flags=display="Persist";backup=1;
+/lta-label       ext4      /dev/block/bootdevice/by-name/LTALabel         flags=display="LTALabel";backup=1;
+/idd             ext4      /dev/block/bootdevice/by-name/diag             flags=display="Diag";backup=1;
+/firmware        vfat      /dev/block/bootdevice/by-name/modem            flags=display="Firmware";backup=1;mounttodecrypt;
+/modemst1        emmc      /dev/block/bootdevice/by-name/modemst1         flags=display="modem_fs1 "Baseband"";backup=1;mounttodecrypt;subpartitionof=/boot;
+/modemst2        emmc      /dev/block/bootdevice/by-name/modemst2         flags=display="modem_fs2 "Baseband"";backup=1;mounttodecrypt;subpartitionof=/boot;
+/ta              emmc      /dev/block/bootdevice/by-name/TA               flags=display="TA "Trim-Area";
+/persistent      emmc      /dev/block/bootdevice/by-name/config
+/misc            emmc      /dev/block/bootdevice/by-name/misc
+/keymaster       emmc      /dev/block/bootdevice/by-name/keymaster

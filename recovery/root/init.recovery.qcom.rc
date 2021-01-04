@@ -1,0 +1,37 @@
+on early-init
+    mkdir /firmware 0771 system system
+    mkdir /persist 0771 system system
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+
+on fs
+    symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
+
+    wait /dev/block/bootdevice/by-name/cache
+    mount ext4 /dev/block/bootdevice/by-name/cache /cache nosuid nodev barrier=1
+
+on post-fs
+    # start clearpad_post_probe when filesystem is available for fwflash
+    write /sys/devices/virtual/input/clearpad/post_probe_start 1
+    write /sys/devices/virtual/input/clearpad/wakeup_gesture 1
+    write /sys/kernel/debug/clearpad/hwtest "XP"
+
+on boot
+    write /sys/class/android_usb/android0/idVendor 0FCE
+    write /sys/class/android_usb/android0/idProduct 6${ro.usb.pid_suffix}
+
+    # Configure governor settings for little cluster
+    write /sys/devices/system/cpu/cpu0/core_ctl/always_online_cpu "1 1 1 1"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    # Configure governor settings for big cluster
+    write /sys/devices/system/cpu/cpu4/core_ctl/always_online_cpu "1 0 0 0"
+    write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 2
+    write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 1
+    chown system system /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+    chown system system /sys/devices/system/cpu/cpu4/core_ctl/max_cpus
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres "40 40 40 40"
+    write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres "70 70 70 70"
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+    # Max default frequencies
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1555200
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1248000

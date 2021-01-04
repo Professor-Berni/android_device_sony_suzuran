@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
+# Recovery
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # RIL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dsi_config.xml:system/etc/data/dsi_config.xml \
