@@ -1,6 +1,6 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright 2015 The Android Open Source Project
+# Copyright (C) 2017-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,21 +13,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from suzuran device
+# Inherit device configurations
 $(call inherit-product, device/sony/suzuran/device.mk)
 
-# Set those variables here to overwrite the inherited values.
-PRODUCT_BRAND := Sony
-PRODUCT_NAME := full_suzuran
-PRODUCT_MANUFACTURER := Sony
+# Device identification
+PRODUCT_NAME   := lineage_suzuran
+PRODUCT_MODEL  := Xperia Z5 Compact
 PRODUCT_DEVICE := suzuran
-PRODUCT_MODEL := E5823
+PRODUCT_BRAND  := Sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_RELEASE_NAME := suzuran
+SOMC_PLATFORM  := kitakami
 
 # TWRP Сonfigurations
 TW_THEME := portrait_hdpi
@@ -49,7 +46,7 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 # Battery sensor
 TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
 # Temperature sensor (xo_therm)
-#TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone@/temp"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone25/temp"
 
 # TWRP Storage
 RECOVERY_SDCARD_ON_DATA := true
