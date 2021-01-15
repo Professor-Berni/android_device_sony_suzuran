@@ -1,6 +1,6 @@
 #
-# Copyright 2014 The Android Open Source Project
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright 2015 The Android Open Source Project
+# Copyright (C) 2016-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,6 +15,8 @@
 # limitations under the License.
 #
 
-add_lunch_combo lineage_suzuran-eng
-add_lunch_combo lineage_suzuran-user
-add_lunch_combo lineage_suzuran-userdebug
+add_lunch_combo twrp_suzuran-userdebug
+export LC_ALL=C
+export ALLOW_MISSING_DEPENDENCIES=true
+export TARGET_COMPILE_WITH_MSM_KERNEL=false
+

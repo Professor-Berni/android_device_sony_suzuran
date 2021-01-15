@@ -1,6 +1,6 @@
 #
 # Copyright 2015 The Android Open Source Project
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2016-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,13 +30,14 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_SMP := true
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53.a57
+TARGET_2ND_CPU_VARIANT := generic
 
 TARGET_USES_64_BIT_BINDER := true
 
@@ -50,8 +51,6 @@ TARGET_NO_KERNEL := false
 # Kernel properties
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_VERSION := 3.10
-BOARD_KERNEL_IMAGE_NAME := kernel
 # Kernel file
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 
@@ -79,9 +78,6 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5257383936
 # Reserve space for data encryption (24239296512-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 24239280128
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -89,17 +85,18 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Fixup SELinux file labels
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
+# Custom Platform Version and Security Patch
+# TWRP Defaults
+PLATFORM_VERSION := 20.1.0
+PLATFORM_SECURITY_PATCH := 2099-12-31
+
 # Recovery
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Recovery blobs
-TARGET_RECOVERY_DEVICE_MODULES := libbinder libgui libui libEGL libGLESv2 libprotobuf-cpp-lite libsync
-TW_RECOVERY_ADDITIONAL_RELINK_FILES := \
-    $(OUT)/system/lib64/libbinder.so \
-    $(OUT)/system/lib64/libgui.so \
-    $(OUT)/system/lib64/libui.so \
-    $(OUT)/system/lib64/libEGL.so \
-    $(OUT)/system/lib64/libGLESv2.so \
-    $(OUT)/system/lib64/libprotobuf-cpp-lite.so \
-    $(OUT)/system/lib64/libsync.so
+TARGET_RECOVERY_DEVICE_MODULES := libbinder libgui libui libEGL libGLESv2 libsync tzdata
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/usr/share/zoneinfo/tzdata
+TW_USE_TOOLBOX := true
+TW_INCLUDE_NTFS_3G := true
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone9/temp

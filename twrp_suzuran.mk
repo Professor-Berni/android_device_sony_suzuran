@@ -1,6 +1,6 @@
 #
 # Copyright 2015 The Android Open Source Project
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2016-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,17 +14,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit device configurations
-$(call inherit-product, device/sony/suzuran/device.mk)
+# Release name
+PRODUCT_RELEASE_NAME := suzuran
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit some common Omni stuff
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Device identification
-PRODUCT_NAME   := lineage_suzuran
+PRODUCT_NAME   := twrp_suzuran
 PRODUCT_MODEL  := Xperia Z5 Compact
 PRODUCT_DEVICE := suzuran
 PRODUCT_BRAND  := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_RELEASE_NAME := suzuran
 SOMC_PLATFORM  := kitakami
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := E5803,E5823,suzuran
 
 # TWRP Сonfigurations
 TW_THEME := portrait_hdpi
