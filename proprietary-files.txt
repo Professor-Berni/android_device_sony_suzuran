@@ -65,7 +65,6 @@ vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
 vendor/lib/libmmcamera_cac2_lib.so
-vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_dw9761b_eeprom.so
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libmmcamera_eztune_module.so
@@ -117,7 +116,6 @@ vendor/lib/libmmcamera_isp_sub_module.so
 vendor/lib/libmmcamera_isp_wb46.so
 vendor/lib/libmmcamera_llvd.so
 vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
-vendor/lib/libmmcamera_optizoom_lib.so
 vendor/lib/libmmcamera_ov4688_eeprom.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_pdafcamif.so
@@ -129,7 +127,6 @@ vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_trueportrait_lib.so
 vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib/libmmcamera_vpu_module.so
 vendor/lib/libmmipl.so
 vendor/lib/libmmjpeg.so
