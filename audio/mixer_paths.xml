@@ -1515,12 +1515,12 @@
 
     <!-- Gain offset target for dmic1 unit calibration -->
     <path name="dmic1-adj-gain">
-        <ctl name="DEC7 Volume" value="84" />
+        <ctl name="DEC7 Volume" value="87" />
     </path>
 
     <!-- Gain offset target for dmic2 unit calibration -->
     <path name="dmic2-adj-gain">
-        <ctl name="DEC9 Volume" value="84" />
+        <ctl name="DEC9 Volume" value="81" />
     </path>
 
     <path name="dmic1">
