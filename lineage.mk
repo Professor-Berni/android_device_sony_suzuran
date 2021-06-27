@@ -24,6 +24,9 @@ PRODUCT_NAME := lineage_suzuran
 
 # Use the latest approved GMS identifiers
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=suzuran
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="suzuran-user 8.1.0 OPM7-181205-001 1 test-keys"
-BUILD_FINGERPRINT := Sony/suzuran/suzuran:8.1.0/OPM7.181205.001/1:user/test-keys
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=suzuran \
+    PRIVATE_BUILD_DESC="E5823-user 7.1.1 32.4.A.1.54 3761073091 release-keys"
+
+BUILD_FINGERPRINT := "Sony/E5823/E5823:7.1.1/32.4.A.1.54/3761073091:user/release-keys"
+
