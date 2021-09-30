@@ -54,5 +54,8 @@ WIFI_BUS := SDIO
 # FDroid
 WITH_FDROID := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_suzuran
+
 # Inherit from the proprietary version
 -include vendor/sony/suzuran/BoardConfigVendor.mk
