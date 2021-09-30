@@ -57,5 +57,8 @@ WITH_FDROID := true
 # microG
 WITH_MICROG := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_suzuran
+
 # Inherit from the proprietary version
 -include vendor/sony/suzuran/BoardConfigVendor.mk
