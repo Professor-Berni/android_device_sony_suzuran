@@ -35,7 +35,7 @@
 #include "property_service.h"
 #include "util.h"
 
-using android::init::ImportKernelCmdline;
+using android::init::import_kernel_cmdline;
 
 constexpr auto LTALABEL_PATH = "/lta-label/pages/menu.htm";
 
@@ -94,7 +94,5 @@ static void import_kernel_nv(const std::string& key,
 
 void vendor_load_properties()
 {
-    ImportKernelCmdline([&](const std::string& key, const std::string& value) {
-        import_kernel_nv(key, value, false);
-    });
+    import_kernel_cmdline(0, import_kernel_nv);
 }
