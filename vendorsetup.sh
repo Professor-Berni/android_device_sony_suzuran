@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 
+add_lunch_combo twrp_suzuran-eng
 add_lunch_combo twrp_suzuran-userdebug
 export LC_ALL=C
 export ALLOW_MISSING_DEPENDENCIES=true
