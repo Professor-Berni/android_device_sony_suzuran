@@ -12,9 +12,6 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
 
-# Display density
-ro.sf.lcd_density=320
-
 # Semc props
 ro.semc.content.number=PA5
 ro.semc.ms_type_id=PM-0880-BV
