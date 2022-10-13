@@ -16,6 +16,9 @@
 
 $(call inherit-product, device/sony/suzuran/full_suzuran.mk)
 
+# Config: Allow opting out of EPPE
+TARGET_DISABLE_EPPE := true
+
 # Inherit some common LineageOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
