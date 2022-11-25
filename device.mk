@@ -28,6 +28,22 @@ $(call inherit-product-if-exists, vendor/fdroid/fdroid-vendor.mk)
 PRODUCT_PACKAGES += \
     privapp_whitelist_org.fdroid.fdroid.privileged.xml
 
+# Since microG and GApps can't coexist, you NEED to choice whether you build for microG OR GApps.
+# Set "export WITH_MICROG="true"" to build for microG OR "export WITH_MICROG="false"" to build for GApps.
+# This can be done i.e. in your build script.
+
+ifeq ($(WITH_MICROG),true)
+
+# microG
+$(call inherit-product-if-exists, vendor/microG/microG-vendor.mk)
+
+# microGPrivilegedExtension
+PRODUCT_PACKAGES += \
+		privapp-permissions-com.android.vending.xml \
+		privapp-permissions-com.google.android.gms.xml
+
+endif
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
