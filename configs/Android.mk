@@ -23,3 +23,22 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
 LOCAL_SRC_FILES := configs/privapp_whitelist_org.fdroid.fdroid.privileged.xml
 include $(BUILD_PREBUILT)
+
+# Modified by Bernhard Thoben 2022-11-24
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := privapp-permissions-com.android.vending.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
+LOCAL_SRC_FILES := configs/privapp-permissions-com.android.vending.xml
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := privapp-permissions-com.google.android.gms.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
+LOCAL_SRC_FILES := configs/privapp-permissions-com.google.android.gms.xml
+include $(BUILD_PREBUILT)
+
