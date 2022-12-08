@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-#               2017-2020 The LineageOS Project
+#               2017-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 # limitations under the License.
 
 # This file is made by Bernhard Thoben 2020-12-23
+# FDroid permissions
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := privapp_whitelist_org.fdroid.fdroid.privileged.xml
@@ -25,6 +26,7 @@ LOCAL_SRC_FILES := configs/privapp_whitelist_org.fdroid.fdroid.privileged.xml
 include $(BUILD_PREBUILT)
 
 # Modified by Bernhard Thoben 2022-11-24
+# microG permissions
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := privapp-permissions-com.android.vending.xml
@@ -40,5 +42,16 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
 LOCAL_SRC_FILES := configs/privapp-permissions-com.google.android.gms.xml
+include $(BUILD_PREBUILT)
+
+# Modified by Bernhard Thoben 2022-12-08
+# AuroraServices permissions
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := permissions_com.aurora.services.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
+LOCAL_SRC_FILES := configs/permissions_com.aurora.services.xml
 include $(BUILD_PREBUILT)
 
