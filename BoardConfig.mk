@@ -51,9 +51,6 @@ VENDOR_SECURITY_PATCH := 2017-09-01
 # Wifi
 WIFI_BUS := SDIO
 
-# FDroid
-WITH_FDROID := true
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_suzuran
 

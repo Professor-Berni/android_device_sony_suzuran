@@ -21,6 +21,14 @@ $(call inherit-product, device/sony/kitakami-common/device-common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/suzuran/suzuran-vendor.mk)
 
+# This build barrier lets you decide whether you build a clean ROM or a ROM with F-Droid, UnifiedNLP,
+# AuroraStore and AuroraServices.  
+# Set "export WITH_FDROID="true"" to build a ROM with the apps mentioned above OR "export WITH_FDROID="false""
+# to build a clean ROM.
+# This can be done i.e. in your build script.
+
+ifeq ($(WITH_FDROID),true)
+
 # AuroraServices
 $(call inherit-product-if-exists, vendor/AuroraServices/AuroraServices-vendor.mk)
 
@@ -34,6 +42,8 @@ $(call inherit-product-if-exists, vendor/fdroid/fdroid-vendor.mk)
 # FDroid permissions
 PRODUCT_PACKAGES += \
     privapp_whitelist_org.fdroid.fdroid.privileged.xml
+
+endif
 
 # Since microG and GApps can't coexist, you NEED to choose whether you build for microG OR GApps.
 # Set "export WITH_MICROG="true"" to build for microG OR "export WITH_MICROG="false"" to build for GApps.
