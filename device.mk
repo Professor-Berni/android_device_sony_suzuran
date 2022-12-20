@@ -57,7 +57,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-TARGET_SCREEN_DENSITY := 300
+# Tweak density, if not set yet:
+TARGET_SCREEN_DENSITY ?= 280
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
