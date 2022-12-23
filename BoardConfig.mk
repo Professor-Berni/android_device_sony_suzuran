@@ -1,6 +1,6 @@
 #
 # Copyright 2015 The Android Open Source Project
-# Copyright (C) 2016-2021 The LineageOS Project
+# Copyright (C) 2016-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -89,6 +89,9 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # TWRP Defaults
 PLATFORM_VERSION := 20.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/device.prop
 
 # Recovery
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4

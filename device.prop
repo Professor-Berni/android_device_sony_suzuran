@@ -1,0 +1,4 @@
+libc.debug.malloc=0
+persist.sys.timezone=1
+ro.debuggable=1
+ro.product.device=suzuran
