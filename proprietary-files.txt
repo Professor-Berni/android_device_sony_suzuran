@@ -4,7 +4,6 @@ etc/acdbdata/Sony/Sony_General_cal.acdb
 etc/acdbdata/Sony/Sony_Global_cal.acdb
 etc/acdbdata/Sony/Sony_Handset_cal.acdb
 etc/acdbdata/Sony/Sony_Hdmi_cal.acdb
-etc/acdbdata/Sony/Sony_Headset_cal.acdb
 etc/acdbdata/Sony/Sony_Speaker_cal.acdb
 
 # Bluetooth
