@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,10 +18,8 @@
 set -e
 
 FP=$(cd ${0%/*} && pwd -P)
-export DEVICE=$(basename $FP)
-export DEVICE_COMMON=kitakami-common
-export VENDOR=$(basename $(dirname $FP))
+export DEVICE=$(basename ${FP})
+export DEVICE_COMMON="kitakami-common"
+export VENDOR=$(basename $(dirname ${FP}))
 
-export DEVICE_BRINGUP_YEAR=2016
-
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh $@
