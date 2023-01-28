@@ -35,7 +35,6 @@ lib/libsomc_raisinrsc.so
 lib/libsomc_spica.so
 lib/libsomc_spicarsc.so
 lib/libsomc_thermal.so
-lib/libsomc_thermal.so
 lib/libsomc_toppo.so
 lib/libsomc_topporsc.so
 lib/libsomc_yummy.so
@@ -465,10 +464,6 @@ vendor/lib/libactuator_rohm_bu64243gwz.so
 vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so
 vendor/lib/libactuator_rohm_bu64243gwz_camera.so
 vendor/lib/libflash_pmic.so
-vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
-vendor/lib/libmmcamera_ov4688_eeprom.so
-vendor/lib/libmmcamera_sony_imx214_eeprom.so
-vendor/lib/libmmcamera_sonyimx135_eeprom.so
 vendor/lib/libmmcamera_pdaf_v3.so
 vendor/lib/libois_lc898122.so
 
