@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-#               2017-2018 The LineageOS Project
+#               2017-2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 # limitations under the License.
 #
 
-# Get common aspects
-$(call inherit-product, device/sony/kitakami-common/device-common.mk)
+# This indicates the first api level, device has been commercially launched on.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/suzuran/suzuran-vendor.mk)
@@ -108,3 +108,7 @@ PRODUCT_COPY_FILES += \
 # WLAN
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wlan/bcmdhd.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/firmware/wlan/bcmdhd/bcmdhd.cal
+    
+# Get common aspects
+$(call inherit-product, device/sony/kitakami-common/device-common.mk)
+

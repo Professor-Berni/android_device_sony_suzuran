@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2020-2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,23 +14,27 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/sony/suzuran/full_suzuran.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Config: Allow opting out of EPPE
-TARGET_DISABLE_EPPE := true
+# Inherit from suzuran device
+$(call inherit-product, device/sony/suzuran/device.mk)
 
 # Inherit some common LineageOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# This indicates the first api level, device has been commercially launched on.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
-
-PRODUCT_NAME := lineage_suzuran
+# Set those variables here to overwrite the inherited values.
+PRODUCT_BRAND        := Sony
+PRODUCT_DEVICE       := suzuran
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL        := Xperia Z5 compact
+PRODUCT_NAME         := lineage_suzuran
+# Config: Allow opting out of EPPE
+TARGET_DISABLE_EPPE  := true
 
 # Use the latest approved GMS identifiers
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=suzuran \
     PRIVATE_BUILD_DESC="E5823-user 7.1.1 32.4.A.1.54 3761073091 release-keys"
 
 BUILD_FINGERPRINT := "Sony/E5823/E5823:7.1.1/32.4.A.1.54/3761073091:user/release-keys"

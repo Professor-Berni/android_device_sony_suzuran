@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-#               2017-2018 The LineageOS Project
+#               2017-2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -56,3 +56,4 @@ TARGET_INIT_VENDOR_LIB := libinit_suzuran
 
 # Inherit from the proprietary version
 -include vendor/sony/suzuran/BoardConfigVendor.mk
+
