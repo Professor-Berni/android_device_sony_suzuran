@@ -51,9 +51,6 @@ VENDOR_SECURITY_PATCH := 2017-09-01
 # Wifi
 WIFI_BUS := SDIO
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_suzuran
-
 # Inherit from the proprietary version
 -include vendor/sony/suzuran/BoardConfigVendor.mk
 
