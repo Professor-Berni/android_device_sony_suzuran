@@ -21,21 +21,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/suzuran/suzuran-vendor.mk)
 
-# This build barrier lets you decide whether you build a clean ROM or a ROM with F-Droid, UnifiedNLP,
-# AuroraStore and AuroraServices.  
+# This build barrier lets you decide whether you build a clean ROM or a ROM with F-Droid, UnifiedNLP and AuroraStore.  
 # Set "export WITH_FDROID="true"" to build a ROM with the apps mentioned above OR "export WITH_FDROID="false""
 # to build a clean ROM.
 # This can be done i.e. in your build script.
 
 ifeq ($(WITH_FDROID),true)
 
-# AuroraServices
-$(call inherit-product-if-exists, vendor/AuroraServices/AuroraServices-vendor.mk)
-
-# AuroraServices permissions
-PRODUCT_PACKAGES += \
-		permissions_com.aurora.services.xml
-		
 # FDroid
 $(call inherit-product-if-exists, vendor/fdroid/fdroid-vendor.mk)
 
