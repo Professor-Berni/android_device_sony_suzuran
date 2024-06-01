@@ -21,13 +21,6 @@ $(call inherit-product, device/sony/kitakami-common/device-common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/suzuran/suzuran-vendor.mk)
 
-# AuroraServices
-$(call inherit-product-if-exists, vendor/AuroraServices/AuroraServices-vendor.mk)
-
-# AuroraServices permissions
-PRODUCT_PACKAGES += \
-		permissions_com.aurora.services.xml
-		
 # FDroid
 $(call inherit-product-if-exists, vendor/fdroid/fdroid-vendor.mk)
 
