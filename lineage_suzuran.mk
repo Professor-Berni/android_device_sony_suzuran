@@ -35,7 +35,9 @@ TARGET_DISABLE_EPPE  := true
 
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="E5823-user 7.1.1 32.4.A.1.54 3761073091 release-keys"
-
-BUILD_FINGERPRINT := "Sony/E5823/E5823:7.1.1/32.4.A.1.54/3761073091:user/release-keys"
-
+    BuildDesc="E5823-user 7.1.1 32.4.A.1.54 3761073091 release-keys" \
+    BuildFingerprint=Sony/E5823/E5823:7.1.1/32.4.A.1.54/3761073091:user/release-keys \
+    DeviceName=suzuran \
+    DeviceProduct=suzuran \
+    SystemDevice=suzuran \
+    SystemName=suzuran
