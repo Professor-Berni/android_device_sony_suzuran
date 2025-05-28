@@ -11,7 +11,7 @@ etc/firmware/BCM43xx.hcd
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.qcom.so|25570700e9c16f6271475fa3963ac4ee673635da
+lib/hw/camera.qcom.so:vendor/lib/hw/camera.vendor.msm8994.so|25570700e9c16f6271475fa3963ac4ee673635da
 lib/libcamera_clientsemc.so
 lib/libcammw.so
 lib/libmm-qcamera.so
