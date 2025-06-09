@@ -503,7 +503,7 @@ lib/libexcal_legacy.so
 lib/libexcal_pal.so
 lib/libexcal_system.so
 lib/libsomc_chokoballcmn.so
-lib/libsomc_chokoballpal.so
+lib/libsomc_chokoballpal.so;DISABLE_CHECKELF
 
 # DRM
 bin/qseecomd
