@@ -1,6 +1,6 @@
 #!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
 #
-# SPDX-FileCopyrightText: 2024 The LineageOS Project
+# SPDX-FileCopyrightText: 2025 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -62,6 +62,10 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libcamera_client.so')
         .remove_needed('libcamera_clientsemc.so')
         .remove_needed('libcamera_metadata.so'),
+    (
+        'vendor/lib/libqomx_core.so',
+    ): blob_fixup()
+        .add_needed('liblog.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
