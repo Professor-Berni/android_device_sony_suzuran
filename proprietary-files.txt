@@ -1,3 +1,8 @@
+# Android
+lib64/libandroid.so:vendor/lib64/libandroid_vendor.so;DISABLE_CHECKELF
+lib/libandroid.so:vendor/lib/libandroid_vendor.so;DISABLE_CHECKELF
+lib/libmemalloc.so:vendor/lib/libmemalloc_vendor.so;DISABLE_CHECKELF
+
 # Audio
 etc/acdbdata/Sony/Sony_Bluetooth_cal.acdb
 etc/acdbdata/Sony/Sony_General_cal.acdb
@@ -6,13 +11,16 @@ etc/acdbdata/Sony/Sony_Handset_cal.acdb
 etc/acdbdata/Sony/Sony_Hdmi_cal.acdb
 etc/acdbdata/Sony/Sony_Speaker_cal.acdb
 
+# Binder
+lib/libbinder.so:vendor/lib/libbinder_vendor.so;DISABLE_CHECKELF
+
 # Bluetooth
 etc/firmware/BCM43xx.hcd
 
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
-lib/hw/camera.qcom.so:vendor/lib/hw/camera.vendor.msm8994.so|25570700e9c16f6271475fa3963ac4ee673635da|eb6449e13058403cb8d43708df71a47e36b04ea8
-lib/libcammw.so:vendor/lib/libcammw.so
+lib/hw/camera.qcom.so:vendor/lib/hw/camera.vendor.msm8994.so|25570700e9c16f6271475fa3963ac4ee673635da|eb6449e13058403cb8d43708df71a47e36b04ea8;DISABLE_CHECKELF
+lib/libcammw.so:vendor/lib/libcammw.so;DISABLE_CHECKELF
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
 lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
@@ -61,14 +69,14 @@ vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmcamera2_sensor_debug.so
 vendor/lib/libmmcamera2_sensor_modules.so
 vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_stats_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_vpe_module.so
 vendor/lib/libmmcamera2_wnr_module.so
 vendor/lib/libmmcamera_cac2_lib.so
 vendor/lib/libmmcamera_dw9761b_eeprom.so
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libmmcamera_eztune_module.so
-vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_imx258_gt24c16_eeprom.so
@@ -490,7 +498,7 @@ lib/camera/libexcal_scene_detector_plugin.so:vendor/lib/camera/libexcal_scene_de
 lib/camera/libexcal_snapshot_ctrl_plugin.so:vendor/lib/camera/libexcal_snapshot_ctrl_plugin.so
 lib/camera/libexcal_splitter_plugin.so:vendor/lib/camera/libexcal_splitter_plugin.so
 lib/camera/libexcal_stream_ctrl_plugin.so:vendor/lib/camera/libexcal_stream_ctrl_plugin.so
-lib/libcacao_client.so:vendor/lib/libcacao_client.so
+lib/libcacao_client.so:vendor/lib/libcacao_client.so;DISABLE_CHECKELF
 lib/libcacao_common.so:vendor/lib/libcacao_common.so
 lib/libcacao_imgproc.so:vendor/lib/libcacao_imgproc.so
 lib/libcacao_jpeg.so:vendor/lib/libcacao_jpeg.so
@@ -509,7 +517,7 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/librpmb.so
-vendor/lib64/lib-sec-disp.so
+vendor/lib64/lib-sec-disp.so;DISABLE_CHECKELF
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
@@ -518,11 +526,28 @@ vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
-vendor/lib/lib-sec-disp.so
+vendor/lib/lib-sec-disp.so;DISABLE_CHECKELF
 vendor/lib/libsecureui.so
 vendor/lib/libsecureui_svcsock.so
 vendor/lib/libssd.so
 vendor/lib/libStDrvInt.so
+
+# Fingerprint
+lib64/hw/fingerprint.msm8994.so:vendor/lib64/hw/fingerprint.msm8994.so
+lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
+lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
+lib/hw/fingerprint.msm8994.so:vendor/lib/hw/fingerprint.msm8994.so
+lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
+lib/lib_fpc_tac_shared.so:vendor/lib/lib_fpc_tac_shared.so
+vendor/firmware/tzfingerprint.b00
+vendor/firmware/tzfingerprint.b01
+vendor/firmware/tzfingerprint.b02
+vendor/firmware/tzfingerprint.b03
+vendor/firmware/tzfingerprint.mdt
+
+# GUI
+lib64/libgui.so:vendor/lib64/libgui_vendor.so;DISABLE_CHECKELF
+lib/libgui.so:vendor/lib/libgui_vendor.so;DISABLE_CHECKELF
 
 # NFC
 lib64/hw/libpn547_fw.so:vendor/lib64/hw/libpn547_fw.so
@@ -562,16 +587,3 @@ etc/touch_fw_update.sh
 # Wifi
 etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin
 etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin
-
-# Fingerprint
-lib64/hw/fingerprint.msm8994.so:vendor/lib64/hw/fingerprint.msm8994.so
-lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
-lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
-lib/hw/fingerprint.msm8994.so:vendor/lib/hw/fingerprint.msm8994.so
-lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
-lib/lib_fpc_tac_shared.so:vendor/lib/lib_fpc_tac_shared.so
-vendor/firmware/tzfingerprint.b00
-vendor/firmware/tzfingerprint.b01
-vendor/firmware/tzfingerprint.b02
-vendor/firmware/tzfingerprint.b03
-vendor/firmware/tzfingerprint.mdt
