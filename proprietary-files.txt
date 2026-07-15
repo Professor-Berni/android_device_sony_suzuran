@@ -532,18 +532,16 @@ vendor/lib/libsecureui_svcsock.so
 vendor/lib/libssd.so
 vendor/lib/libStDrvInt.so
 
-# Fingerprint
-lib64/hw/fingerprint.msm8994.so:vendor/lib64/hw/fingerprint.msm8994.so
-lib64/libcom_fingerprints_service.so:vendor/lib64/libcom_fingerprints_service.so
-lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
-lib/hw/fingerprint.msm8994.so:vendor/lib/hw/fingerprint.msm8994.so
-lib/libcom_fingerprints_service.so:vendor/lib/libcom_fingerprints_service.so
-lib/lib_fpc_tac_shared.so:vendor/lib/lib_fpc_tac_shared.so
+# Fingerprint - HAL @1.0 module + FPC TrustZone Application Communication.
 vendor/firmware/tzfingerprint.b00
 vendor/firmware/tzfingerprint.b01
 vendor/firmware/tzfingerprint.b02
 vendor/firmware/tzfingerprint.b03
 vendor/firmware/tzfingerprint.mdt
+vendor/lib/lib_fpc_tac_shared.so|lib/lib_fpc_tac_shared.so
+vendor/lib64/lib_fpc_tac_shared.so|lib64/lib_fpc_tac_shared.so
+vendor/lib/hw/fingerprint.msm8994.so|lib/hw/fingerprint.msm8994.so
+vendor/lib64/hw/fingerprint.msm8994.so|lib64/hw/fingerprint.msm8994.so
 
 # GUI
 lib64/libgui.so:vendor/lib64/libgui_vendor.so;DISABLE_CHECKELF
@@ -566,10 +564,8 @@ vendor/lib/libsensor_reg.so
 vendor/lib/sensors.ssc.so
 
 # Thermal
-lib64/libidd.so:vendor/lib64/libidd.so
-lib64/liblights-core.so:vendor/lib64/liblights-core.so
-lib/libidd.so:vendor/lib/libidd.so
-lib/liblights-core.so:vendor/lib/liblights-core.so
+vendor/lib64/libidd.so|lib64/libidd.so
+vendor/lib/libidd.so|lib/libidd.so
 
 # Touchscreen
 etc/firmware/touch_module_id_0x30.img
