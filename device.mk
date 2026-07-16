@@ -21,9 +21,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/suzuran/suzuran-vendor.mk)
 
-# Get soong/libinit/vendor
-$(call soong_config_set,libinit,vendor_init_lib,libinit_satsuki)
-
 # Power HAL's DOUBLE_TAP_TO_WAKE handler.
 $(call soong_config_set,qtipower,tap_to_wake_node,/sys/devices/virtual/input/clearpad/wakeup_gesture)
 
