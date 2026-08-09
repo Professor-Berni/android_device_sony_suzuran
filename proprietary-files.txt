@@ -11,43 +11,62 @@ etc/acdbdata/Sony/Sony_Speaker_cal.acdb
 etc/firmware/BCM43xx.hcd
 
 # Camera
-bin/mm-qcamera-daemon
-lib64/libcamera_client.so:vendor/lib64/libcamera_client.so
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib64/libcamera_clientsemc.so
-lib64/libcamera_clientsemc.so:vendor/lib64/libcamera_clientsemc.so
 lib/hw/camera.qcom.so:vendor/lib/hw/camera.vendor.msm8994.so
 lib/hw/camera.msm8994.so:vendor/lib/hw/camera.msm8994.so
 lib/libcamera_client.so:vendor/lib/libcamera_client.so
 lib/libcamera_clientsemc.so
 lib/libcamera_clientsemc.so:vendor/lib/libcamera_clientsemc.so
 lib/libcammw.so
-lib/libmmcamera_interface.so
+lib/libcammw.so:vendor/lib/libcammw.so
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so
 lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
 lib/libmm-qcamera.so
+lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
 lib/libqomx_core.so:vendor/lib/libqomx_core.so
 lib/libsomc_alfortrsc.so
+lib/libsomc_alfortrsc.so:vendor/lib/libsomc_alfortrsc.so
 lib/libsomc_alfort.so
+lib/libsomc_alfort.so:vendor/lib/libsomc_alfort.so
 lib/libsomc_bordeauxrsc.so
+lib/libsomc_bordeauxrsc.so:vendor/lib/libsomc_bordeauxrsc.so
 lib/libsomc_bordeaux.so
+lib/libsomc_bordeaux.so:vendor/lib/libsomc_bordeaux.so
 lib/libsomc_canelersc.so
+lib/libsomc_canelersc.so:vendor/lib/libsomc_canelersc.so
 lib/libsomc_canele.so
+lib/libsomc_canele.so:vendor/lib/libsomc_canele.so
 lib/libsomc_marblersc.so
+lib/libsomc_marblersc.so:vendor/lib/libsomc_marblersc.so
 lib/libsomc_marble.so
+lib/libsomc_marble.so:vendor/lib/libsomc_marble.so
 lib/libsomc_melonpanrsc.so
+lib/libsomc_melonpanrsc.so:vendor/lib/libsomc_melonpanrsc.so
 lib/libsomc_melonpan.so
+lib/libsomc_melonpan.so:vendor/lib/libsomc_melonpan.so
 lib/libsomc_mugichocorsc.so
+lib/libsomc_mugichocorsc.so:vendor/lib/libsomc_mugichocorsc.so
 lib/libsomc_mugichoco.so
+lib/libsomc_mugichoco.so:vendor/lib/libsomc_mugichoco.so
 lib/libsomc_raisinrsc.so
+lib/libsomc_raisinrsc.so:vendor/lib/libsomc_raisinrsc.so
 lib/libsomc_raisin.so
+lib/libsomc_raisin.so:vendor/lib/libsomc_raisin.so
 lib/libsomc_spicarsc.so
+lib/libsomc_spicarsc.so:vendor/lib/libsomc_spicarsc.so
 lib/libsomc_spica.so
+lib/libsomc_spica.so:vendor/lib/libsomc_spica.so
 lib/libsomc_thermal.so
+lib/libsomc_thermal.so:vendor/lib/libsomc_thermal.so
 lib/libsomc_topporsc.so
+lib/libsomc_topporsc.so:vendor/lib/libsomc_topporsc.so
 lib/libsomc_toppo.so
+lib/libsomc_toppo.so:vendor/lib/libsomc_toppo.so
 lib/libsomc_yummyrsc.so
+lib/libsomc_yummyrsc.so:vendor/lib/libsomc_yummyrsc.so
 lib/libsomc_yummy.so
+lib/libsomc_yummy.so:vendor/lib/libsomc_yummy.so
 lib/libsony_fooddetect.so
 lib/libsony_fooddetect.so:vendor/lib/libsony_fooddetect.so
 lib/libsony_naruto.so
@@ -144,10 +163,10 @@ vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/liboemcamera.so
+vendor/lib/liboemcamera.so:lib/liboemcamera.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
-vendor/lib/libseemore.so
 
 # Camera chromatix
 vendor/lib/libchromatix_s5k3m2xx_common.so
@@ -180,6 +199,7 @@ etc/firmware/cpp_firmware_v1_8_0.fw
 # Camera module
 lib64/libcameralight.so
 lib/libcameralight.so
+lib/libcameralight.so:vendor/lib/libcameralight.so
 vendor/camera/default.dat
 vendor/camera/flash.dat
 vendor/camera/LGI05BN0/color_ctrl.dat
@@ -531,11 +551,17 @@ lib/libcacao_jpeg.so
 lib/libcacao_service.so
 lib/libcacao_system.so
 lib/libexcal_core.so
+lib/libexcal_core.so:vendor/lib/libexcal_core.so
 lib/libexcal_legacy.so
+lib/libexcal_legacy.so:vendor/lib/libexcal_legacy.so
 lib/libexcal_pal.so
+lib/libexcal_pal.so:vendor/lib/libexcal_pal.so
 lib/libexcal_system.so
+lib/libexcal_system.so:vendor/lib/libexcal_system.so
 lib/libsomc_chokoballcmn.so
+lib/libsomc_chokoballcmn.so:vendor/lib/libsomc_chokoballcmn.so
 lib/libsomc_chokoballpal.so
+lib/libsomc_chokoballpal.so:vendor/lib/libsomc_chokoballpal.so
 
 # DRM
 bin/qseecomd
@@ -588,6 +614,7 @@ bin/sensors.qcom
 etc/sensors/hals.conf:vendor/etc/sensors/hals.conf
 etc/sensors/sensor_def_qcomdev.conf
 vendor/lib64/libdataitems.so
+vendor/lib64/libdataitems.so:lib64/libdataitems.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
@@ -604,10 +631,8 @@ vendor/lib/libmmcamera_ubifocus_lib.so
 # Thermal
 lib64/libidd.so
 lib64/libidd.so:vendor/lib64/libidd.so
-lib64/liblights-core.so
 lib/libidd.so
 lib/libidd.so:vendor/lib/libidd.so
-lib/liblights-core.so
 
 # Touchscreen
 etc/firmware/touch_module_id_0x30.img
