@@ -11,10 +11,7 @@ etc/acdbdata/Sony/Sony_Speaker_cal.acdb
 etc/firmware/BCM43xx.hcd
 
 # Camera
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib64/libcamera_clientsemc.so
-lib/hw/camera.qcom.so:vendor/lib/hw/camera.vendor.msm8994.so
-lib/hw/camera.msm8994.so:vendor/lib/hw/camera.msm8994.so
 lib/libcamera_client.so:vendor/lib/libcamera_client.so
 lib/libcamera_clientsemc.so
 lib/libcamera_clientsemc.so:vendor/lib/libcamera_clientsemc.so
