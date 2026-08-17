@@ -91,11 +91,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.fingerprint.type=rear
 
-# FBE/metadata encryption
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vold.projid_quotas=false \
-    ro.crypto.dm_default_key.options_format.version=2
-
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/clearpad.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/clearpad.idc
