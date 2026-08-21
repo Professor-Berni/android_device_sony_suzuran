@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.fingerprint.type=rear
+    persist.vendor.fingerprint.type=side
 
 # Input
 PRODUCT_COPY_FILES += \
