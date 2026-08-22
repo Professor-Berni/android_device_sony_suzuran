@@ -11,6 +11,39 @@ etc/acdbdata/Sony/Sony_Speaker_cal.acdb
 etc/firmware/BCM43xx.hcd
 
 # Camera
+lib64/libcamera_clientsemc.so
+lib64/libcameralight.so
+lib/libcamera_clientsemc.so
+lib/libcameralight.so
+lib/libcammw.so
+lib/libexcal_core.so
+lib/libexcal_legacy.so
+lib/libexcal_pal.so
+lib/libexcal_system.so
+lib/libmm-qcamera.so
+lib/libsomc_alfortrsc.so
+lib/libsomc_alfort.so
+lib/libsomc_bordeauxrsc.so
+lib/libsomc_bordeaux.so
+lib/libsomc_canelersc.so
+lib/libsomc_canele.so
+lib/libsomc_chokoballcmn.so
+lib/libsomc_chokoballpal.so
+lib/libsomc_marblersc.so
+lib/libsomc_marble.so
+lib/libsomc_melonpanrsc.so
+lib/libsomc_melonpan.so
+lib/libsomc_mugichocorsc.so
+lib/libsomc_mugichoco.so
+lib/libsomc_raisinrsc.so
+lib/libsomc_raisin.so
+lib/libsomc_spicarsc.so
+lib/libsomc_spica.so
+lib/libsomc_thermal.so
+lib/libsomc_topporsc.so
+lib/libsomc_toppo.so
+lib/libsomc_yummyrsc.so
+lib/libsomc_yummy.so
 lib/libsony_fooddetect.so
 lib/libsony_fooddetect.so:vendor/lib/libsony_fooddetect.so
 lib/libsony_naruto.so
@@ -20,6 +53,7 @@ vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmipl.so
+vendor/lib/liboemcamera.so:lib/liboemcamera.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
