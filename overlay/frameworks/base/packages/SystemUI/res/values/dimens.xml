@@ -32,4 +32,13 @@
     <!-- Location on the screen of the center of the physical power button. This is a reasonable
     default that should be overridden by device-specific overlays. -->
     <dimen name="physical_power_button_center_screen_location_y">490px</dimen>
+
+    <!-- Reserve only the dot itself; AOSP's 20dp left a wide unused gap at the status bar end. -->
+    <dimen name="ongoing_appops_dot_min_padding">6dp</dimen>
+
+    <!-- Centre the dot in the gap the status bar leaves at its end. -->
+    <dimen name="ongoing_appops_dot_edge_margin">4dp</dimen>
+
+    <!-- The right-position clock is the last view in system_icons, so it needs no end padding. -->
+    <dimen name="status_bar_clock_end_padding">0dp</dimen>
 </resources>
