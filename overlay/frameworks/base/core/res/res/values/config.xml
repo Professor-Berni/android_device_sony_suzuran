@@ -19,6 +19,9 @@
     <!-- Operating volatage for bluetooth controller. 0 by default-->
     <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
 
+    <!-- Low Memory Killer tweak -->
+    <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">161280</integer>
+
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps">true</bool>
 
