@@ -16,6 +16,11 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- limit cached processes and disable the Pinner Service-->
+    <integer name="config_customizedMaxCachedProcesses">16</integer>
+    <integer name="config_pinnerHomePinBytes">0</integer>
+    <integer name="config_pinnerWebviewPinBytes">0</integer>
+
     <!-- Operating volatage for bluetooth controller. 0 by default-->
     <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
 
