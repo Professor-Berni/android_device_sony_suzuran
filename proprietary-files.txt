@@ -434,7 +434,6 @@ lib64/hw/libpn547_fw.so
 
 # Sensors
 bin/sensors.qcom
-etc/sensors/hals.conf:vendor/etc/sensors/hals.conf
 etc/sensors/sensor_def_qcomdev.conf
 vendor/lib64/libdataitems.so
 vendor/lib64/libdataitems.so:lib64/libdataitems.so
